@@ -18,6 +18,7 @@ class MainMenuVController: UIViewController, CLLocationManagerDelegate {
     {
         super.viewDidLoad()
         
+        
         locationManager.delegate=self;
         locationManager.desiredAccuracy=kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
