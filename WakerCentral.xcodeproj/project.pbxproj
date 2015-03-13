@@ -14,6 +14,9 @@
 		3FA0E03F1AB1F1FB00802D0A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA0E03D1AB1F1FB00802D0A /* LaunchScreen.xib */; };
 		3FA0E04B1AB1F1FB00802D0A /* WakerCentralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0E04A1AB1F1FB00802D0A /* WakerCentralTests.swift */; };
 		FF399A241AB3239100F70316 /* ByThisTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF399A231AB3239100F70316 /* ByThisTimeController.swift */; };
+		FF399A281AB351DC00F70316 /* alarm_classic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A251AB351DC00F70316 /* alarm_classic.mp3 */; };
+		FF399A291AB351DC00F70316 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A261AB351DC00F70316 /* alarm_sound.mp3 */; };
+		FF399A2A1AB351DC00F70316 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A271AB351DC00F70316 /* alarm.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		3FA0E0491AB1F1FB00802D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FA0E04A1AB1F1FB00802D0A /* WakerCentralTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakerCentralTests.swift; sourceTree = "<group>"; };
 		FF399A231AB3239100F70316 /* ByThisTimeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByThisTimeController.swift; sourceTree = "<group>"; };
+		FF399A251AB351DC00F70316 /* alarm_classic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_classic.mp3; sourceTree = "<group>"; };
+		FF399A261AB351DC00F70316 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
+		FF399A271AB351DC00F70316 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		3FA0E0311AB1F1FB00802D0A /* WakerCentral */ = {
 			isa = PBXGroup;
 			children = (
+				FF399A2B1AB3526400F70316 /* Sounds */,
 				3FA0E0341AB1F1FB00802D0A /* AppDelegate.swift */,
 				3FA0E0361AB1F1FB00802D0A /* ViewController.swift */,
 				FF399A231AB3239100F70316 /* ByThisTimeController.swift */,
@@ -113,6 +120,16 @@
 				3FA0E0491AB1F1FB00802D0A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF399A2B1AB3526400F70316 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				FF399A251AB351DC00F70316 /* alarm_classic.mp3 */,
+				FF399A261AB351DC00F70316 /* alarm_sound.mp3 */,
+				FF399A271AB351DC00F70316 /* alarm.mp3 */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +213,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FA0E03A1AB1F1FB00802D0A /* Main.storyboard in Resources */,
+				FF399A291AB351DC00F70316 /* alarm_sound.mp3 in Resources */,
+				FF399A2A1AB351DC00F70316 /* alarm.mp3 in Resources */,
+				FF399A281AB351DC00F70316 /* alarm_classic.mp3 in Resources */,
 				3FA0E03F1AB1F1FB00802D0A /* LaunchScreen.xib in Resources */,
 				3FA0E03C1AB1F1FB00802D0A /* Images.xcassets in Resources */,
 			);
@@ -343,7 +363,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WakerCentral/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,7 +374,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WakerCentral/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
