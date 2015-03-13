@@ -15,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        if let window = window {
+            window.backgroundColor = UIColor.whiteColor()
+            window.rootViewController = MainMenuVController(nibName: "MainMenuVController", bundle: nil)
+            window.makeKeyAndVisible()
+        }
         // Override point for customization after application launch.
         return true
     }

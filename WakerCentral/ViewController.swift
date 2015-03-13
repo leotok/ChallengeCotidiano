@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreLocation
+
+
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
     let locationManager = CLLocationManager()
@@ -16,7 +18,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.redColor()
         locationManager.delegate=self;
         locationManager.desiredAccuracy=kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
@@ -26,9 +27,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    @IBAction func ByThisTimeButton(sender: UIButton) {
+    @IBAction func ByThisTimeButton(sender: UIButton)
+    {
+        let vc = ByThisTimeVController(nibName: "ByThisTimeVController", bundle: nil)
+        self.presentViewController(vc, animated: false, completion: nil)
         
     }
+
     func locationManager(manager: CLLocationManager!,
         didChangeAuthorizationStatus status: CLAuthorizationStatus)
     {
@@ -80,14 +85,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 
             }
             
-            
-            
-            
+  
             
         })
         
-        
-        
+    
     }
     func displayLocationInfo(placemark: CLPlacemark)
     {
@@ -97,17 +99,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         println(placemark.administrativeArea)
         println(placemark.country)
     }
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if segue.identifier == "ToByThisTimeSegue"{
-            let vc = segue.destinationViewController as ByThisTimeController
-            vc.waitTime=2;
-        }
-    }
+
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+//        if segue.identifier == "ToByThisTimeSegue"{
+//            let vc = segue.destinationViewController as ByThisTimeController
+//            vc.waitTime=2;
+//        }
+//    }
 
 
 }
