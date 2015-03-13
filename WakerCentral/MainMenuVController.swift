@@ -31,6 +31,7 @@ class MainMenuVController: UIViewController, CLLocationManagerDelegate {
     @IBAction func ByThisTimeButton(sender: UIButton)
     {
         let vc = ByThisTimeVController(nibName: "ByThisTimeVController", bundle: nil)
+        vc.setToVibrateAndToPlaySound("alarm_classic", ofType: "mp3", timeToWait: 2)
         self.presentViewController(vc, animated: false, completion: nil)
         
     }
