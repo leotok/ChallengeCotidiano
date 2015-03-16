@@ -21,12 +21,13 @@ class ByThisTimeVController: UIViewController {
 
     @IBOutlet weak var stopButton: UIButton!
     
+    @IBOutlet weak var backButton: UIButton!
     
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+        backButton.enabled=false
         let startButton   = UIButton()
         startButton.setImage(UIImage(named: "startButton"), forState: .Normal)
         startButton.frame = CGRectMake(0, 0, 200, 200)
@@ -63,6 +64,7 @@ class ByThisTimeVController: UIViewController {
     
     @IBAction func stopButtonPressed(sender: UIButton)
     {
+        
         timeCounter.invalidate()
         if(sound==true)
         {
@@ -70,6 +72,7 @@ class ByThisTimeVController: UIViewController {
         }
         
         self.stopButton.enabled=false;
+        self.backButton.enabled=true;
     }
     @IBAction func backButtonPressed(sender: UIButton)
     {
@@ -79,7 +82,7 @@ class ByThisTimeVController: UIViewController {
     func waitIsOver()
     {
         stopButton.enabled=true;
-        
+        backButton.enabled=false
         
         println("TheWaitIsOver v:\(vibrate) s:\(sound)" )
         if(vibrate==true)
