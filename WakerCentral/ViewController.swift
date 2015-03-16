@@ -30,6 +30,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func ByThisTimeButton(sender: UIButton)
     {
         let vc = ByThisTimeVController(nibName: "ByThisTimeVController", bundle: nil)
+        
         self.presentViewController(vc, animated: false, completion: nil)
         
     }
