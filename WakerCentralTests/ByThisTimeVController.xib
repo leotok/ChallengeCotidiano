@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ByThisTimeVController" customModule="WakerCentral" customModuleProvider="target">
             <connections>
+                <outlet property="stopButton" destination="OYP-2I-hHt" id="g84-qV-afP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,6 +22,15 @@
                     </state>
                     <connections>
                         <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="1iw-T9-qgX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYP-2I-hHt">
+                    <rect key="frame" x="249" y="225" width="33" height="30"/>
+                    <state key="normal" title="Stop">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="stopButtonPressed:" destination="-1" eventType="touchUpInside" id="3jS-06-MjY"/>
                     </connections>
                 </button>
             </subviews>
