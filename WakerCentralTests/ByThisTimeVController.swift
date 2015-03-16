@@ -18,17 +18,46 @@ class ByThisTimeVController: UIViewController {
     private var player:AVAudioPlayer = AVAudioPlayer();
     private var vibrate: Bool = true
     private var sound: Bool = false
-    
+
     @IBOutlet weak var stopButton: UIButton!
+    
+    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        //self.view.backgroundColor = UIColor.blueColor()
+        let startButton   = UIButton()
+        startButton.setImage(UIImage(named: "startButton"), forState: .Normal)
+        startButton.frame = CGRectMake(0, 0, 200, 200)
+        startButton.center = CGPointMake(self.view.frame.width/3, self.view.frame.height + 20)
+        startButton.setTitle("Start", forState: .Normal)
+        startButton.addTarget(self, action: "startbuttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+
+        let whereToButton   = UIButton()
+        whereToButton.setImage(UIImage(named: "sideButton.jpg"), forState: .Normal)
+        whereToButton.setTitle("Where To?", forState: .Normal)
+//        whereToButton.titleLabel?.text = "Where To?"
+        whereToButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+    
+        whereToButton.frame = CGRectMake(0, self.view.frame.height - 50, 200, 200)
+        //whereToButton.addTarget(self, action: "whereTobuttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        self.view.addSubview(whereToButton)
+        self.view.addSubview(startButton)
+
+    
         timeCounter = NSTimer.scheduledTimerWithTimeInterval(waitTime, target: self, selector: Selector("waitIsOver"), userInfo: nil, repeats: true)
         
         println("WaitTime: \(waitTime)")
+        
+    }
+
+    
+    
+    @IBAction func startButtonPressed(sender: UIButton)
+    {
+        
         
     }
     

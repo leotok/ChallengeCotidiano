@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F5E14F21AB74E3A0067F649 /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E14EE1AB74E3A0067F649 /* startButton.png */; };
+		3F5E14F31AB74E3A0067F649 /* sideButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E14EF1AB74E3A0067F649 /* sideButton.jpg */; };
+		3F5E14F41AB74E3A0067F649 /* seta back.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E14F01AB74E3A0067F649 /* seta back.png */; };
+		3F5E14F51AB74E3A0067F649 /* seta pra baixo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E14F11AB74E3A0067F649 /* seta pra baixo.png */; };
 		3FA0E0351AB1F1FB00802D0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0E0341AB1F1FB00802D0A /* AppDelegate.swift */; };
 		3FA0E03C1AB1F1FB00802D0A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FA0E03B1AB1F1FB00802D0A /* Images.xcassets */; };
 		3FA0E03F1AB1F1FB00802D0A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA0E03D1AB1F1FB00802D0A /* LaunchScreen.xib */; };
@@ -31,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F5E14EE1AB74E3A0067F649 /* startButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startButton.png; sourceTree = "<group>"; };
+		3F5E14EF1AB74E3A0067F649 /* sideButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sideButton.jpg; sourceTree = "<group>"; };
+		3F5E14F01AB74E3A0067F649 /* seta back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta back.png"; sourceTree = "<group>"; };
+		3F5E14F11AB74E3A0067F649 /* seta pra baixo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta pra baixo.png"; sourceTree = "<group>"; };
 		3FA0E02F1AB1F1FB00802D0A /* WakerCentral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakerCentral.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA0E0331AB1F1FB00802D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FA0E0341AB1F1FB00802D0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +74,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F5E14ED1AB74E3A0067F649 /* documents-export-2015-03-16 */ = {
+			isa = PBXGroup;
+			children = (
+				3F5E14EE1AB74E3A0067F649 /* startButton.png */,
+				3F5E14EF1AB74E3A0067F649 /* sideButton.jpg */,
+				3F5E14F01AB74E3A0067F649 /* seta back.png */,
+				3F5E14F11AB74E3A0067F649 /* seta pra baixo.png */,
+			);
+			path = "documents-export-2015-03-16";
+			sourceTree = "<group>";
+		};
 		3FA0E0261AB1F1FB00802D0A = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +120,7 @@
 		3FA0E0321AB1F1FB00802D0A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3F5E14ED1AB74E3A0067F649 /* documents-export-2015-03-16 */,
 				3FA0E0331AB1F1FB00802D0A /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -233,12 +253,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF399A291AB351DC00F70316 /* alarm_sound.mp3 in Resources */,
+				3F5E14F21AB74E3A0067F649 /* startButton.png in Resources */,
+				3F5E14F31AB74E3A0067F649 /* sideButton.jpg in Resources */,
 				FF399A2A1AB351DC00F70316 /* alarm.mp3 in Resources */,
+				3F5E14F41AB74E3A0067F649 /* seta back.png in Resources */,
 				3FA0E0621AB3746700802D0A /* MainMenuVController.xib in Resources */,
 				FF399A281AB351DC00F70316 /* alarm_classic.mp3 in Resources */,
 				3FA0E0671AB374AB00802D0A /* ByThisTimeVController.xib in Resources */,
 				3FA0E03F1AB1F1FB00802D0A /* LaunchScreen.xib in Resources */,
 				3FA0E03C1AB1F1FB00802D0A /* Images.xcassets in Resources */,
+				3F5E14F51AB74E3A0067F649 /* seta pra baixo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
