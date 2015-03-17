@@ -18,7 +18,7 @@ class KeepMeAwakeVController: UIViewController {
     private var feedBackTypeArray: NSMutableArray = NSMutableArray()
     private var feedBackTimer: NSTimer = NSTimer()
     private var feedBackInterval: NSTimeInterval = NSTimeInterval()
-    private var waitingFeedBackInterval: NSTimeInterval = 2;
+    private var waitingFeedBackInterval: NSTimeInterval = NSTimeInterval(2);
     private var feedBackCounter: Int = 0
     
     
@@ -71,14 +71,14 @@ class KeepMeAwakeVController: UIViewController {
 //       feedBackTimer.invalidate()
         feedBackCounter++
         
-        var numeroFeedBackEscolhido: Int = Int(arc4random()) % (feedBackTypeArray.count)
+        var numeroFeedBackEscolhido: Int = Int(arc4random_uniform(UInt32(feedBackTypeArray.count)))
         
         NSLog("Wake up! Don't fall asleep!!")
         
         if (vibrate == true)
         {
             NSLog("vibrando")
-           // AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         }
         if (sound == true)
         {
