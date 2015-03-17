@@ -24,6 +24,8 @@
 		FF399A281AB351DC00F70316 /* alarm_classic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A251AB351DC00F70316 /* alarm_classic.mp3 */; };
 		FF399A291AB351DC00F70316 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A261AB351DC00F70316 /* alarm_sound.mp3 */; };
 		FF399A2A1AB351DC00F70316 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A271AB351DC00F70316 /* alarm.mp3 */; };
+		FF6E10D41AB87873008E5228 /* SetModeVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6E10D21AB87873008E5228 /* SetModeVController.swift */; };
+		FF6E10D51AB87873008E5228 /* SetModeVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF6E10D31AB87873008E5228 /* SetModeVController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		FF399A251AB351DC00F70316 /* alarm_classic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_classic.mp3; sourceTree = "<group>"; };
 		FF399A261AB351DC00F70316 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 		FF399A271AB351DC00F70316 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
+		FF6E10D21AB87873008E5228 /* SetModeVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetModeVController.swift; sourceTree = "<group>"; };
+		FF6E10D31AB87873008E5228 /* SetModeVController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetModeVController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				3FA0E0341AB1F1FB00802D0A /* AppDelegate.swift */,
+				FF6E10D11AB86E37008E5228 /* SetMode */,
 				3FA0E05E1AB3744A00802D0A /* MainMenu */,
 				3FF13AEA1AB861330098A4CD /* KeepMeAwake */,
 				3FA0E0631AB3747C00802D0A /* ByThisTime */,
@@ -185,6 +190,16 @@
 			);
 			name = Sounds;
 			sourceTree = "<group>";
+		};
+		FF6E10D11AB86E37008E5228 /* SetMode */ = {
+			isa = PBXGroup;
+			children = (
+				FF6E10D21AB87873008E5228 /* SetModeVController.swift */,
+				FF6E10D31AB87873008E5228 /* SetModeVController.xib */,
+			);
+			name = SetMode;
+			path = WakerCentralTests;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -268,6 +283,7 @@
 			files = (
 				FF399A291AB351DC00F70316 /* alarm_sound.mp3 in Resources */,
 				3F5E14F21AB74E3A0067F649 /* startButton.png in Resources */,
+				FF6E10D51AB87873008E5228 /* SetModeVController.xib in Resources */,
 				3F5E14F31AB74E3A0067F649 /* sideButton.jpg in Resources */,
 				FF399A2A1AB351DC00F70316 /* alarm.mp3 in Resources */,
 				3F5E14F41AB74E3A0067F649 /* seta back.png in Resources */,
@@ -295,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF6E10D41AB87873008E5228 /* SetModeVController.swift in Sources */,
 				3FA0E0611AB3746700802D0A /* MainMenuVController.swift in Sources */,
 				3FF13AE81AB8612F0098A4CD /* KeepMeAwakeVController.swift in Sources */,
 				3FA0E0351AB1F1FB00802D0A /* AppDelegate.swift in Sources */,
