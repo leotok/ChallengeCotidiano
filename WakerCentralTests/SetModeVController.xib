@@ -6,6 +6,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetModeVController" customModule="WakerCentral" customModuleProvider="target">
             <connections>
+                <outlet property="okButton" destination="dR1-Oy-Nzc" id="jdn-1W-feD"/>
+                <outlet property="slideSwitch" destination="A91-bg-rrF" id="TMo-Rx-ytQ"/>
+                <outlet property="soundPicker" destination="Gqp-3U-nkf" id="EC9-TM-Iyk"/>
+                <outlet property="soundSwitch" destination="Ig1-uQ-8rX" id="zHP-fL-jUb"/>
+                <outlet property="tapSwitch" destination="50c-9S-HcE" id="jSo-Li-PU5"/>
+                <outlet property="timePicker" destination="U5h-LB-sru" id="xSW-ea-QcA"/>
+                <outlet property="vibrateSwitch" destination="bmy-G5-KpM" id="185-6Z-ba8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,9 +39,6 @@
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bmy-G5-KpM">
                     <rect key="frame" x="276" y="89" width="51" height="31"/>
                 </switch>
-                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gqp-3U-nkf">
-                    <rect key="frame" x="-69" y="171" width="600" height="162"/>
-                </pickerView>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="50c-9S-HcE">
                     <rect key="frame" x="276" y="348" width="51" height="31"/>
                 </switch>
@@ -52,6 +56,9 @@
                     <state key="normal" title="OK">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="okButtonPressed:" destination="-1" eventType="touchUpInside" id="Vdq-bf-Knh"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tap " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ew5-tD-hMu">
                     <rect key="frame" x="167" y="353" width="30" height="21"/>
@@ -59,8 +66,18 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gqp-3U-nkf">
+                    <rect key="frame" x="0.0" y="178" width="600" height="162"/>
+                </pickerView>
+                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5h-LB-sru">
+                    <rect key="frame" x="-57" y="348" width="235" height="162"/>
+                    <date key="date" timeIntervalSinceReferenceDate="448288860.69164598">
+                        <!--2015-03-17 12:41:00 +0000-->
+                    </date>
+                </datePicker>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="353" y="290"/>
         </view>
     </objects>
 </document>

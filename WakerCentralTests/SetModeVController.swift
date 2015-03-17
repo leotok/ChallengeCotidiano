@@ -10,17 +10,75 @@ import UIKit
 
 class SetModeVController: UIViewController {
 
-    override func viewDidLoad() {
+    @IBOutlet weak var vibrateSwitch: UISwitch!
+    @IBOutlet weak var soundSwitch: UISwitch!
+    @IBOutlet weak var soundPicker: UIPickerView!
+    @IBOutlet weak var tapSwitch: UISwitch!
+    @IBOutlet weak var slideSwitch: UISwitch!
+  
+    @IBOutlet weak var timePicker: UIDatePicker!
+    var soundName: String = String("")
+    var soundFormat: String = String("mp3")
+    
+    @IBOutlet weak var okButton: UIButton!
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
+        //Default
+        
+        vibrateSwitch.selected=true
+        soundSwitch.selected=false
+        
+        if(soundSwitch.selected==false)
+        {
+            soundPicker.hidden=true
+        }
+        
+        tapSwitch.selected=true
+        slideSwitch.selected=false
+        
+        
+        
+        
         // Do any additional setup after loading the view.
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func okButtonPressed(sender: UIButton) {
+        let vc = ByThisTimeVController(nibName: "ByThisTimeVController", bundle: nil)
+        
+        var timeToWait: NSTimeInterval = 1
+        if(vibrateSwitch.selected==true)
+        {
+            if(soundSwitch.selected==true)
+            {
+                vc.setToVibrateAndToPlaySound("alarm_sound", ofType: ".mp3", timeToWait: timeToWait)
+            }
+            else
+            {
+                vc.setToVibrate(timeToWait)
+            }
+        }
+        else
+        {
+            if(soundSwitch.selected==true)
+            {
+                vc.setSoundToPlay("alarm_sound", ofType: ".mp3", timeToWait: timeToWait)
+            }
+            else
+            {
+                println("ERROR");
+                return
+            }
+        }
+        
+        self.presentViewController(vc, animated: false, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
