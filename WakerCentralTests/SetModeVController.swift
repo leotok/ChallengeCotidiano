@@ -53,7 +53,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         return 1
     }
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView {
-        var label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        var label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 100))
         label.text = soundArray[row]
         
         return label    }
@@ -64,15 +64,15 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
     
     @IBAction func okButtonPressed(sender: UIButton) {
         let vc = ByThisTimeVController(nibName: "ByThisTimeVController", bundle: nil)
-        
-        
+        soundName = soundArray[soundPicker.selectedRowInComponent(0)]
+        println("soundName \(soundName)")
         var timeToWait: NSTimeInterval = timePicker.countDownDuration
         println("on \(vibrateSwitch.on) \(soundSwitch.on)")
         if(vibrateSwitch.on==true)
         {
             if(soundSwitch.on==true)
             {
-                vc.setToVibrateAndToPlaySound("alarm_sound", ofType: ".mp3", timeToWait: timeToWait)
+                vc.setToVibrateAndToPlaySound(soundName, ofType: ".mp3", timeToWait: timeToWait)
             }
             else
             {
@@ -83,7 +83,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         {
             if(soundSwitch.on==true)
             {
-                vc.setSoundToPlay("alarm_sound", ofType: ".mp3", timeToWait: timeToWait)
+                vc.setSoundToPlay(soundName, ofType: ".mp3", timeToWait: timeToWait)
             }
             else
             {
