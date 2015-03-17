@@ -84,7 +84,6 @@ class KeepMeAwakeVController: UIViewController {
         {
             player.play()
         }
-    
         
         var feedBackEscolhido: String = feedBackTypeArray[numeroFeedBackEscolhido] as String
         
@@ -92,7 +91,12 @@ class KeepMeAwakeVController: UIViewController {
         
         if (feedBackEscolhido == "tap")
         {
-            if (feedBackCounter > 0)
+            var tapTheScreenLabel: UILabel = UILabel(frame: CGRectMake(self.view.frame.width/3, self.view.frame.height/2, 100, 50))
+            tapTheScreenLabel.text = "Tap me!!"
+        
+            self.view.addSubview(tapTheScreenLabel)
+            
+            if (feedBackCounter == 1)
             {
                 var tapFeedBack = UITapGestureRecognizer(target: self, action: Selector("didGetFeedBack:"))
                 view.addGestureRecognizer(tapFeedBack)
@@ -101,16 +105,17 @@ class KeepMeAwakeVController: UIViewController {
     }
     
     
-    func didGetFeedBack (tap: UIGestureRecognizer)
+    func didGetFeedBack (gesture: UIGestureRecognizer)
     {
         feedBackTimer.invalidate()
+        feedBackCounter = 0
         
         if(sound == true)
         {
             player.stop()
         }
         NSLog("Tapped")
-        view.removeGestureRecognizer(tap)
+        view.removeGestureRecognizer(gesture)
         
         feedBackTimer = NSTimer.scheduledTimerWithTimeInterval(feedBackInterval, target:self, selector: Selector("startAlarm"),userInfo:nil, repeats: false)
         
