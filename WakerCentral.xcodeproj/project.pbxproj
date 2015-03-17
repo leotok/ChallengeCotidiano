@@ -19,6 +19,8 @@
 		3FA0E0621AB3746700802D0A /* MainMenuVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA0E0601AB3746700802D0A /* MainMenuVController.xib */; };
 		3FA0E0661AB374AB00802D0A /* ByThisTimeVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0E0641AB374AB00802D0A /* ByThisTimeVController.swift */; };
 		3FA0E0671AB374AB00802D0A /* ByThisTimeVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA0E0651AB374AB00802D0A /* ByThisTimeVController.xib */; };
+		3FF13AE81AB8612F0098A4CD /* KeepMeAwakeVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF13AE61AB8612F0098A4CD /* KeepMeAwakeVController.swift */; };
+		3FF13AE91AB8612F0098A4CD /* KeepMeAwakeVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AE71AB8612F0098A4CD /* KeepMeAwakeVController.xib */; };
 		FF399A281AB351DC00F70316 /* alarm_classic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A251AB351DC00F70316 /* alarm_classic.mp3 */; };
 		FF399A291AB351DC00F70316 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A261AB351DC00F70316 /* alarm_sound.mp3 */; };
 		FF399A2A1AB351DC00F70316 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A271AB351DC00F70316 /* alarm.mp3 */; };
@@ -51,6 +53,8 @@
 		3FA0E0601AB3746700802D0A /* MainMenuVController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuVController.xib; sourceTree = "<group>"; };
 		3FA0E0641AB374AB00802D0A /* ByThisTimeVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByThisTimeVController.swift; sourceTree = "<group>"; };
 		3FA0E0651AB374AB00802D0A /* ByThisTimeVController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ByThisTimeVController.xib; sourceTree = "<group>"; };
+		3FF13AE61AB8612F0098A4CD /* KeepMeAwakeVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeepMeAwakeVController.swift; sourceTree = "<group>"; };
+		3FF13AE71AB8612F0098A4CD /* KeepMeAwakeVController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeepMeAwakeVController.xib; sourceTree = "<group>"; };
 		FF399A251AB351DC00F70316 /* alarm_classic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_classic.mp3; sourceTree = "<group>"; };
 		FF399A261AB351DC00F70316 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 		FF399A271AB351DC00F70316 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
@@ -107,10 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				3FA0E0341AB1F1FB00802D0A /* AppDelegate.swift */,
-				3FA0E0631AB3747C00802D0A /* ByThisTime */,
-				FF399A2B1AB3526400F70316 /* Sounds */,
-				3FA0E03B1AB1F1FB00802D0A /* Images.xcassets */,
 				3FA0E05E1AB3744A00802D0A /* MainMenu */,
+				3FF13AEA1AB861330098A4CD /* KeepMeAwake */,
+				3FA0E0631AB3747C00802D0A /* ByThisTime */,
+				3FA0E03B1AB1F1FB00802D0A /* Images.xcassets */,
 				3FA0E03D1AB1F1FB00802D0A /* LaunchScreen.xib */,
 				3FA0E0321AB1F1FB00802D0A /* Supporting Files */,
 			);
@@ -120,6 +124,7 @@
 		3FA0E0321AB1F1FB00802D0A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FF399A2B1AB3526400F70316 /* Sounds */,
 				3F5E14ED1AB74E3A0067F649 /* documents-export-2015-03-16 */,
 				3FA0E0331AB1F1FB00802D0A /* Info.plist */,
 			);
@@ -161,6 +166,15 @@
 			name = ByThisTime;
 			path = WakerCentralTests;
 			sourceTree = SOURCE_ROOT;
+		};
+		3FF13AEA1AB861330098A4CD /* KeepMeAwake */ = {
+			isa = PBXGroup;
+			children = (
+				3FF13AE61AB8612F0098A4CD /* KeepMeAwakeVController.swift */,
+				3FF13AE71AB8612F0098A4CD /* KeepMeAwakeVController.xib */,
+			);
+			name = KeepMeAwake;
+			sourceTree = "<group>";
 		};
 		FF399A2B1AB3526400F70316 /* Sounds */ = {
 			isa = PBXGroup;
@@ -257,6 +271,7 @@
 				3F5E14F31AB74E3A0067F649 /* sideButton.jpg in Resources */,
 				FF399A2A1AB351DC00F70316 /* alarm.mp3 in Resources */,
 				3F5E14F41AB74E3A0067F649 /* seta back.png in Resources */,
+				3FF13AE91AB8612F0098A4CD /* KeepMeAwakeVController.xib in Resources */,
 				3FA0E0621AB3746700802D0A /* MainMenuVController.xib in Resources */,
 				FF399A281AB351DC00F70316 /* alarm_classic.mp3 in Resources */,
 				3FA0E0671AB374AB00802D0A /* ByThisTimeVController.xib in Resources */,
@@ -281,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FA0E0611AB3746700802D0A /* MainMenuVController.swift in Sources */,
+				3FF13AE81AB8612F0098A4CD /* KeepMeAwakeVController.swift in Sources */,
 				3FA0E0351AB1F1FB00802D0A /* AppDelegate.swift in Sources */,
 				3FA0E0661AB374AB00802D0A /* ByThisTimeVController.swift in Sources */,
 			);
