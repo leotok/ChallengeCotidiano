@@ -35,6 +35,9 @@
                 </label>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ig1-uQ-8rX">
                     <rect key="frame" x="276" y="132" width="51" height="31"/>
+                    <connections>
+                        <action selector="soundSwitchChanged:" destination="-1" eventType="valueChanged" id="pbi-ES-sh6"/>
+                    </connections>
                 </switch>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bmy-G5-KpM">
                     <rect key="frame" x="276" y="89" width="51" height="31"/>
@@ -66,15 +69,19 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gqp-3U-nkf">
-                    <rect key="frame" x="0.0" y="178" width="600" height="162"/>
-                </pickerView>
-                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5h-LB-sru">
-                    <rect key="frame" x="-57" y="348" width="235" height="162"/>
+                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="1" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5h-LB-sru">
+                    <rect key="frame" x="8" y="172" width="235" height="162"/>
                     <date key="date" timeIntervalSinceReferenceDate="448288860.69164598">
                         <!--2015-03-17 12:41:00 +0000-->
                     </date>
                 </datePicker>
+                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gqp-3U-nkf">
+                    <rect key="frame" x="-36" y="172" width="600" height="162"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value=""/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="cklvnd" value=""/>
+                    </userDefinedRuntimeAttributes>
+                </pickerView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="353" y="290"/>
