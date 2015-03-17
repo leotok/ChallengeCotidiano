@@ -46,7 +46,7 @@ class KeepMeAwakeVController: UIViewController {
         self.view.addSubview(startButton)
         
 
-        feedBackInterval = 
+        //feedBackInterval =
     }
 
     override func didReceiveMemoryWarning() {
