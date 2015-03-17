@@ -1,4 +1,4 @@
-//
+////
 //  KeepMeAwakeVController.swift
 //  WakerCentral
 //
@@ -14,8 +14,14 @@ class KeepMeAwakeVController: UIViewController {
     private var player: AVAudioPlayer = AVAudioPlayer()
     private var vibrate: Bool = true
     private var sound: Bool = false
+    private var feedBackTypeDic: NSMutableDictionary = NSMutableDictionary()
+    private var feedBackTypeArray: NSMutableArray = NSMutableArray()
     private var feedBackTimer: NSTimer = NSTimer()
     private var feedBackInterval: NSTimeInterval = NSTimeInterval()
+    private var waitingFeedBackInterval: NSTimeInterval = 2;
+    private var feedBackCounter: Int = 0
+    
+    
     
     
     override func viewDidLoad() {
@@ -45,24 +51,123 @@ class KeepMeAwakeVController: UIViewController {
         self.view.addSubview(cafezinConfigButton)
         self.view.addSubview(startButton)
         
+       
+        
+        
 
-        //feedBackInterval =
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        feedBackTimer = NSTimer.scheduledTimerWithTimeInterval(feedBackInterval, target:self, selector: Selector("startAlarm"),userInfo:nil, repeats: false)
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func startAlarm()
+    {
+        
+         feedBackTimer = NSTimer.scheduledTimerWithTimeInterval(waitingFeedBackInterval, target:self, selector: Selector("getFeedBack"),userInfo:nil, repeats: true)
     }
-    */
+    
+    
+    func getFeedBack()
+    {
+//       feedBackTimer.invalidate()
+        feedBackCounter++
+        
+        var numeroFeedBackEscolhido: Int = Int(arc4random()) % (feedBackTypeArray.count)
+        
+        NSLog("Wake up! Don't fall asleep!!")
+        
+        if (vibrate == true)
+        {
+            NSLog("vibrando")
+           // AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        }
+        if (sound == true)
+        {
+            player.play()
+        }
+    
+        
+        var feedBackEscolhido: String = feedBackTypeArray[numeroFeedBackEscolhido] as String
+        
+        NSLog("\(feedBackEscolhido)")
+        
+        if (feedBackEscolhido == "tap")
+        {
+            if (feedBackCounter > 0)
+            {
+                var tapFeedBack = UITapGestureRecognizer(target: self, action: Selector("didGetFeedBack:"))
+                view.addGestureRecognizer(tapFeedBack)
+            }
+        }
+    }
+    
+    
+    func didGetFeedBack (tap: UIGestureRecognizer)
+    {
+        feedBackTimer.invalidate()
+        
+        if(sound == true)
+        {
+            player.stop()
+        }
+        NSLog("Tapped")
+        view.removeGestureRecognizer(tap)
+        
+        feedBackTimer = NSTimer.scheduledTimerWithTimeInterval(feedBackInterval, target:self, selector: Selector("startAlarm"),userInfo:nil, repeats: false)
+        
+    }
+    
+    func setFeedBackTypesAndTimeInterval(fbTypes: NSMutableDictionary, timeInterval: NSTimeInterval)
+    {
+        
+        self.feedBackTypeDic = fbTypes
+        feedBackInterval = timeInterval
+        
+        if(feedBackTypeDic.objectForKey("tap") as String ==  "1")
+        {
+            feedBackTypeArray.addObject("tap")
+        }
+        if(feedBackTypeDic.objectForKey("slide") as String == "1")
+        {
+            feedBackTypeArray.addObject("slide")
+        }
+        if(feedBackTypeDic.objectForKey("wink")as String == "1")
+        {
+            feedBackTypeArray.addObject("wink")
+        }
+        if(feedBackTypeDic.objectForKey("smile")as String == "1")
+        {
+            feedBackTypeArray.addObject("smile")
+        }
+        
+    }
+    
+    func setToVibrateAndToPlaySound(soundName:String, ofType:String)
+    {
+        var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(soundName, ofType: ofType)!)
+        var error:NSError?
+        player = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
+        player.prepareToPlay()
+        sound=true
+        vibrate=true
+        
+    }
+
+    func setSoundToPlay(soundName:String, ofType: String)
+    {
+        var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(soundName, ofType: ofType)!)
+        var error: NSError?
+        player = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
+        player.prepareToPlay()
+        
+        sound = true
+        vibrate = false
+    }
+   
+    
+    func setToVibrate()
+    {
+        sound = false
+        vibrate = true
+    }
 
 }
