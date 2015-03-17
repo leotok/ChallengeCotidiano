@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ByThisTimeVController" customModule="WakerCentral" customModuleProvider="target">
             <connections>
                 <outlet property="backButton" destination="5RG-hY-CmL" id="Yid-gH-Cqz"/>
+                <outlet property="countDownLabel" destination="V0c-Ge-LRo" id="rXB-DX-gko"/>
                 <outlet property="stopButton" destination="OYP-2I-hHt" id="g84-qV-afP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -34,6 +35,12 @@
                         <action selector="stopButtonPressed:" destination="-1" eventType="touchUpInside" id="3jS-06-MjY"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CountDown" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0c-Ge-LRo">
+                    <rect key="frame" x="219" y="172" width="116" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="993" y="576"/>

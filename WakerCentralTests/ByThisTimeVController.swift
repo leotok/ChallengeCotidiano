@@ -18,11 +18,14 @@ class ByThisTimeVController: UIViewController {
     private var player:AVAudioPlayer = AVAudioPlayer();
     private var vibrate: Bool = true
     private var sound: Bool = false
-
+    private var timerUpdate: NSTimeInterval = NSTimeInterval(1)
+    private var timeNow:NSTimeInterval = NSTimeInterval(0)
+   
     @IBOutlet weak var stopButton: UIButton!
     
     @IBOutlet weak var backButton: UIButton!
     
+    @IBOutlet weak var countDownLabel: UILabel!
     
     override func viewDidLoad()
     {
@@ -48,13 +51,43 @@ class ByThisTimeVController: UIViewController {
         self.view.addSubview(startButton)
 
     
-        timeCounter = NSTimer.scheduledTimerWithTimeInterval(waitTime, target: self, selector: Selector("waitIsOver"), userInfo: nil, repeats: true)
+        
+        timeCounter = NSTimer.scheduledTimerWithTimeInterval(timerUpdate, target: self, selector: Selector("timeUpdate"), userInfo: nil, repeats: true)
+        
+        countDownLabel.text=getTimerString()
         
         println("WaitTime: \(waitTime)")
         
+        
     }
 
-    
+    private func getTimerString() ->String
+    {
+        var mins: Int;
+        var secs: Int;
+        var hours: Int;
+        var result:String;
+        var c : Int
+        
+        
+        
+        
+        
+        var time:NSTimeInterval = waitTime - timeNow
+        
+        hours = Int(time/3600)
+        mins = Int(time/60) - hours*60
+        secs = Int(time) - mins*60 - hours*3600
+        
+//        var dateFormat: NSDateFormatter = NSDateFormatter()
+//        dateFormat.setLocalizedDateFormatFromTemplate("hh:mm:ss")
+//        var date: NSDate = NSDate(timeIntervalSince1970: time)
+//        result = dateFormat.stringFromDate(date)
+//        
+        result = String(format: "%d:%d:%d", hours,mins,secs)
+        
+        return result;
+    }
     
     @IBAction func startButtonPressed(sender: UIButton)
     {
@@ -79,6 +112,21 @@ class ByThisTimeVController: UIViewController {
         self.dismissViewControllerAnimated(false, completion: nil)
     }
     //What happens when time cancels
+    func timeUpdate()
+    {
+        timeNow += timerUpdate
+        
+        if(timeNow > waitTime)
+        {
+            self.waitIsOver();
+        }
+        else
+        {
+            countDownLabel.text = getTimerString()
+        }
+        
+    }
+    
     func waitIsOver()
     {
         stopButton.enabled=true;
