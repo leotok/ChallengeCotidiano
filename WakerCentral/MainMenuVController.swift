@@ -44,8 +44,8 @@ class MainMenuVController: UIViewController, CLLocationManagerDelegate {
     }
     @IBAction func ByThisTimeButton(sender: UIButton)
     {
-        let vc = ByThisTimeVController(nibName: "ByThisTimeVController", bundle: nil)
-        vc.setToVibrate(3)
+        let vc = SetModeVController(nibName: "SetModeVController", bundle: nil)
+       
         self.presentViewController(vc, animated: false, completion: nil)
         
     }
