@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -21,40 +21,40 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vibrate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIx-8w-Im2">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Vibrate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIx-8w-Im2">
                     <rect key="frame" x="167" y="94" width="54" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sound" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGs-wc-g3P">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sound" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGs-wc-g3P">
                     <rect key="frame" x="167" y="137" width="51" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ig1-uQ-8rX">
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ig1-uQ-8rX">
                     <rect key="frame" x="276" y="132" width="51" height="31"/>
                     <connections>
                         <action selector="soundSwitchChanged:" destination="-1" eventType="valueChanged" id="pbi-ES-sh6"/>
                     </connections>
                 </switch>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bmy-G5-KpM">
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bmy-G5-KpM">
                     <rect key="frame" x="276" y="89" width="51" height="31"/>
                 </switch>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="50c-9S-HcE">
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="50c-9S-HcE">
                     <rect key="frame" x="276" y="348" width="51" height="31"/>
                 </switch>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="slide" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmL-dh-rvB">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="slide" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmL-dh-rvB">
                     <rect key="frame" x="167" y="397" width="36" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A91-bg-rrF">
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A91-bg-rrF">
                     <rect key="frame" x="276" y="397" width="51" height="31"/>
                 </switch>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dR1-Oy-Nzc">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dR1-Oy-Nzc">
                     <rect key="frame" x="285" y="515" width="30" height="30"/>
                     <state key="normal" title="OK">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -63,13 +63,13 @@
                         <action selector="okButtonPressed:" destination="-1" eventType="touchUpInside" id="Vdq-bf-Knh"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tap " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ew5-tD-hMu">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="tap " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ew5-tD-hMu">
                     <rect key="frame" x="167" y="353" width="30" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="1" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5h-LB-sru">
+                <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="1" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5h-LB-sru">
                     <rect key="frame" x="8" y="172" width="235" height="162"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="162" id="5vq-vv-J40"/>
@@ -91,7 +91,7 @@
                         </mask>
                     </variation>
                 </datePicker>
-                <pickerView contentMode="right" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gqp-3U-nkf">
+                <pickerView contentMode="right" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gqp-3U-nkf">
                     <rect key="frame" x="-36" y="172" width="600" height="162"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="148" id="dt4-tk-fg1"/>
@@ -150,6 +150,10 @@
             </constraints>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="htX-PQ-sOj"/>
+                    <exclude reference="uT5-xP-jHi"/>
+                    <exclude reference="A9p-Qy-Rb0"/>
+                    <exclude reference="Z1x-NV-IZ8"/>
                     <exclude reference="1dP-nv-9vW"/>
                     <exclude reference="YTY-uV-a4D"/>
                     <exclude reference="ZU5-uq-1OV"/>
@@ -161,26 +165,26 @@
                     <exclude reference="VPg-qO-eeD"/>
                     <exclude reference="lkJ-ew-icb"/>
                     <exclude reference="lyb-TR-Edd"/>
-                    <exclude reference="htX-PQ-sOj"/>
-                    <exclude reference="uT5-xP-jHi"/>
-                    <exclude reference="A9p-Qy-Rb0"/>
-                    <exclude reference="Z1x-NV-IZ8"/>
                     <exclude reference="OtS-VB-Xxw"/>
                     <exclude reference="ctY-26-sD1"/>
-                    <exclude reference="aER-k8-8Fc"/>
-                    <exclude reference="LD1-Nd-Fpj"/>
-                    <exclude reference="LkI-8l-Wg8"/>
-                    <exclude reference="Ysu-ji-bAF"/>
                     <exclude reference="74t-pw-sus"/>
                     <exclude reference="bcn-mY-S9e"/>
                     <exclude reference="nAv-CN-Oiu"/>
                     <exclude reference="olh-uS-614"/>
+                    <exclude reference="aER-k8-8Fc"/>
+                    <exclude reference="LD1-Nd-Fpj"/>
+                    <exclude reference="LkI-8l-Wg8"/>
+                    <exclude reference="Ysu-ji-bAF"/>
                     <exclude reference="Gb4-8x-gqP"/>
                     <exclude reference="rH6-hm-Dwv"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
                 <mask key="constraints">
+                    <include reference="htX-PQ-sOj"/>
+                    <include reference="uT5-xP-jHi"/>
+                    <include reference="A9p-Qy-Rb0"/>
+                    <include reference="Z1x-NV-IZ8"/>
                     <include reference="1dP-nv-9vW"/>
                     <include reference="YTY-uV-a4D"/>
                     <include reference="ZU5-uq-1OV"/>
@@ -192,20 +196,16 @@
                     <include reference="VPg-qO-eeD"/>
                     <include reference="lkJ-ew-icb"/>
                     <include reference="lyb-TR-Edd"/>
-                    <include reference="htX-PQ-sOj"/>
-                    <include reference="uT5-xP-jHi"/>
-                    <include reference="A9p-Qy-Rb0"/>
-                    <include reference="Z1x-NV-IZ8"/>
                     <include reference="OtS-VB-Xxw"/>
                     <include reference="ctY-26-sD1"/>
-                    <include reference="aER-k8-8Fc"/>
-                    <include reference="LD1-Nd-Fpj"/>
-                    <include reference="LkI-8l-Wg8"/>
-                    <include reference="Ysu-ji-bAF"/>
                     <include reference="74t-pw-sus"/>
                     <include reference="bcn-mY-S9e"/>
                     <include reference="nAv-CN-Oiu"/>
                     <include reference="olh-uS-614"/>
+                    <include reference="aER-k8-8Fc"/>
+                    <include reference="LD1-Nd-Fpj"/>
+                    <include reference="LkI-8l-Wg8"/>
+                    <include reference="Ysu-ji-bAF"/>
                     <include reference="Gb4-8x-gqP"/>
                     <include reference="rH6-hm-Dwv"/>
                 </mask>

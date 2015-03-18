@@ -40,13 +40,19 @@ class MainMenuVController: UIViewController, CLLocationManagerDelegate {
         self.presentViewController(kmavc, animated: false, completion: nil)
         
     }
+    
     @IBAction func ByThisTimeButton(sender: UIButton)
     {
-        let vc = SetModeVController(nibName: "SetModeVController", bundle: nil)
-       
-        self.presentViewController(vc, animated: false, completion: nil)
+        let mm2 = MainMenu2VController()
+        
+        self.presentViewController(mm2, animated: false, completion: nil)
+        
+//        let vc = SetModeVController(nibName: "SetModeVController", bundle: nil)
+//
+//        self.presentViewController(vc, animated: false, completion: nil)
         
     }
+    
     
     func locationManager(manager: CLLocationManager!,
         didChangeAuthorizationStatus status: CLAuthorizationStatus)

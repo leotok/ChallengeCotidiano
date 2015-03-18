@@ -33,6 +33,8 @@
 		3FF13B021AB9D5500098A4CD /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AFB1AB9D5500098A4CD /* cancel.png */; };
 		3FF13B031AB9D5500098A4CD /* menu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AFC1AB9D5500098A4CD /* menu2.png */; };
 		3FF13B041AB9D5500098A4CD /* NLtext.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AFD1AB9D5500098A4CD /* NLtext.png */; };
+		3FF13B071AB9E5FE0098A4CD /* MainMenu2VController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF13B051AB9E5FE0098A4CD /* MainMenu2VController.swift */; };
+		3FF13B081AB9E5FE0098A4CD /* MainMenu2VController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13B061AB9E5FE0098A4CD /* MainMenu2VController.xib */; };
 		FF399A281AB351DC00F70316 /* alarm_classic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A251AB351DC00F70316 /* alarm_classic.mp3 */; };
 		FF399A291AB351DC00F70316 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A261AB351DC00F70316 /* alarm_sound.mp3 */; };
 		FF399A2A1AB351DC00F70316 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A271AB351DC00F70316 /* alarm.mp3 */; };
@@ -81,6 +83,8 @@
 		3FF13AFB1AB9D5500098A4CD /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		3FF13AFC1AB9D5500098A4CD /* menu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu2.png; sourceTree = "<group>"; };
 		3FF13AFD1AB9D5500098A4CD /* NLtext.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NLtext.png; sourceTree = "<group>"; };
+		3FF13B051AB9E5FE0098A4CD /* MainMenu2VController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu2VController.swift; sourceTree = "<group>"; };
+		3FF13B061AB9E5FE0098A4CD /* MainMenu2VController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu2VController.xib; sourceTree = "<group>"; };
 		FF399A251AB351DC00F70316 /* alarm_classic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_classic.mp3; sourceTree = "<group>"; };
 		FF399A261AB351DC00F70316 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 		FF399A271AB351DC00F70316 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				3FA0E0341AB1F1FB00802D0A /* AppDelegate.swift */,
+				3FF13B091AB9E6030098A4CD /* MainMenu2 */,
 				FF6E10D11AB86E37008E5228 /* SetMode */,
 				3FA0E05E1AB3744A00802D0A /* MainMenu */,
 				3FF13AEA1AB861330098A4CD /* KeepMeAwake */,
@@ -231,6 +236,15 @@
 				3FF13AFD1AB9D5500098A4CD /* NLtext.png */,
 			);
 			path = "Menu II";
+			sourceTree = "<group>";
+		};
+		3FF13B091AB9E6030098A4CD /* MainMenu2 */ = {
+			isa = PBXGroup;
+			children = (
+				3FF13B051AB9E5FE0098A4CD /* MainMenu2VController.swift */,
+				3FF13B061AB9E5FE0098A4CD /* MainMenu2VController.xib */,
+			);
+			name = MainMenu2;
 			sourceTree = "<group>";
 		};
 		FF399A2B1AB3526400F70316 /* Sounds */ = {
@@ -338,6 +352,7 @@
 				3FF13AF11AB9D5460098A4CD /* info.png in Resources */,
 				3FF13B031AB9D5500098A4CD /* menu2.png in Resources */,
 				3FF13B011AB9D5500098A4CD /* buttonNL.png in Resources */,
+				3FF13B081AB9E5FE0098A4CD /* MainMenu2VController.xib in Resources */,
 				3F5E14F21AB74E3A0067F649 /* startButton.png in Resources */,
 				FF6E10D51AB87873008E5228 /* SetModeVController.xib in Resources */,
 				3FF13AFF1AB9D5500098A4CD /* BTTtext.png in Resources */,
@@ -380,6 +395,7 @@
 				3FF13AE81AB8612F0098A4CD /* KeepMeAwakeVController.swift in Sources */,
 				3FA0E0351AB1F1FB00802D0A /* AppDelegate.swift in Sources */,
 				3FA0E0661AB374AB00802D0A /* ByThisTimeVController.swift in Sources */,
+				3FF13B071AB9E5FE0098A4CD /* MainMenu2VController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
