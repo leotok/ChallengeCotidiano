@@ -43,13 +43,10 @@ class MainMenuVController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func ByThisTimeButton(sender: UIButton)
     {
-        let mm2 = MainMenu2VController()
-        
+        let mm2 = MainMenu2VController(nibName:"MainMenu2VController",bundle:nil)
+
+        self.modalPresentationStyle = UIModalPresentationStyle.OverFullScreen
         self.presentViewController(mm2, animated: false, completion: nil)
-        
-//        let vc = SetModeVController(nibName: "SetModeVController", bundle: nil)
-//
-//        self.presentViewController(vc, animated: false, completion: nil)
         
     }
     

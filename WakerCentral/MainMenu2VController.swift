@@ -13,24 +13,31 @@ class MainMenu2VController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.clearColor()
+//        var popUpMenu: UIImageView = UIImageView(image: UIImage(named: "bgmenu2"))
+//        popUpMenu.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)
+//        popUpMenu.alpha = 0.6
+//        view.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.6)
+//        
         
-        var popUpMenu: UIImageView = UIImageView(image: UIImage(named: "bgmenu2"))
-        popUpMenu.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)
-        popUpMenu.alpha = 0.8
-        
-        var cancelButton: UIButton = UIButton(frame: CGRectMake(UIScreen.mainScreen().bounds.width / 1.5, 30, 80, 30))
-        cancelButton.setImage(UIImage(named: "cancel"), forState: .Normal)
-        cancelButton.addTarget(self, action: Selector("cancelButtonAction"), forControlEvents: UIControlEvents.TouchUpInside)
-        
-        
-        view.addSubview(popUpMenu)
-        view.addSubview(cancelButton)
         
     }
 
     
-    func cancelButtonAction()
+    @IBAction func NearLocationAction(sender: UIButton)
+    {
+        
+    }
+    
+    
+    @IBAction func ByThisTimeAction(sender: UIButton)
+    {
+       let vc = SetModeVController(nibName: "SetModeVController", bundle: nil)
+       
+       self.presentViewController(vc, animated: false, completion: nil)
+        
+    }
+    
+    @IBAction func cancelButtonAction()
     {
         self.dismissViewControllerAnimated(false, completion: nil)
         

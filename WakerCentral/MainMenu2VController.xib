@@ -10,10 +10,56 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.49999999999999961" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" alpha="0.84999999999999987" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bgmenu2.png" translatesAutoresizingMaskIntoConstraints="NO" id="pKL-so-ZLa">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ag9-yS-rJ5">
+                    <rect key="frame" x="80" y="106" width="161" height="128"/>
+                    <state key="normal" title="Button" image="buttonNL.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="NearLocationAction:" destination="-1" eventType="touchUpInside" id="UoG-xr-k5J"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jA3-qK-6LB">
+                    <rect key="frame" x="80" y="306" width="161" height="128"/>
+                    <state key="normal" title="Button" image="buttonBTT.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="ByThisTimeAction:" destination="-1" eventType="touchUpInside" id="gfk-SI-yap"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BTTtext.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q2N-9K-2Ru">
+                    <rect key="frame" x="97" y="442" width="127" height="21"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NLtext.png" translatesAutoresizingMaskIntoConstraints="NO" id="6kA-IE-eIk">
+                    <rect key="frame" x="97" y="250" width="127" height="21"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQU-Mq-2cc">
+                    <rect key="frame" x="221" y="24" width="71" height="28"/>
+                    <state key="normal" image="cancel.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="cancelButtonAction" destination="-1" eventType="touchUpInside" id="D6c-OP-dIs"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
         </view>
     </objects>
+    <resources>
+        <image name="BTTtext.png" width="240" height="30"/>
+        <image name="NLtext.png" width="240" height="30"/>
+        <image name="bgmenu2.png" width="640" height="1136"/>
+        <image name="buttonBTT.png" width="252" height="221"/>
+        <image name="buttonNL.png" width="252" height="221"/>
+        <image name="cancel.png" width="100" height="35"/>
+    </resources>
 </document>
