@@ -23,7 +23,6 @@
 		3FF13AE91AB8612F0098A4CD /* KeepMeAwakeVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AE71AB8612F0098A4CD /* KeepMeAwakeVController.xib */; };
 		3FF13AF11AB9D5460098A4CD /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AEC1AB9D5460098A4CD /* info.png */; };
 		3FF13AF21AB9D5460098A4CD /* keepme.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AED1AB9D5460098A4CD /* keepme.png */; };
-		3FF13AF31AB9D5460098A4CD /* mainmenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AEE1AB9D5460098A4CD /* mainmenu.png */; };
 		3FF13AF41AB9D5460098A4CD /* titlemain.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AEF1AB9D5460098A4CD /* titlemain.png */; };
 		3FF13AF51AB9D5460098A4CD /* wakemeup.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AF01AB9D5460098A4CD /* wakemeup.png */; };
 		3FF13AFE1AB9D5500098A4CD /* bgmenu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AF71AB9D5500098A4CD /* bgmenu2.png */; };
@@ -36,6 +35,22 @@
 		3FF13B071AB9E5FE0098A4CD /* MainMenu2VController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF13B051AB9E5FE0098A4CD /* MainMenu2VController.swift */; };
 		3FF13B081AB9E5FE0098A4CD /* MainMenu2VController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13B061AB9E5FE0098A4CD /* MainMenu2VController.xib */; };
 		3FF13B0B1AB9F1FF0098A4CD /* telainicio@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13B0A1AB9F1FF0098A4CD /* telainicio@2x.png */; };
+		E52C4D3C1AB9FA970003A154 /* telainiciobg.png in Resources */ = {isa = PBXBuildFile; fileRef = E52C4D3B1AB9FA970003A154 /* telainiciobg.png */; };
+		E52C4D491AB9FDEB0003A154 /* backbt.png in Resources */ = {isa = PBXBuildFile; fileRef = E52C4D3E1AB9FDEB0003A154 /* backbt.png */; };
+		E52C4D4A1AB9FDEB0003A154 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E52C4D3F1AB9FDEB0003A154 /* bg.png */; };
+		E52C4D4B1AB9FDEB0003A154 /* maisbt.png in Resources */ = {isa = PBXBuildFile; fileRef = E52C4D401AB9FDEB0003A154 /* maisbt.png */; };
+		E52C4D4C1AB9FDEB0003A154 /* NLPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = E52C4D411AB9FDEB0003A154 /* NLPlay.png */; };
+		E52C4D4D1AB9FDEB0003A154 /* NLwake.png in Resources */ = {isa = PBXBuildFile; fileRef = E52C4D421AB9FDEB0003A154 /* NLwake.png */; };
+		E52C4D4E1AB9FDEB0003A154 /* NLwhere.png in Resources */ = {isa = PBXBuildFile; fileRef = E52C4D431AB9FDEB0003A154 /* NLwhere.png */; };
+		E52C4D4F1AB9FDEB0003A154 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = E52C4D441AB9FDEB0003A154 /* play.png */; };
+		E52C4D501AB9FDEB0003A154 /* setaback.png in Resources */ = {isa = PBXBuildFile; fileRef = E52C4D451AB9FDEB0003A154 /* setaback.png */; };
+		E52C4D511AB9FDEB0003A154 /* setalado.png in Resources */ = {isa = PBXBuildFile; fileRef = E52C4D461AB9FDEB0003A154 /* setalado.png */; };
+		E52C4D521AB9FDEB0003A154 /* wakemode.png in Resources */ = {isa = PBXBuildFile; fileRef = E52C4D471AB9FDEB0003A154 /* wakemode.png */; };
+		E52C4D531AB9FDEB0003A154 /* wheretogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E52C4D481AB9FDEB0003A154 /* wheretogo.png */; };
+		E52C4D551AB9FE730003A154 /* config.png in Resources */ = {isa = PBXBuildFile; fileRef = E52C4D541AB9FE730003A154 /* config.png */; };
+		E52C4D571AB9FF990003A154 /* configbg.png in Resources */ = {isa = PBXBuildFile; fileRef = E52C4D561AB9FF990003A154 /* configbg.png */; };
+		E52C4D5A1ABA08E00003A154 /* InfoVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52C4D581ABA08E00003A154 /* InfoVController.swift */; };
+		E52C4D5B1ABA08E00003A154 /* InfoVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52C4D591ABA08E00003A154 /* InfoVController.xib */; };
 		FF399A281AB351DC00F70316 /* alarm_classic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A251AB351DC00F70316 /* alarm_classic.mp3 */; };
 		FF399A291AB351DC00F70316 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A261AB351DC00F70316 /* alarm_sound.mp3 */; };
 		FF399A2A1AB351DC00F70316 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A271AB351DC00F70316 /* alarm.mp3 */; };
@@ -74,7 +89,6 @@
 		3FF13AE71AB8612F0098A4CD /* KeepMeAwakeVController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeepMeAwakeVController.xib; sourceTree = "<group>"; };
 		3FF13AEC1AB9D5460098A4CD /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 		3FF13AED1AB9D5460098A4CD /* keepme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keepme.png; sourceTree = "<group>"; };
-		3FF13AEE1AB9D5460098A4CD /* mainmenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainmenu.png; sourceTree = "<group>"; };
 		3FF13AEF1AB9D5460098A4CD /* titlemain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titlemain.png; sourceTree = "<group>"; };
 		3FF13AF01AB9D5460098A4CD /* wakemeup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wakemeup.png; sourceTree = "<group>"; };
 		3FF13AF71AB9D5500098A4CD /* bgmenu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgmenu2.png; sourceTree = "<group>"; };
@@ -87,6 +101,22 @@
 		3FF13B051AB9E5FE0098A4CD /* MainMenu2VController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu2VController.swift; sourceTree = "<group>"; };
 		3FF13B061AB9E5FE0098A4CD /* MainMenu2VController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu2VController.xib; sourceTree = "<group>"; };
 		3FF13B0A1AB9F1FF0098A4CD /* telainicio@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "telainicio@2x.png"; sourceTree = "<group>"; };
+		E52C4D3B1AB9FA970003A154 /* telainiciobg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = telainiciobg.png; path = ../../../../../Desktop/telainiciobg.png; sourceTree = "<group>"; };
+		E52C4D3E1AB9FDEB0003A154 /* backbt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbt.png; sourceTree = "<group>"; };
+		E52C4D3F1AB9FDEB0003A154 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		E52C4D401AB9FDEB0003A154 /* maisbt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maisbt.png; sourceTree = "<group>"; };
+		E52C4D411AB9FDEB0003A154 /* NLPlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NLPlay.png; sourceTree = "<group>"; };
+		E52C4D421AB9FDEB0003A154 /* NLwake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NLwake.png; sourceTree = "<group>"; };
+		E52C4D431AB9FDEB0003A154 /* NLwhere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NLwhere.png; sourceTree = "<group>"; };
+		E52C4D441AB9FDEB0003A154 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		E52C4D451AB9FDEB0003A154 /* setaback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setaback.png; sourceTree = "<group>"; };
+		E52C4D461AB9FDEB0003A154 /* setalado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setalado.png; sourceTree = "<group>"; };
+		E52C4D471AB9FDEB0003A154 /* wakemode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wakemode.png; sourceTree = "<group>"; };
+		E52C4D481AB9FDEB0003A154 /* wheretogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wheretogo.png; sourceTree = "<group>"; };
+		E52C4D541AB9FE730003A154 /* config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = config.png; path = ../../Desktop/config.png; sourceTree = "<group>"; };
+		E52C4D561AB9FF990003A154 /* configbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = configbg.png; path = ../../Desktop/configbg.png; sourceTree = "<group>"; };
+		E52C4D581ABA08E00003A154 /* InfoVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoVController.swift; sourceTree = "<group>"; };
+		E52C4D591ABA08E00003A154 /* InfoVController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoVController.xib; sourceTree = "<group>"; };
 		FF399A251AB351DC00F70316 /* alarm_classic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_classic.mp3; sourceTree = "<group>"; };
 		FF399A261AB351DC00F70316 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 		FF399A271AB351DC00F70316 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
@@ -145,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				3FA0E0341AB1F1FB00802D0A /* AppDelegate.swift */,
+				E52C4D5C1ABA08E40003A154 /* Info */,
 				3FF13B091AB9E6030098A4CD /* MainMenu2 */,
 				FF6E10D11AB86E37008E5228 /* SetMode */,
 				3FA0E05E1AB3744A00802D0A /* MainMenu */,
@@ -160,6 +191,7 @@
 		3FA0E0321AB1F1FB00802D0A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E52C4D3D1AB9FDEB0003A154 /* Telas - Configurações */,
 				3FF13B0A1AB9F1FF0098A4CD /* telainicio@2x.png */,
 				3FF13AF61AB9D5500098A4CD /* Menu II */,
 				3FF13AEB1AB9D5460098A4CD /* Main Menu */,
@@ -218,9 +250,9 @@
 		3FF13AEB1AB9D5460098A4CD /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
+				E52C4D3B1AB9FA970003A154 /* telainiciobg.png */,
 				3FF13AEC1AB9D5460098A4CD /* info.png */,
 				3FF13AED1AB9D5460098A4CD /* keepme.png */,
-				3FF13AEE1AB9D5460098A4CD /* mainmenu.png */,
 				3FF13AEF1AB9D5460098A4CD /* titlemain.png */,
 				3FF13AF01AB9D5460098A4CD /* wakemeup.png */,
 			);
@@ -248,6 +280,36 @@
 				3FF13B061AB9E5FE0098A4CD /* MainMenu2VController.xib */,
 			);
 			name = MainMenu2;
+			sourceTree = "<group>";
+		};
+		E52C4D3D1AB9FDEB0003A154 /* Telas - Configurações */ = {
+			isa = PBXGroup;
+			children = (
+				E52C4D561AB9FF990003A154 /* configbg.png */,
+				E52C4D541AB9FE730003A154 /* config.png */,
+				E52C4D3E1AB9FDEB0003A154 /* backbt.png */,
+				E52C4D3F1AB9FDEB0003A154 /* bg.png */,
+				E52C4D401AB9FDEB0003A154 /* maisbt.png */,
+				E52C4D411AB9FDEB0003A154 /* NLPlay.png */,
+				E52C4D421AB9FDEB0003A154 /* NLwake.png */,
+				E52C4D431AB9FDEB0003A154 /* NLwhere.png */,
+				E52C4D441AB9FDEB0003A154 /* play.png */,
+				E52C4D451AB9FDEB0003A154 /* setaback.png */,
+				E52C4D461AB9FDEB0003A154 /* setalado.png */,
+				E52C4D471AB9FDEB0003A154 /* wakemode.png */,
+				E52C4D481AB9FDEB0003A154 /* wheretogo.png */,
+			);
+			name = "Telas - Configurações";
+			path = "../../../../Downloads/Telas - Configurações";
+			sourceTree = "<group>";
+		};
+		E52C4D5C1ABA08E40003A154 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				E52C4D581ABA08E00003A154 /* InfoVController.swift */,
+				E52C4D591ABA08E00003A154 /* InfoVController.xib */,
+			);
+			name = Info;
 			sourceTree = "<group>";
 		};
 		FF399A2B1AB3526400F70316 /* Sounds */ = {
@@ -351,32 +413,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF399A291AB351DC00F70316 /* alarm_sound.mp3 in Resources */,
+				E52C4D4F1AB9FDEB0003A154 /* play.png in Resources */,
 				3FF13AF21AB9D5460098A4CD /* keepme.png in Resources */,
 				3FF13AF11AB9D5460098A4CD /* info.png in Resources */,
 				3FF13B031AB9D5500098A4CD /* menu2.png in Resources */,
 				3FF13B011AB9D5500098A4CD /* buttonNL.png in Resources */,
 				3FF13B081AB9E5FE0098A4CD /* MainMenu2VController.xib in Resources */,
+				E52C4D5B1ABA08E00003A154 /* InfoVController.xib in Resources */,
+				E52C4D4E1AB9FDEB0003A154 /* NLwhere.png in Resources */,
+				E52C4D531AB9FDEB0003A154 /* wheretogo.png in Resources */,
 				3F5E14F21AB74E3A0067F649 /* startButton.png in Resources */,
 				FF6E10D51AB87873008E5228 /* SetModeVController.xib in Resources */,
+				E52C4D521AB9FDEB0003A154 /* wakemode.png in Resources */,
 				3FF13AFF1AB9D5500098A4CD /* BTTtext.png in Resources */,
 				3FF13AF41AB9D5460098A4CD /* titlemain.png in Resources */,
 				3F5E14F31AB74E3A0067F649 /* sideButton.jpg in Resources */,
+				E52C4D3C1AB9FA970003A154 /* telainiciobg.png in Resources */,
+				E52C4D491AB9FDEB0003A154 /* backbt.png in Resources */,
+				E52C4D551AB9FE730003A154 /* config.png in Resources */,
 				FF399A2A1AB351DC00F70316 /* alarm.mp3 in Resources */,
+				E52C4D4C1AB9FDEB0003A154 /* NLPlay.png in Resources */,
 				3F5E14F41AB74E3A0067F649 /* seta back.png in Resources */,
 				3FF13B041AB9D5500098A4CD /* NLtext.png in Resources */,
+				E52C4D571AB9FF990003A154 /* configbg.png in Resources */,
 				3FF13AFE1AB9D5500098A4CD /* bgmenu2.png in Resources */,
 				3FF13AE91AB8612F0098A4CD /* KeepMeAwakeVController.xib in Resources */,
-				3FF13AF31AB9D5460098A4CD /* mainmenu.png in Resources */,
 				3FF13B021AB9D5500098A4CD /* cancel.png in Resources */,
+				E52C4D501AB9FDEB0003A154 /* setaback.png in Resources */,
 				3FA0E0621AB3746700802D0A /* MainMenuVController.xib in Resources */,
+				E52C4D511AB9FDEB0003A154 /* setalado.png in Resources */,
 				3FF13AF51AB9D5460098A4CD /* wakemeup.png in Resources */,
+				E52C4D4B1AB9FDEB0003A154 /* maisbt.png in Resources */,
 				3FF13B0B1AB9F1FF0098A4CD /* telainicio@2x.png in Resources */,
+				E52C4D4A1AB9FDEB0003A154 /* bg.png in Resources */,
 				FF399A281AB351DC00F70316 /* alarm_classic.mp3 in Resources */,
 				3FF13B001AB9D5500098A4CD /* buttonBTT.png in Resources */,
 				3FA0E0671AB374AB00802D0A /* ByThisTimeVController.xib in Resources */,
 				3FA0E03F1AB1F1FB00802D0A /* LaunchScreen.xib in Resources */,
 				3FA0E03C1AB1F1FB00802D0A /* Images.xcassets in Resources */,
 				3F5E14F51AB74E3A0067F649 /* seta pra baixo.png in Resources */,
+				E52C4D4D1AB9FDEB0003A154 /* NLwake.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +472,7 @@
 			files = (
 				FF6E10D41AB87873008E5228 /* SetModeVController.swift in Sources */,
 				3FA0E0611AB3746700802D0A /* MainMenuVController.swift in Sources */,
+				E52C4D5A1ABA08E00003A154 /* InfoVController.swift in Sources */,
 				3FF13AE81AB8612F0098A4CD /* KeepMeAwakeVController.swift in Sources */,
 				3FA0E0351AB1F1FB00802D0A /* AppDelegate.swift in Sources */,
 				3FA0E0661AB374AB00802D0A /* ByThisTimeVController.swift in Sources */,

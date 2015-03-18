@@ -16,6 +16,14 @@ class InfoVController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func cancel2(sender: UIButton) {
+        
+
+        self.dismissViewControllerAnimated(false, completion: nil)
+        
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
