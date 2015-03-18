@@ -67,6 +67,7 @@ class ByThisTimeVController: UIViewController {
         var secs: Int;
         var hours: Int;
         var result:String;
+        
         var c : Int
         
         
@@ -83,8 +84,25 @@ class ByThisTimeVController: UIViewController {
 //        dateFormat.setLocalizedDateFormatFromTemplate("hh:mm:ss")
 //        var date: NSDate = NSDate(timeIntervalSince1970: time)
 //        result = dateFormat.stringFromDate(date)
-//        
-        result = String(format: "%d:%d:%d", hours,mins,secs)
+        var hS: String = "%d";
+        var sS: String = "%d";
+        var mS: String = "%d";
+        
+        if(secs<10)
+        {
+            sS="0%d"
+        }
+        if(mins<10)
+        {
+            mS="0%d"
+        }
+        if(hours<10)
+        {
+            hS="0%d"
+        }
+        var formatS: String = hS + ":" + mS + ":" + sS
+        
+        result = String(format: formatS, hours,mins,secs)
         
         return result;
     }
