@@ -46,10 +46,17 @@ class MainMenuVController: UIViewController, CLLocationManagerDelegate {
         let mm2 = MainMenu2VController(nibName:"MainMenu2VController",bundle:nil)
 
         self.modalPresentationStyle = UIModalPresentationStyle.OverFullScreen
-        self.presentViewController(mm2, animated: false, completion: nil)
+        self.presentViewController(mm2, animated: true, completion: nil)
         
     }
     
+    @IBAction func InfoButton(sender: UIButton) {
+        
+        let info = InfoVController(nibName: "InfoVController", bundle: nil)
+        self.modalPresentationStyle = UIModalPresentationStyle.Popover
+        self.presentViewController(info, animated: true, completion: nil)
+        
+    }
     
     func locationManager(manager: CLLocationManager!,
         didChangeAuthorizationStatus status: CLAuthorizationStatus)
