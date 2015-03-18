@@ -35,7 +35,6 @@
 		3FF13B071AB9E5FE0098A4CD /* MainMenu2VController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF13B051AB9E5FE0098A4CD /* MainMenu2VController.swift */; };
 		3FF13B081AB9E5FE0098A4CD /* MainMenu2VController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13B061AB9E5FE0098A4CD /* MainMenu2VController.xib */; };
 		3FF13B0B1AB9F1FF0098A4CD /* telainicio@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13B0A1AB9F1FF0098A4CD /* telainicio@2x.png */; };
-		E52C4D3C1AB9FA970003A154 /* telainiciobg.png in Resources */ = {isa = PBXBuildFile; fileRef = E52C4D3B1AB9FA970003A154 /* telainiciobg.png */; };
 		E52C4D5A1ABA08E00003A154 /* InfoVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52C4D581ABA08E00003A154 /* InfoVController.swift */; };
 		E52C4D5B1ABA08E00003A154 /* InfoVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52C4D591ABA08E00003A154 /* InfoVController.xib */; };
 		E5CE82991ABA283700C52DB6 /* backbt.png in Resources */ = {isa = PBXBuildFile; fileRef = E5CE828E1ABA283600C52DB6 /* backbt.png */; };
@@ -49,6 +48,7 @@
 		E5CE82A11ABA283700C52DB6 /* setalado.png in Resources */ = {isa = PBXBuildFile; fileRef = E5CE82961ABA283700C52DB6 /* setalado.png */; };
 		E5CE82A21ABA283700C52DB6 /* wakemode.png in Resources */ = {isa = PBXBuildFile; fileRef = E5CE82971ABA283700C52DB6 /* wakemode.png */; };
 		E5CE82A31ABA283700C52DB6 /* wheretogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E5CE82981ABA283700C52DB6 /* wheretogo.png */; };
+		E5CE82A51ABA294400C52DB6 /* telainiciobg.png in Resources */ = {isa = PBXBuildFile; fileRef = E5CE82A41ABA294400C52DB6 /* telainiciobg.png */; };
 		FF399A281AB351DC00F70316 /* alarm_classic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A251AB351DC00F70316 /* alarm_classic.mp3 */; };
 		FF399A291AB351DC00F70316 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A261AB351DC00F70316 /* alarm_sound.mp3 */; };
 		FF399A2A1AB351DC00F70316 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A271AB351DC00F70316 /* alarm.mp3 */; };
@@ -99,7 +99,6 @@
 		3FF13B051AB9E5FE0098A4CD /* MainMenu2VController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu2VController.swift; sourceTree = "<group>"; };
 		3FF13B061AB9E5FE0098A4CD /* MainMenu2VController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu2VController.xib; sourceTree = "<group>"; };
 		3FF13B0A1AB9F1FF0098A4CD /* telainicio@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "telainicio@2x.png"; sourceTree = "<group>"; };
-		E52C4D3B1AB9FA970003A154 /* telainiciobg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = telainiciobg.png; path = ../../../../../Desktop/telainiciobg.png; sourceTree = "<group>"; };
 		E52C4D581ABA08E00003A154 /* InfoVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoVController.swift; sourceTree = "<group>"; };
 		E52C4D591ABA08E00003A154 /* InfoVController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoVController.xib; sourceTree = "<group>"; };
 		E5CE828E1ABA283600C52DB6 /* backbt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbt.png; sourceTree = "<group>"; };
@@ -113,6 +112,7 @@
 		E5CE82961ABA283700C52DB6 /* setalado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setalado.png; sourceTree = "<group>"; };
 		E5CE82971ABA283700C52DB6 /* wakemode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wakemode.png; sourceTree = "<group>"; };
 		E5CE82981ABA283700C52DB6 /* wheretogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wheretogo.png; sourceTree = "<group>"; };
+		E5CE82A41ABA294400C52DB6 /* telainiciobg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = telainiciobg.png; sourceTree = "<group>"; };
 		FF399A251AB351DC00F70316 /* alarm_classic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_classic.mp3; sourceTree = "<group>"; };
 		FF399A261AB351DC00F70316 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 		FF399A271AB351DC00F70316 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
@@ -246,7 +246,7 @@
 		3FF13AEB1AB9D5460098A4CD /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
-				E52C4D3B1AB9FA970003A154 /* telainiciobg.png */,
+				E5CE82A41ABA294400C52DB6 /* telainiciobg.png */,
 				3FF13AEC1AB9D5460098A4CD /* info.png */,
 				3FF13AED1AB9D5460098A4CD /* keepme.png */,
 				3FF13AEF1AB9D5460098A4CD /* titlemain.png */,
@@ -420,7 +420,7 @@
 				E5CE82A31ABA283700C52DB6 /* wheretogo.png in Resources */,
 				3FF13AF41AB9D5460098A4CD /* titlemain.png in Resources */,
 				3F5E14F31AB74E3A0067F649 /* sideButton.jpg in Resources */,
-				E52C4D3C1AB9FA970003A154 /* telainiciobg.png in Resources */,
+				E5CE82A51ABA294400C52DB6 /* telainiciobg.png in Resources */,
 				E5CE829C1ABA283700C52DB6 /* NLPlay.png in Resources */,
 				E5CE829D1ABA283700C52DB6 /* NLwake.png in Resources */,
 				FF399A2A1AB351DC00F70316 /* alarm.mp3 in Resources */,
