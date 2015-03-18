@@ -17,8 +17,12 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RG-hY-CmL">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RG-hY-CmL">
                     <rect key="frame" x="31" y="21" width="35" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="n04-Ul-Gk4"/>
+                        <constraint firstAttribute="height" constant="30" id="pZM-fH-noh"/>
+                    </constraints>
                     <state key="normal" backgroundImage="seta back.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -26,8 +30,8 @@
                         <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="1iw-T9-qgX"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYP-2I-hHt">
-                    <rect key="frame" x="249" y="225" width="33" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYP-2I-hHt">
+                    <rect key="frame" x="283" y="259" width="33" height="30"/>
                     <state key="normal" title="Stop">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -35,14 +39,26 @@
                         <action selector="stopButtonPressed:" destination="-1" eventType="touchUpInside" id="3jS-06-MjY"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CountDown" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0c-Ge-LRo">
-                    <rect key="frame" x="219" y="172" width="116" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CountDown" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0c-Ge-LRo">
+                    <rect key="frame" x="214" y="172" width="172" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="172" id="atB-0P-s50"/>
+                        <constraint firstAttribute="height" constant="55" id="bin-e8-E1F"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <color key="textColor" red="0.8784313725490196" green="0.58431372549019611" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="V0c-Ge-LRo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="172" id="5Nl-Re-Yp8"/>
+                <constraint firstItem="5RG-hY-CmL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="31" id="BNg-Xo-ZQV"/>
+                <constraint firstItem="5RG-hY-CmL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="21" id="EYa-17-ZXI"/>
+                <constraint firstItem="OYP-2I-hHt" firstAttribute="top" secondItem="V0c-Ge-LRo" secondAttribute="bottom" constant="32" id="IYm-Nl-kSS"/>
+                <constraint firstAttribute="centerX" secondItem="V0c-Ge-LRo" secondAttribute="centerX" id="doB-wb-UFW"/>
+                <constraint firstAttribute="centerX" secondItem="OYP-2I-hHt" secondAttribute="centerX" id="oGG-df-zlb"/>
+            </constraints>
             <point key="canvasLocation" x="993" y="576"/>
         </view>
         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="h0p-4c-jOy">
