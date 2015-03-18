@@ -22,7 +22,8 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
     
     var soundArray: [String] = ["alarm_classic","alarm_sound","alarm"]
     
-    @IBOutlet weak var okButton: UIButton!
+   @IBOutlet weak var okButton: UIButton!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -61,6 +62,14 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func backMenu2(sender: UIButton) {
+        
+        self.dismissViewControllerAnimated(false, completion: nil)
+        
+    }
+    
+
     
     @IBAction func okButtonPressed(sender: UIButton) {
         let vc = ByThisTimeVController(nibName: "ByThisTimeVController", bundle: nil)
