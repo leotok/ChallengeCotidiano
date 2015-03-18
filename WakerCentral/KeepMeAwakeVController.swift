@@ -24,6 +24,7 @@ class KeepMeAwakeVController: UIViewController {
     
     
     @IBAction func backMenu(sender: UIButton) {
+        feedBackTimer.invalidate() // Stops Timer Loop when leaves this Screen
         self.dismissViewControllerAnimated(false, completion: nil)
     
     }
