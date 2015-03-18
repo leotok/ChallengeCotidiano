@@ -21,6 +21,18 @@
 		3FA0E0671AB374AB00802D0A /* ByThisTimeVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA0E0651AB374AB00802D0A /* ByThisTimeVController.xib */; };
 		3FF13AE81AB8612F0098A4CD /* KeepMeAwakeVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF13AE61AB8612F0098A4CD /* KeepMeAwakeVController.swift */; };
 		3FF13AE91AB8612F0098A4CD /* KeepMeAwakeVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AE71AB8612F0098A4CD /* KeepMeAwakeVController.xib */; };
+		3FF13AF11AB9D5460098A4CD /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AEC1AB9D5460098A4CD /* info.png */; };
+		3FF13AF21AB9D5460098A4CD /* keepme.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AED1AB9D5460098A4CD /* keepme.png */; };
+		3FF13AF31AB9D5460098A4CD /* mainmenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AEE1AB9D5460098A4CD /* mainmenu.png */; };
+		3FF13AF41AB9D5460098A4CD /* titlemain.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AEF1AB9D5460098A4CD /* titlemain.png */; };
+		3FF13AF51AB9D5460098A4CD /* wakemeup.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AF01AB9D5460098A4CD /* wakemeup.png */; };
+		3FF13AFE1AB9D5500098A4CD /* bgmenu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AF71AB9D5500098A4CD /* bgmenu2.png */; };
+		3FF13AFF1AB9D5500098A4CD /* BTTtext.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AF81AB9D5500098A4CD /* BTTtext.png */; };
+		3FF13B001AB9D5500098A4CD /* buttonBTT.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AF91AB9D5500098A4CD /* buttonBTT.png */; };
+		3FF13B011AB9D5500098A4CD /* buttonNL.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AFA1AB9D5500098A4CD /* buttonNL.png */; };
+		3FF13B021AB9D5500098A4CD /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AFB1AB9D5500098A4CD /* cancel.png */; };
+		3FF13B031AB9D5500098A4CD /* menu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AFC1AB9D5500098A4CD /* menu2.png */; };
+		3FF13B041AB9D5500098A4CD /* NLtext.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AFD1AB9D5500098A4CD /* NLtext.png */; };
 		FF399A281AB351DC00F70316 /* alarm_classic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A251AB351DC00F70316 /* alarm_classic.mp3 */; };
 		FF399A291AB351DC00F70316 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A261AB351DC00F70316 /* alarm_sound.mp3 */; };
 		FF399A2A1AB351DC00F70316 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A271AB351DC00F70316 /* alarm.mp3 */; };
@@ -57,6 +69,18 @@
 		3FA0E0651AB374AB00802D0A /* ByThisTimeVController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ByThisTimeVController.xib; sourceTree = "<group>"; };
 		3FF13AE61AB8612F0098A4CD /* KeepMeAwakeVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeepMeAwakeVController.swift; sourceTree = "<group>"; };
 		3FF13AE71AB8612F0098A4CD /* KeepMeAwakeVController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeepMeAwakeVController.xib; sourceTree = "<group>"; };
+		3FF13AEC1AB9D5460098A4CD /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		3FF13AED1AB9D5460098A4CD /* keepme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keepme.png; sourceTree = "<group>"; };
+		3FF13AEE1AB9D5460098A4CD /* mainmenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainmenu.png; sourceTree = "<group>"; };
+		3FF13AEF1AB9D5460098A4CD /* titlemain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titlemain.png; sourceTree = "<group>"; };
+		3FF13AF01AB9D5460098A4CD /* wakemeup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wakemeup.png; sourceTree = "<group>"; };
+		3FF13AF71AB9D5500098A4CD /* bgmenu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgmenu2.png; sourceTree = "<group>"; };
+		3FF13AF81AB9D5500098A4CD /* BTTtext.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BTTtext.png; sourceTree = "<group>"; };
+		3FF13AF91AB9D5500098A4CD /* buttonBTT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonBTT.png; sourceTree = "<group>"; };
+		3FF13AFA1AB9D5500098A4CD /* buttonNL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonNL.png; sourceTree = "<group>"; };
+		3FF13AFB1AB9D5500098A4CD /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
+		3FF13AFC1AB9D5500098A4CD /* menu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu2.png; sourceTree = "<group>"; };
+		3FF13AFD1AB9D5500098A4CD /* NLtext.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NLtext.png; sourceTree = "<group>"; };
 		FF399A251AB351DC00F70316 /* alarm_classic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_classic.mp3; sourceTree = "<group>"; };
 		FF399A261AB351DC00F70316 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 		FF399A271AB351DC00F70316 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
@@ -129,6 +153,8 @@
 		3FA0E0321AB1F1FB00802D0A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3FF13AF61AB9D5500098A4CD /* Menu II */,
+				3FF13AEB1AB9D5460098A4CD /* Main Menu */,
 				FF399A2B1AB3526400F70316 /* Sounds */,
 				3F5E14ED1AB74E3A0067F649 /* documents-export-2015-03-16 */,
 				3FA0E0331AB1F1FB00802D0A /* Info.plist */,
@@ -179,6 +205,32 @@
 				3FF13AE71AB8612F0098A4CD /* KeepMeAwakeVController.xib */,
 			);
 			name = KeepMeAwake;
+			sourceTree = "<group>";
+		};
+		3FF13AEB1AB9D5460098A4CD /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				3FF13AEC1AB9D5460098A4CD /* info.png */,
+				3FF13AED1AB9D5460098A4CD /* keepme.png */,
+				3FF13AEE1AB9D5460098A4CD /* mainmenu.png */,
+				3FF13AEF1AB9D5460098A4CD /* titlemain.png */,
+				3FF13AF01AB9D5460098A4CD /* wakemeup.png */,
+			);
+			path = "Main Menu";
+			sourceTree = "<group>";
+		};
+		3FF13AF61AB9D5500098A4CD /* Menu II */ = {
+			isa = PBXGroup;
+			children = (
+				3FF13AF71AB9D5500098A4CD /* bgmenu2.png */,
+				3FF13AF81AB9D5500098A4CD /* BTTtext.png */,
+				3FF13AF91AB9D5500098A4CD /* buttonBTT.png */,
+				3FF13AFA1AB9D5500098A4CD /* buttonNL.png */,
+				3FF13AFB1AB9D5500098A4CD /* cancel.png */,
+				3FF13AFC1AB9D5500098A4CD /* menu2.png */,
+				3FF13AFD1AB9D5500098A4CD /* NLtext.png */,
+			);
+			path = "Menu II";
 			sourceTree = "<group>";
 		};
 		FF399A2B1AB3526400F70316 /* Sounds */ = {
@@ -282,14 +334,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF399A291AB351DC00F70316 /* alarm_sound.mp3 in Resources */,
+				3FF13AF21AB9D5460098A4CD /* keepme.png in Resources */,
+				3FF13AF11AB9D5460098A4CD /* info.png in Resources */,
+				3FF13B031AB9D5500098A4CD /* menu2.png in Resources */,
+				3FF13B011AB9D5500098A4CD /* buttonNL.png in Resources */,
 				3F5E14F21AB74E3A0067F649 /* startButton.png in Resources */,
 				FF6E10D51AB87873008E5228 /* SetModeVController.xib in Resources */,
+				3FF13AFF1AB9D5500098A4CD /* BTTtext.png in Resources */,
+				3FF13AF41AB9D5460098A4CD /* titlemain.png in Resources */,
 				3F5E14F31AB74E3A0067F649 /* sideButton.jpg in Resources */,
 				FF399A2A1AB351DC00F70316 /* alarm.mp3 in Resources */,
 				3F5E14F41AB74E3A0067F649 /* seta back.png in Resources */,
+				3FF13B041AB9D5500098A4CD /* NLtext.png in Resources */,
+				3FF13AFE1AB9D5500098A4CD /* bgmenu2.png in Resources */,
 				3FF13AE91AB8612F0098A4CD /* KeepMeAwakeVController.xib in Resources */,
+				3FF13AF31AB9D5460098A4CD /* mainmenu.png in Resources */,
+				3FF13B021AB9D5500098A4CD /* cancel.png in Resources */,
 				3FA0E0621AB3746700802D0A /* MainMenuVController.xib in Resources */,
+				3FF13AF51AB9D5460098A4CD /* wakemeup.png in Resources */,
 				FF399A281AB351DC00F70316 /* alarm_classic.mp3 in Resources */,
+				3FF13B001AB9D5500098A4CD /* buttonBTT.png in Resources */,
 				3FA0E0671AB374AB00802D0A /* ByThisTimeVController.xib in Resources */,
 				3FA0E03F1AB1F1FB00802D0A /* LaunchScreen.xib in Resources */,
 				3FA0E03C1AB1F1FB00802D0A /* Images.xcassets in Resources */,

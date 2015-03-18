@@ -18,12 +18,10 @@ class MainMenuVController: UIViewController, CLLocationManagerDelegate {
     {
         super.viewDidLoad()
         
-        
         locationManager.delegate=self;
         locationManager.desiredAccuracy=kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        
         
         
     }
@@ -115,14 +113,7 @@ class MainMenuVController: UIViewController, CLLocationManagerDelegate {
         println(placemark.administrativeArea)
         println(placemark.country)
     }
-    
-    
-    //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-    //        if segue.identifier == "ToByThisTimeSegue"{
-    //            let vc = segue.destinationViewController as ByThisTimeController
-    //            vc.waitTime=2;
-    //        }
-    //    }
+
     
     
 }
