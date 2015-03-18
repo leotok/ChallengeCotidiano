@@ -23,6 +23,10 @@ class KeepMeAwakeVController: UIViewController {
     
     
     
+    @IBAction func backMenu(sender: UIButton) {
+        self.dismissViewControllerAnimated(false, completion: nil)
+    
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,9 +56,6 @@ class KeepMeAwakeVController: UIViewController {
         self.view.addSubview(startButton)
         
        
-        
-        
-
         feedBackTimer = NSTimer.scheduledTimerWithTimeInterval(feedBackInterval, target:self, selector: Selector("startAlarm"),userInfo:nil, repeats: false)
         
     }
