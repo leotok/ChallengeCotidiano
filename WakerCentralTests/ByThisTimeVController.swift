@@ -47,8 +47,8 @@ class ByThisTimeVController: UIViewController {
         whereToButton.frame = CGRectMake(0, self.view.frame.height - 50, 200, 200)
         //whereToButton.addTarget(self, action: "whereTobuttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         
-        self.view.addSubview(whereToButton)
-        self.view.addSubview(startButton)
+       // self.view.addSubview(whereToButton)
+        //self.view.addSubview(startButton)
 
     
         
