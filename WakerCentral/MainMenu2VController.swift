@@ -25,8 +25,9 @@ class MainMenu2VController: UIViewController {
     
     @IBAction func NearLocationAction(sender: UIButton)
     {
-        let vc = NearLocationVController(nibName: "NearLocationVController", bundle: nil)
-        
+        //let vc = NearLocationVController(nibName: "NearLocationVController", bundle: nil)
+        let vc = SetModeVController()
+        vc.setViewControllerToPresent(SetModeVController.viewControllers.NearLocationVController)
         self.presentViewController(vc, animated: false, completion: nil)
         
     }
@@ -34,9 +35,9 @@ class MainMenu2VController: UIViewController {
     
     @IBAction func ByThisTimeAction(sender: UIButton)
     {
-       let vc = SetModeVController(nibName: "SetModeVController", bundle: nil)
-       
-       self.presentViewController(vc, animated: false, completion: nil)
+        let vc = SetModeVController()
+        vc.setViewControllerToPresent(SetModeVController.viewControllers.ByThisTimeVController)
+        self.presentViewController(vc, animated: false, completion: nil)
         
     }
     
