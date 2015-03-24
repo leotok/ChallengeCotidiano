@@ -53,6 +53,8 @@
 		FF399A281AB351DC00F70316 /* alarm_classic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A251AB351DC00F70316 /* alarm_classic.mp3 */; };
 		FF399A291AB351DC00F70316 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A261AB351DC00F70316 /* alarm_sound.mp3 */; };
 		FF399A2A1AB351DC00F70316 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A271AB351DC00F70316 /* alarm.mp3 */; };
+		FF54CA0E1AC194C0008560ED /* NearLocationVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54CA0C1AC194C0008560ED /* NearLocationVController.swift */; };
+		FF54CA0F1AC194C0008560ED /* NearLocationVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF54CA0D1AC194C0008560ED /* NearLocationVController.xib */; };
 		FF6E10D41AB87873008E5228 /* SetModeVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6E10D21AB87873008E5228 /* SetModeVController.swift */; };
 		FF6E10D51AB87873008E5228 /* SetModeVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF6E10D31AB87873008E5228 /* SetModeVController.xib */; };
 /* End PBXBuildFile section */
@@ -118,6 +120,8 @@
 		FF399A251AB351DC00F70316 /* alarm_classic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_classic.mp3; sourceTree = "<group>"; };
 		FF399A261AB351DC00F70316 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 		FF399A271AB351DC00F70316 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
+		FF54CA0C1AC194C0008560ED /* NearLocationVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearLocationVController.swift; sourceTree = "<group>"; };
+		FF54CA0D1AC194C0008560ED /* NearLocationVController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearLocationVController.xib; sourceTree = "<group>"; };
 		FF6E10D21AB87873008E5228 /* SetModeVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetModeVController.swift; sourceTree = "<group>"; };
 		FF6E10D31AB87873008E5228 /* SetModeVController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetModeVController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,6 +182,7 @@
 				FF6E10D11AB86E37008E5228 /* SetMode */,
 				3FA0E05E1AB3744A00802D0A /* MainMenu */,
 				3FF13AEA1AB861330098A4CD /* KeepMeAwake */,
+				FF54CA0B1AC19482008560ED /* NearLocation */,
 				3FA0E0631AB3747C00802D0A /* ByThisTime */,
 				3FA0E03B1AB1F1FB00802D0A /* Images.xcassets */,
 				3FA0E03D1AB1F1FB00802D0A /* LaunchScreen.xib */,
@@ -318,6 +323,15 @@
 			name = Sounds;
 			sourceTree = "<group>";
 		};
+		FF54CA0B1AC19482008560ED /* NearLocation */ = {
+			isa = PBXGroup;
+			children = (
+				FF54CA0C1AC194C0008560ED /* NearLocationVController.swift */,
+				FF54CA0D1AC194C0008560ED /* NearLocationVController.xib */,
+			);
+			name = NearLocation;
+			sourceTree = "<group>";
+		};
 		FF6E10D11AB86E37008E5228 /* SetMode */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,6 +437,7 @@
 				E5CE82A31ABA283700C52DB6 /* wheretogo.png in Resources */,
 				3FF13AF41AB9D5460098A4CD /* titlemain.png in Resources */,
 				3F5E14F31AB74E3A0067F649 /* sideButton.jpg in Resources */,
+				FF54CA0F1AC194C0008560ED /* NearLocationVController.xib in Resources */,
 				E5CE82A51ABA294400C52DB6 /* telainiciobg.png in Resources */,
 				E5CE829C1ABA283700C52DB6 /* NLPlay.png in Resources */,
 				E5CE829D1ABA283700C52DB6 /* NLwake.png in Resources */,
@@ -466,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF6E10D41AB87873008E5228 /* SetModeVController.swift in Sources */,
+				FF54CA0E1AC194C0008560ED /* NearLocationVController.swift in Sources */,
 				3FA0E0611AB3746700802D0A /* MainMenuVController.swift in Sources */,
 				E52C4D5A1ABA08E00003A154 /* InfoVController.swift in Sources */,
 				3FF13AE81AB8612F0098A4CD /* KeepMeAwakeVController.swift in Sources */,

@@ -25,6 +25,9 @@ class MainMenu2VController: UIViewController {
     
     @IBAction func NearLocationAction(sender: UIButton)
     {
+        let vc = NearLocationVController(nibName: "NearLocationVController", bundle: nil)
+        
+        self.presentViewController(vc, animated: false, completion: nil)
         
     }
     
