@@ -53,6 +53,8 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         
         backgroundImage.image = UIImage(named: "configbg.png")
         
+        // buttons
+        
         leftButton.setImage(UIImage(named: "wheretogo"), forState: UIControlState.Normal)
         rightButton.setImage(UIImage(named: "wakemode"), forState: UIControlState.Normal)
         okButton.setImage(UIImage(named: "play"), forState: UIControlState.Normal)
@@ -64,16 +66,22 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         rightButton.addTarget(self, action: Selector("leftRightButtons:"), forControlEvents: UIControlEvents.TouchUpInside)
         rightButton.tag = 1
         
+        soundSwitch.addTarget(self, action: Selector("soundSwitchChanged:"), forControlEvents: UIControlEvents.TouchUpInside)
+        
+        // labels
         
         vibrateLabel.text = "Vibrate"
         soundLabel.text = "Sound"
         tapLabel.text = "Tap"
         slideLabel.text = "Slide"
         
-        soundSwitch.addTarget(self, action: Selector("soundSwitchChanged:"), forControlEvents: UIControlEvents.TouchUpInside)
+        // pickers
         
         timePicker.frame = CGRectMake(60, 290, 200, 162.0)
         timePicker.datePickerMode = UIDatePickerMode.CountDownTimer
+        
+        
+        // adiciona os elementos na tela
         
         view.addSubview(backgroundImage)
         view.addSubview(leftButton)
@@ -92,8 +100,10 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         view.addSubview(slideLabel)
         
         view.addSubview(soundPicker)
-        view.addSubview(timePicker)
+        
        
+        
+        // seta os elementos na config default
         
         vibrateSwitch.on=true
         soundSwitch.on=false
@@ -106,10 +116,15 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
             soundPicker.hidden=true
         }
         
+        
+        //condicoes diferentes pra cada parametro de chamada da classe
+        
         switch vcToPresent
         {
+            
         case .ByThisTimeVController:
         
+            view.addSubview(timePicker)
             NSLog("oi")
         
         case .KeepMeAwakeVController:
