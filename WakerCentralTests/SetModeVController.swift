@@ -221,6 +221,49 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
     
     func okButtonPressed(sender: UIButton)
     {
+        
+        //configuracoes de wakemode's a serem mandadas para o viewcontroller chamado, falta implementar para alguns
+        if( !tapSwitch.on && !slideSwitch.on )
+        {
+            NSLog("Escolha pelo menos um tipo de feedback")
+            return
+        }
+        var feedBackDic: NSMutableDictionary = NSMutableDictionary()
+        if(tapSwitch.on)
+        {
+            feedBackDic.setValue("1", forKey: "tap")
+        }
+        else
+        {
+            feedBackDic.setValue("0", forKey: "tap")
+        }
+        if(slideSwitch.on)
+        {
+            feedBackDic.setValue("1", forKey: "slide")
+        }
+        else
+        {
+            feedBackDic.setValue("0", forKey: "slide")
+        }
+        // if(winkSwitch.on)
+        if(false)                                               // temporario! ainda nao existe essa opcao entao sempre será 0
+        {
+            feedBackDic.setValue("1", forKey: "wink")
+        }
+        else
+        {
+            feedBackDic.setValue("0", forKey: "wink")
+        }
+        //if(smileSwitch.on)
+        if(false)                                               // temporario!
+        {
+            feedBackDic.setValue("1", forKey: "smile")
+        }
+        else
+        {
+            feedBackDic.setValue("0", forKey: "smile")
+        }
+        
         switch vcToPresent
         {
             case .ByThisTimeVController:
@@ -257,12 +300,6 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
                 self.presentViewController(vc, animated: false, completion: nil)
                 
             case .KeepMeAwakeVController:
-                
-                var feedBackDic: NSMutableDictionary = NSMutableDictionary()
-                feedBackDic.setValue("1", forKey: "tap")
-                feedBackDic.setValue("0", forKey: "slide")
-                feedBackDic.setValue("0", forKey: "wink")
-                feedBackDic.setValue("0", forKey: "smile")
                 
                 let kmavc = KeepMeAwakeVController(nibName: "KeepMeAwakeVController", bundle: nil)
                 kmavc.setToVibrate()
