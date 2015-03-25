@@ -23,39 +23,16 @@ class KeepMeAwakeVController: UIViewController {
     
     
     
-    @IBAction func backMenu(sender: UIButton) {
+    @IBAction func backMenu(sender: UIButton)
+    {
         feedBackTimer.invalidate() // Stops Timer Loop when leaves this Screen
         self.dismissViewControllerAnimated(false, completion: nil)
     
     }
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
-        let startButton   = UIButton()
-        startButton.setImage(UIImage(named: "startButton"), forState: .Normal)
-        startButton.frame = CGRectMake(0, 0, 200, 200)
-        startButton.center = CGPointMake(self.view.frame.width/3.2, self.view.frame.height + 20)
-        startButton.setTitle("Start", forState: .Normal)
-       // startButton.addTarget(self, action: "startbuttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
-        
-        let wakeModeButton   = UIButton()
-        wakeModeButton.setImage(UIImage(named: "sideButton.jpg"), forState: .Normal)
-        //wakeModeButton.setTitle("Where To?", forState: .Normal)
-        wakeModeButton.frame = CGRectMake(0, self.view.frame.height - 50, 200, 200)
-        //wakeModeButton.addTarget(self, action: "whereTobuttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
-        
-
-        let cafezinConfigButton   = UIButton()
-        cafezinConfigButton.setImage(UIImage(named: "sideButton.jpg"), forState: .Normal)
-       // cafezinConfigButton.setTitle("Where To?", forState: .Normal)
-        cafezinConfigButton.frame = CGRectMake(self.view.frame.width/3, self.view.frame.height - 50, 200, 200)
-        //cafezinConfigButton.addTarget(self, action: "whereTobuttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
-        
-        self.view.addSubview(wakeModeButton)
-        self.view.addSubview(cafezinConfigButton)
-        self.view.addSubview(startButton)
-        
        
         feedBackTimer = NSTimer.scheduledTimerWithTimeInterval(feedBackInterval, target:self, selector: Selector("startAlarm"),userInfo:nil, repeats: false)
         

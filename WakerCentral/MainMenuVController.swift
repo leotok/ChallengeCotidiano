@@ -28,16 +28,20 @@ class MainMenuVController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func KeepMeAwakeButton(sender: UIButton)
     {
-        var feedBackDic: NSMutableDictionary = NSMutableDictionary()
-        feedBackDic.setValue("1", forKey: "tap")
-        feedBackDic.setValue("0", forKey: "slide")
-        feedBackDic.setValue("0", forKey: "wink")
-        feedBackDic.setValue("0", forKey: "smile")
+//        var feedBackDic: NSMutableDictionary = NSMutableDictionary()
+//        feedBackDic.setValue("1", forKey: "tap")
+//        feedBackDic.setValue("0", forKey: "slide")
+//        feedBackDic.setValue("0", forKey: "wink")
+//        feedBackDic.setValue("0", forKey: "smile")
+//        
+//        let kmavc = KeepMeAwakeVController(nibName: "KeepMeAwakeVController", bundle: nil)
+//        kmavc.setToVibrate()
+//        kmavc.setFeedBackTypesAndTimeInterval(feedBackDic, timeInterval: 6)
+//        self.presentViewController(kmavc, animated: false, completion: nil)
         
-        let kmavc = KeepMeAwakeVController(nibName: "KeepMeAwakeVController", bundle: nil)
-        kmavc.setToVibrate()
-        kmavc.setFeedBackTypesAndTimeInterval(feedBackDic, timeInterval: 6)
-        self.presentViewController(kmavc, animated: false, completion: nil)
+        let vc = SetModeVController()
+        vc.setViewControllerToPresent(SetModeVController.viewControllers.KeepMeAwakeVController)
+        self.presentViewController(vc, animated: false, completion: nil)
         
     }
     
