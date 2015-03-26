@@ -40,45 +40,55 @@ class KeepMeAwakeVController: UIViewController {
     
     func startAlarm()
     {
-        
+        NSLog("timer started")
          feedBackTimer = NSTimer.scheduledTimerWithTimeInterval(waitingFeedBackInterval, target:self, selector: Selector("getFeedBack"),userInfo:nil, repeats: true)
     }
     
     
     func getFeedBack()
     {
-//       feedBackTimer.invalidate()
+
         feedBackCounter++
-        
-        var numeroFeedBackEscolhido: Int = Int(arc4random_uniform(UInt32(feedBackTypeArray.count)))
-        
-        NSLog("Wake up! Don't fall asleep!!")
+        NSLog("Wake up! Don't fall asleep!! (\(feedBackCounter))")
         
         if (vibrate == true)
         {
             NSLog("vibrando")
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-        }
-        if (sound == true)
-        {
-            player.play()
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))  // roda varias vezes no loop de acordar
         }
         
-        var feedBackEscolhido: String = feedBackTypeArray[numeroFeedBackEscolhido] as String
-        
-        NSLog("\(feedBackEscolhido)")
-        
-        if (feedBackEscolhido == "tap")
+        if ( feedBackCounter == 1 )  // roda só uma vez no loop de acordar
         {
-            var tapTheScreenLabel: UILabel = UILabel(frame: CGRectMake(self.view.frame.width/3, self.view.frame.height/2, 100, 50))
-            tapTheScreenLabel.text = "Tap me!!"
-        
-            self.view.addSubview(tapTheScreenLabel)
-            
-            if (feedBackCounter == 1)
+            if (sound == true)
             {
+                player.play()
+            }
+            var numeroFeedBackEscolhido: Int = Int(arc4random_uniform(UInt32(feedBackTypeArray.count)))  // escolhe um feedback aleatorio entre os escolhidos anteriormente
+            var feedBackEscolhido: String = feedBackTypeArray[numeroFeedBackEscolhido] as String
+        
+            NSLog("\(feedBackEscolhido)")
+        
+            if (feedBackEscolhido == "tap")
+            {
+                var tapTheScreenLabel: UILabel = UILabel(frame: CGRectMake(self.view.frame.width/3, self.view.frame.height/2, 100, 50))
+                tapTheScreenLabel.text = "Tap me!!"
+        
+                view.addSubview(tapTheScreenLabel)
+        
                 var tapFeedBack = UITapGestureRecognizer(target: self, action: Selector("didGetFeedBack:"))
                 view.addGestureRecognizer(tapFeedBack)
+                
+            }
+            else if (feedBackEscolhido == "slide")
+            {
+                var slideTheScreenLabel: UILabel = UILabel(frame: CGRectMake(self.view.frame.width/3, self.view.frame.height/2, 100, 50))
+                slideTheScreenLabel.text = "Slide here!"
+            
+                view.addSubview(slideTheScreenLabel)
+            
+                var slideFeedBack = UIPanGestureRecognizer(target: self, action: Selector("didGetFeedBack:"))
+                view.addGestureRecognizer(slideFeedBack)
+
             }
         }
     }

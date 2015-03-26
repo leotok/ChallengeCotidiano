@@ -300,15 +300,18 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
             feedBackDic.setValue("0", forKey: "smile")
         }
         
+        
+        soundName = soundArray[soundPicker.selectedRowInComponent(0)]
+        println("soundName \(soundName)")
+        var timeToWait: NSTimeInterval = timePicker.countDownDuration
+        println("on \(vibrateSwitch.on) \(soundSwitch.on)")
+        
         switch vcToPresent
         {
             case .ByThisTimeVController:
             
                 let vc = ByThisTimeVController(nibName: "ByThisTimeVController", bundle: nil)
-                soundName = soundArray[soundPicker.selectedRowInComponent(0)]
-                println("soundName \(soundName)")
-                var timeToWait: NSTimeInterval = timePicker.countDownDuration
-                println("on \(vibrateSwitch.on) \(soundSwitch.on)")
+                
                 if(vibrateSwitch.on==true)
                 {
                     if(soundSwitch.on==true)
@@ -328,7 +331,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
                     }
                     else
                     {
-                        println("ERROR");
+                        println("Escolha pelo menos um modo de acordar");
                         return
                     }
                 }
@@ -338,7 +341,31 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
             case .KeepMeAwakeVController:
                 
                 let kmavc = KeepMeAwakeVController(nibName: "KeepMeAwakeVController", bundle: nil)
-                kmavc.setToVibrate()
+                
+                if(vibrateSwitch.on==true)
+                {
+                    if(soundSwitch.on==true)
+                    {
+                        kmavc.setToVibrateAndToPlaySound(soundName, ofType: ".mp3")
+                    }
+                    else
+                    {
+                       kmavc.setToVibrate()
+                    }
+                }
+                else
+                {
+                    if(soundSwitch.on==true)
+                    {
+                        kmavc.setSoundToPlay(soundName, ofType: ".mp3")
+                    }
+                    else
+                    {
+                        println("Escolha pelo menos um modo de acordar");
+                        return
+                    }
+                }
+            
                 kmavc.setFeedBackTypesAndTimeInterval(feedBackDic, timeInterval: 6)
                 
                 self.presentViewController(kmavc, animated: false, completion: nil)
@@ -347,6 +374,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
             case .NearLocationVController:
             
                 let vc = NearLocationVController(nibName: "NearLocationVController", bundle: nil)
+                
                 self.presentViewController(vc, animated: false, completion: nil)
                 
                 
