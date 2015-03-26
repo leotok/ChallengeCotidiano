@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class KeepMeAwakeVController: UIViewController {
+class KeepMeAwakeVController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     private var player: AVAudioPlayer = AVAudioPlayer()
     private var vibrate: Bool = true
@@ -90,9 +90,27 @@ class KeepMeAwakeVController: UIViewController {
                 view.addGestureRecognizer(slideFeedBack)
 
             }
+            else if (feedBackEscolhido == "smile")
+            {
+                var cameraPicker:UIImagePickerController = UIImagePickerController()
+                cameraPicker.delegate = self
+                cameraPicker.allowsEditing = false
+                cameraPicker.sourceType = UIImagePickerControllerSourceType.Camera
+                cameraPicker.showsCameraControls = false
+                cameraPicker.cameraDevice = UIImagePickerControllerCameraDevice.Front
+                cameraPicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureMode.Photo
+                
+                self.presentViewController(cameraPicker, animated: true, completion: nil)
+
+            }
         }
     }
     
+    func imagePickerControllerDidCancel(picker: UIImagePickerController)
+    {
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+   
     
     func didGetFeedBack (gesture: UIGestureRecognizer)
     {
