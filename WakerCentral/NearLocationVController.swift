@@ -18,28 +18,52 @@ class NearLocationVController: UIViewController,CLLocationManagerDelegate
     var timeToWait: NSTimeInterval = NSTimeInterval();
     let locationManager = CLLocationManager()
     
+    @IBOutlet weak var partidaField: UITextField!
+    
+    @IBOutlet weak var destinoField: UITextField!
     
     @IBOutlet weak var mapView: MKMapView!
+    
+    var backButton: UIButton = UIButton(frame: CGRectMake(10,20 , 30 , 30))
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        let location = CLLocationCoordinate2D(
-            latitude: 51.50007773,
-            longitude: -0.1246402
-        )
+        let location = CLLocationCoordinate2D(latitude: -51.50007773, longitude: -0.1246402)
+        
+        locationManager.delegate=self;
+        locationManager.desiredAccuracy=kCLLocationAccuracyKilometer
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
+        partidaField.text="Calculating your position..."
+        
+        backButton.setImage(UIImage(named: "backbt"), forState: UIControlState.Normal)
+        backButton.addTarget(self, action: Selector("backMenu2:"), forControlEvents: UIControlEvents.TouchUpInside)
+        view.addSubview(backButton)
         // 2
+        
+        
+        //3
+        
+        // Do any additional setup after loading the view.
+    }
+    @IBAction func backMenu2(sender: UIButton)
+    {
+        self.dismissViewControllerAnimated(false, completion: nil)
+        
+    }
+    func showYouInMap(location: CLLocationCoordinate2D)
+    {
         let span = MKCoordinateSpanMake(0.05, 0.05)
         let region = MKCoordinateRegion(center: location, span: span)
         mapView.setRegion(region, animated: true)
         
-        //3
         let annotation = MKPointAnnotation()
         annotation.setCoordinate(location)
-        annotation.title = "Big Ben"
-        annotation.subtitle = "London"
+        annotation.title = "You"
+        annotation.subtitle = "Are here"
         mapView.addAnnotation(annotation)
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning()
@@ -48,15 +72,57 @@ class NearLocationVController: UIViewController,CLLocationManagerDelegate
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func locationManager(manager: CLLocationManager!,
+        didChangeAuthorizationStatus status: CLAuthorizationStatus)
+    {
+        if  status == .AuthorizedWhenInUse || status == .AuthorizedAlways
+        {
+            manager.startUpdatingLocation()
+            // ...
+        }
+        println("changed")
+        
     }
-    */
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!)
+    {
+        println("updated")
+        CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler:
+        { (placemarks, error) -> Void in
+            if (error != nil)
+            {
+                println("Error:" + error.localizedDescription)
+                return
+            }
+                
+            if placemarks.count > 0
+            {
+                let pm = placemarks[0] as CLPlacemark
+                self.displayLocationInfo(pm)
+                
+            }
+            else
+            {
+                println("Error with data")
+                    
+            }
+            
+        })
+    }
 
+    func displayLocationInfo(placemark: CLPlacemark)
+    {
+        self.locationManager.stopUpdatingLocation()
+        println(placemark.locality)
+        println(placemark.postalCode)
+        println(placemark.administrativeArea)
+        println(placemark.country)
+        println(placemark.name)
+        println(placemark.region)
+        println(placemark.subAdministrativeArea)
+        println(placemark.subLocality)
+        placemark.location
+        partidaField.text=String(format: "%@ <%f, %f>",placemark.name,placemark.location.coordinate.latitude,placemark.location.coordinate.longitude);
+        showYouInMap(placemark.location.coordinate)
+    }
+  
 }
