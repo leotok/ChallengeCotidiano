@@ -55,8 +55,8 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         
         // buttons
         
-        leftButton.setImage(UIImage(named: "wheretogo"), forState: UIControlState.Normal)
-        rightButton.setImage(UIImage(named: "wakemode"), forState: UIControlState.Normal)
+        leftButton.setImage(UIImage(named: "nearMeButton"), forState: UIControlState.Normal)
+        rightButton.setImage(UIImage(named: "configButton"), forState: UIControlState.Normal)
         okButton.setImage(UIImage(named: "play"), forState: UIControlState.Normal)
         okButton.addTarget(self, action: Selector("okButtonPressed:"), forControlEvents: UIControlEvents.TouchUpInside)
         backButton.setImage(UIImage(named: "backbt"), forState: UIControlState.Normal)
@@ -77,11 +77,11 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         
         // pickers
         
-        timePicker.frame = CGRectMake(60, 290, 200, 162.0)
+        timePicker.frame = CGRectMake(60, 150, 200, 162.0)
         timePicker.datePickerMode = UIDatePickerMode.CountDownTimer
         
         
-        // adiciona os elementos na tela
+        // adiciona os elementos genericos na tela
         
         view.addSubview(backgroundImage)
         view.addSubview(leftButton)
@@ -105,6 +105,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         
         // seta os elementos na config default
         
+
         vibrateSwitch.on=true
         soundSwitch.on=false
         tapSwitch.on=true
@@ -117,16 +118,24 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         }
         
         
-        //condicoes diferentes pra cada parametro de chamada da classe
+        self.viewCases()
         
+    }
+    
+    
+    // verifica qual controller e tab é e diz o q deve ser impresso
+    
+    func viewCases()
+    {
         switch vcToPresent
         {
             
         case .ByThisTimeVController:
-        
+            
+            leftButton.setImage(UIImage(named: "OnTimeButton"), forState: UIControlState.Normal)
             view.addSubview(timePicker)
-            NSLog("oi")
-        
+            timePicker.hidden = true
+            
         case .KeepMeAwakeVController:
             
             NSLog("ola")
@@ -136,16 +145,17 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
             NSLog("tchau")
             
         }
-        
-    
     }
     
     // botoes esquerda e direita
     
     func leftRightButtons(sender: UIButton)
     {
-        if( sender.tag == 1)
-        {
+        if( sender.tag == 1)                            // 1 = rightButton (Wake Mode)
+        {   //apresenta elementos genericos
+            
+            timePicker.hidden = true
+            
             vibrateLabel.hidden = false
             soundLabel.hidden = false
             tapLabel.hidden = false
@@ -154,19 +164,19 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
             soundSwitch.hidden = false
             tapSwitch.hidden = false
             slideSwitch.hidden = false
+
             if(soundSwitch.on==false)
             {
-                timePicker.hidden = false
                 soundPicker.hidden=true
             }
             else
             {
                 soundPicker.hidden = false
-                timePicker.hidden = true
             }
         }
-        else
-        {
+        else                                           // 0 = leftButton (modos dependem do viewController)
+        {  // esconde elementos genericos
+            
             vibrateLabel.hidden = true
             soundLabel.hidden = true
             tapLabel.hidden = true
@@ -176,7 +186,33 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
             tapSwitch.hidden = true
             slideSwitch.hidden = true
             soundPicker.hidden = true
-            timePicker.hidden = true
+            
+            switch vcToPresent
+            {
+                
+            case .ByThisTimeVController:
+                
+                leftButton.setImage(UIImage(named: "OnTimeButton"), forState: UIControlState.Normal)
+                view.addSubview(timePicker)
+                timePicker.hidden = false
+                
+            case .KeepMeAwakeVController:
+                
+                // aqui vão as configuracoes do keepMeAwake: tempos e config do personagem
+                
+                NSLog("KeepMeAwake")
+                
+            case .NearLocationVController:
+
+                NSLog("NearLocation")
+                
+                // aqui vai a parte do mapa do lucas: pra onde vai, onde ta, quantos pontos
+                
+                
+                
+                
+            }
+
         }
         
     }
@@ -319,7 +355,6 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
     }
 
     func soundSwitchChanged(sender: UISwitch) {
-        timePicker.hidden = sender.on
         soundPicker.hidden = !sender.on
     }
 
