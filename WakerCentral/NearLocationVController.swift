@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class NearLocationVController: UIViewController,CLLocationManagerDelegate
+class NearLocationVController: UIViewController,CLLocationManagerDelegate,UITextFieldDelegate
 {
 
     var presentPlace: String = String();
@@ -43,10 +43,17 @@ class NearLocationVController: UIViewController,CLLocationManagerDelegate
         view.addSubview(backButton)
         // 2
         
+        partidaField.delegate = self
+        destinoField.delegate = self
         
         //3
         
         // Do any additional setup after loading the view.
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        return true
     }
     @IBAction func backMenu2(sender: UIButton)
     {

@@ -39,22 +39,22 @@
                         <rect key="frame" x="39" y="66" width="261" height="30"/>
                     </variation>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destino:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QH9-VP-vkf">
-                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="22" y="104" width="68" height="21"/>
-                    </variation>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partida:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1Z-iV-WgO">
                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="22" y="30" width="85" height="28"/>
+                        <rect key="frame" x="71" y="30" width="85" height="28"/>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destino:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QH9-VP-vkf">
+                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="71" y="104" width="68" height="21"/>
                     </variation>
                 </label>
             </subviews>
@@ -63,16 +63,16 @@
                 <mask key="subviews">
                     <exclude reference="oPD-0L-CHz"/>
                     <exclude reference="oob-Yb-aaP"/>
-                    <exclude reference="QH9-VP-vkf"/>
                     <exclude reference="l1Z-iV-WgO"/>
+                    <exclude reference="QH9-VP-vkf"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
                 <mask key="subviews">
                     <include reference="oPD-0L-CHz"/>
                     <include reference="oob-Yb-aaP"/>
-                    <include reference="QH9-VP-vkf"/>
                     <include reference="l1Z-iV-WgO"/>
+                    <include reference="QH9-VP-vkf"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="147" y="309"/>
