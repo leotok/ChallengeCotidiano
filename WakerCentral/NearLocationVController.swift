@@ -32,8 +32,10 @@ class NearLocationVController: UIViewController,CLLocationManagerDelegate,UIText
         let location = CLLocationCoordinate2D(latitude: -51.50007773, longitude: -0.1246402)
         
         locationManager.delegate=self;
-        locationManager.desiredAccuracy=kCLLocationAccuracyKilometer
-        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy=kCLLocationAccuracyBestForNavigation
+        locationManager.activityType = CLActivityType.AutomotiveNavigation
+        //locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         
         partidaField.text="Calculating your position..."
@@ -50,8 +52,22 @@ class NearLocationVController: UIViewController,CLLocationManagerDelegate,UIText
         
         // Do any additional setup after loading the view.
     }
+    func searchCoordinatesForString(textfield : UITextField)
+    {
+        var geocoder:CLGeocoder = CLGeocoder()
+        geocoder.geocodeAddressString(textfield.text, {(placemarks: [AnyObject]!, error: NSError!)->Void in
+            if let placemark = placemarks?[0] as? CLPlacemark {
+                self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
+                self.showYouInMap(placemark.location.coordinate)
+            }
+            
+        })
+        
+        
+    }
     func textFieldShouldReturn(textField: UITextField) -> Bool
     {
+        self.searchCoordinatesForString(textField)
         textField.resignFirstResponder()
         return true
     }
