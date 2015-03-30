@@ -13,9 +13,14 @@ import MapKit
 class NearLocationVController: UIViewController,CLLocationManagerDelegate,UITextFieldDelegate
 {
 
-    var presentPlace: String = String();
+    var departurePlacemark: CLPlacemark = CLPlacemark();
     var destination: String = String();
+    var currentPosition: CLPlacemark = CLPlacemark()
     var timeToWait: NSTimeInterval = NSTimeInterval();
+    var positionUpdates : UnsignedFixed = 0
+    var destinationRegion: CLRegion = CLRegion()
+    var destinationRegionLimit : CLLocationDistance = 10.0
+    
     let locationManager = CLLocationManager()
     
     @IBOutlet weak var partidaField: UITextField!
@@ -58,7 +63,17 @@ class NearLocationVController: UIViewController,CLLocationManagerDelegate,UIText
         geocoder.geocodeAddressString(textfield.text, {(placemarks: [AnyObject]!, error: NSError!)->Void in
             if let placemark = placemarks?[0] as? CLPlacemark {
                 self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
-                self.showYouInMap(placemark.location.coordinate)
+                if(textfield == self.partidaField)
+                {
+                    self.showInMap(placemark, title: "Partida",subtitle: "Você está aqui")
+                }
+                else if(textfield == self.destinoField)
+                {
+                    self.showInMap(placemark, title: "Destino", subtitle: "Local onde você pretende chegar")
+                    self.destinationRegion = CLCircularRegion(center: placemark.location.coordinate, radius: self.destinationRegionLimit, identifier: "destination")
+                    self.locationManager.startMonitoringForRegion(self.destinationRegion)
+                }
+                
             }
             
         })
@@ -68,24 +83,37 @@ class NearLocationVController: UIViewController,CLLocationManagerDelegate,UIText
     func textFieldShouldReturn(textField: UITextField) -> Bool
     {
         self.searchCoordinatesForString(textField)
+       
         textField.resignFirstResponder()
         return true
     }
-    @IBAction func backMenu2(sender: UIButton)
+     func backMenu2(sender: UIButton)
     {
         self.dismissViewControllerAnimated(false, completion: nil)
         
     }
-    func showYouInMap(location: CLLocationCoordinate2D)
+    func showInMap(placemark: CLPlacemark, title: String?, subtitle: String?)
     {
-        let span = MKCoordinateSpanMake(0.05, 0.05)
+        
+        var location: CLLocationCoordinate2D = placemark.location.coordinate
+        var  span = MKCoordinateSpanMake(0.05, 0.05)
         let region = MKCoordinateRegion(center: location, span: span)
         mapView.setRegion(region, animated: true)
         
         let annotation = MKPointAnnotation()
         annotation.setCoordinate(location)
-        annotation.title = "You"
-        annotation.subtitle = "Are here"
+        annotation.title=title
+        annotation.subtitle=subtitle
+        if(title==nil)
+        {
+        annotation.title = placemark.name
+        }
+        if(subtitle==nil)
+        {
+        annotation.subtitle = placemark.locality
+        }
+        
+        
         mapView.addAnnotation(annotation)
     }
 
@@ -122,6 +150,7 @@ class NearLocationVController: UIViewController,CLLocationManagerDelegate,UIText
                 let pm = placemarks[0] as CLPlacemark
                 self.displayLocationInfo(pm)
                 
+                
             }
             else
             {
@@ -144,8 +173,11 @@ class NearLocationVController: UIViewController,CLLocationManagerDelegate,UIText
         println(placemark.subAdministrativeArea)
         println(placemark.subLocality)
         placemark.location
+        if(positionUpdates==0)
+        {
         partidaField.text=String(format: "%@ <%f, %f>",placemark.name,placemark.location.coordinate.latitude,placemark.location.coordinate.longitude);
-        showYouInMap(placemark.location.coordinate)
+        }
+        showInMap(placemark, title: "Position Updated", subtitle: "You are Here")
     }
   
 }
