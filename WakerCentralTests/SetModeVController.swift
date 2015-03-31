@@ -33,11 +33,13 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
     var soundSwitch: UISwitch = UISwitch(frame: CGRectMake(200, 150, 40, 30))
     var tapSwitch: UISwitch = UISwitch(frame: CGRectMake(200, 200, 40, 30))
     var slideSwitch: UISwitch  = UISwitch(frame: CGRectMake(200, 250, 40, 30))
+    var smileSwitch: UISwitch  = UISwitch(frame: CGRectMake(200, 300, 40, 30))
 
     var vibrateLabel: UILabel = UILabel(frame: CGRectMake(100, 100, 70, 30))
     var soundLabel: UILabel = UILabel(frame: CGRectMake(100, 150, 70, 30))
     var tapLabel: UILabel = UILabel(frame: CGRectMake(100, 200, 70, 30))
     var slideLabel: UILabel = UILabel(frame: CGRectMake(100, 250, 70, 30))
+    var smileLabel: UILabel = UILabel(frame: CGRectMake(100, 300, 70, 30))
     
     
     var soundPicker: UIPickerView = UIPickerView(frame: CGRectMake(60, 290, 200, 162.0))
@@ -83,6 +85,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         soundLabel.text = "Sound"
         tapLabel.text = "Tap"
         slideLabel.text = "Slide"
+        smileLabel.text = "Smile"
         
         // pickers
         
@@ -104,11 +107,13 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         view.addSubview(soundSwitch)
         view.addSubview(tapSwitch)
         view.addSubview(slideSwitch)
+        view.addSubview(smileSwitch)
         
         view.addSubview(vibrateLabel)
         view.addSubview(soundLabel)
         view.addSubview(tapLabel)
         view.addSubview(slideLabel)
+        view.addSubview(smileLabel)
         
         view.addSubview(soundPicker)
         
@@ -117,6 +122,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         // seta os elementos na config default
         
 
+        smileSwitch.on = true
         vibrateSwitch.on=true
         soundSwitch.on=false
         tapSwitch.on=true
@@ -168,6 +174,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
             titleImage.image = UIImage(named: "titleWakemode.png")
             timePicker.hidden = true
             
+            smileLabel.hidden = false
             vibrateLabel.hidden = false
             soundLabel.hidden = false
             tapLabel.hidden = false
@@ -176,6 +183,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
             soundSwitch.hidden = false
             tapSwitch.hidden = false
             slideSwitch.hidden = false
+            smileSwitch.hidden = false
 
             if(soundSwitch.on==false)
             {
@@ -188,7 +196,12 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         }
         else                                // 0 = leftButton (modos dependem do viewController)
         {  // esconde elementos genericos
+
             titleImage.image = UIImage(named: "titleLocation.png")
+
+            
+            smileLabel.hidden = true
+
             vibrateLabel.hidden = true
             soundLabel.hidden = true
             tapLabel.hidden = true
@@ -196,6 +209,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
             vibrateSwitch.hidden = true
             soundSwitch.hidden = true
             tapSwitch.hidden = true
+            smileSwitch.hidden = true
             slideSwitch.hidden = true
             soundPicker.hidden = true
             
@@ -286,7 +300,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
     {
         
         //configuracoes de wakemode's a serem mandadas para o viewcontroller chamado, falta implementar para alguns
-        if( !tapSwitch.on && !slideSwitch.on )
+        if( !tapSwitch.on && !slideSwitch.on && !smileSwitch.on)
         {
             NSLog("Escolha pelo menos um tipo de feedback")
             return
@@ -318,7 +332,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
             feedBackDic.setValue("0", forKey: "wink")
         }
         //if(smileSwitch.on)
-        if(false)                                               // temporario!
+        if(smileSwitch.on)                                               // temporario!
         {
             feedBackDic.setValue("1", forKey: "smile")
         }
