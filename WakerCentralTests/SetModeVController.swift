@@ -22,11 +22,12 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
     var vcToPresent: viewControllers = viewControllers.ByThisTimeVController
     
     var backgroundImage: UIImageView = UIImageView(frame: UIScreen.mainScreen().bounds)
+    var titleImage: UIImageView = UIImageView(frame: CGRectMake(0, 17, 320, 50))
     var leftButton: UIButton = UIButton(frame: CGRectMake(0,UIScreen.mainScreen().bounds.height / 1.16 , 342/1.8, 151/1.8))
     var rightButton: UIButton = UIButton(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2,UIScreen.mainScreen().bounds.height / 1.16 , 292/1.8  ,  151/1.8))
     var okButton: UIButton = UIButton(frame: CGRectMake(UIScreen.mainScreen().bounds.width/3,UIScreen.mainScreen().bounds.height / 1.2 , 198/1.8 , 176/1.8))
-    var backButton: UIButton = UIButton(frame: CGRectMake(10,20 , 30 , 30))
-    var plusButton: UIButton = UIButton (frame: CGRectMake(265, 20, 30, 30))
+    var backButton: UIButton = UIButton(frame: CGRectMake(20 ,27 , 30 , 30))
+    var plusButton: UIButton = UIButton (frame: CGRectMake(280, 27, 30, 30))
     
     var vibrateSwitch: UISwitch = UISwitch(frame: CGRectMake(200, 100, 40, 30))
     var soundSwitch: UISwitch = UISwitch(frame: CGRectMake(200, 150, 40, 30))
@@ -53,6 +54,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         //Default
         
         backgroundImage.image = UIImage(named: "background.png")
+        titleImage.image = UIImage(named: "titleWakemode.png")
         
         // buttons
         
@@ -91,6 +93,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         // adiciona os elementos genericos na tela
         
         view.addSubview(backgroundImage)
+        view.addSubview(titleImage)
         view.addSubview(leftButton)
         view.addSubview(rightButton)
         view.addSubview(okButton)
@@ -146,6 +149,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
             
         case .KeepMeAwakeVController:
             
+            leftButton.setImage(UIImage(named: "coffButton"), forState: UIControlState.Normal)
             NSLog("ola")
             
         case .NearLocationVController:
@@ -161,7 +165,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
     {
         if( sender.tag == 1)                            // 1 = rightButton (Wake Mode)
         {   //apresenta elementos genericos
-            
+            titleImage.image = UIImage(named: "titleWakemode.png")
             timePicker.hidden = true
             
             vibrateLabel.hidden = false
@@ -184,7 +188,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         }
         else                                // 0 = leftButton (modos dependem do viewController)
         {  // esconde elementos genericos
-            
+            titleImage.image = UIImage(named: "titleLocation.png")
             vibrateLabel.hidden = true
             soundLabel.hidden = true
             tapLabel.hidden = true
@@ -200,18 +204,26 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
                 
             case .ByThisTimeVController:
                 
+                titleImage.image = UIImage(named: "titleAlarm.png")
                 leftButton.setImage(UIImage(named: "OnTimeButton"), forState: UIControlState.Normal)
                 view.addSubview(timePicker)
                 timePicker.hidden = false
                 
             case .KeepMeAwakeVController:
                 
+                leftButton.setImage(UIImage(named: "coffButton"), forState: UIControlState.Normal)
+                if ( sender.tag == 0){
+                        titleImage.image = UIImage(named: "titleCoffee.png")
+                    
+                }
                 // aqui vão as configuracoes do keepMeAwake: tempos e config do personagem
                 
                 NSLog("KeepMeAwake")
                 
+                
+                
             case .NearLocationVController:
-
+                
                 NSLog("NearLocation")
                 
                 // aqui vai a parte do mapa do lucas: pra onde vai, onde ta, quantos pontos
