@@ -23,6 +23,7 @@
 		3FA7E75B1AC4361900D37944 /* nearMeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA7E7581AC4361900D37944 /* nearMeButton.png */; };
 		3FA7E75C1AC4361900D37944 /* OnTimeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA7E7591AC4361900D37944 /* OnTimeButton.png */; };
 		3FA7E7E41ACADEA600D37944 /* SmileCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7E7E21ACADEA600D37944 /* SmileCameraViewController.m */; };
+		3FA7E7E61ACAE9FB00D37944 /* SmileCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA7E7E51ACAE9FB00D37944 /* SmileCameraViewController.xib */; };
 		3FF13AE81AB8612F0098A4CD /* KeepMeAwakeVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF13AE61AB8612F0098A4CD /* KeepMeAwakeVController.swift */; };
 		3FF13AE91AB8612F0098A4CD /* KeepMeAwakeVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AE71AB8612F0098A4CD /* KeepMeAwakeVController.xib */; };
 		3FF13AF11AB9D5460098A4CD /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AEC1AB9D5460098A4CD /* info.png */; };
@@ -104,6 +105,7 @@
 		3FA7E7E11ACADEA600D37944 /* SmileCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileCameraViewController.h; sourceTree = "<group>"; };
 		3FA7E7E21ACADEA600D37944 /* SmileCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileCameraViewController.m; sourceTree = "<group>"; };
 		3FA7E7E31ACADEA600D37944 /* WakerCentral-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WakerCentral-Bridging-Header.h"; sourceTree = "<group>"; };
+		3FA7E7E51ACAE9FB00D37944 /* SmileCameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmileCameraViewController.xib; sourceTree = "<group>"; };
 		3FF13AE61AB8612F0098A4CD /* KeepMeAwakeVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeepMeAwakeVController.swift; sourceTree = "<group>"; };
 		3FF13AE71AB8612F0098A4CD /* KeepMeAwakeVController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeepMeAwakeVController.xib; sourceTree = "<group>"; };
 		3FF13AEC1AB9D5460098A4CD /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 		FF54CA111AC5E62E008560ED /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3FA7E7E51ACAE9FB00D37944 /* SmileCameraViewController.xib */,
 				E52C4D591ABA08E00003A154 /* InfoVController.xib */,
 				3FF13B061AB9E5FE0098A4CD /* MainMenu2VController.xib */,
 				FF54CA201AC5FE39008560ED /* AlarmListVController.xib */,
@@ -446,6 +449,7 @@
 				3FF13B081AB9E5FE0098A4CD /* MainMenu2VController.xib in Resources */,
 				E52C4D5B1ABA08E00003A154 /* InfoVController.xib in Resources */,
 				3F5E14F21AB74E3A0067F649 /* startButton.png in Resources */,
+				3FA7E7E61ACAE9FB00D37944 /* SmileCameraViewController.xib in Resources */,
 				FF6E10D51AB87873008E5228 /* SetModeVController.xib in Resources */,
 				E5CE82A01ABA283700C52DB6 /* setaback.png in Resources */,
 				3FF13AFF1AB9D5500098A4CD /* BTTtext.png in Resources */,
@@ -634,6 +638,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/WakerCentral/WakerCentral-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -645,6 +650,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/WakerCentral/WakerCentral-Bridging-Header.h";
 			};
 			name = Release;
 		};
