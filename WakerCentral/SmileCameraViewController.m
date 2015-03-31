@@ -199,7 +199,7 @@ bail:
                 [self dismissViewControllerAnimated:NO completion:nil];
                 NSLog(@"Should Cancell Alarm");
                 
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"userSmiled" object:nil]; 
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"userSmiled" object:nil];  //Sends Message "UserSmiled" to receiver in the swift code.  
                 
             }
         }
