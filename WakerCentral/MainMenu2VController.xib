@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainMenu2VController" customModule="WakerCentral" customModuleProvider="target">
@@ -22,25 +22,13 @@
                     <state key="normal" title="Button" image="buttonNL.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="93" y="130" width="135" height="136"/>
+                    </variation>
                     <connections>
                         <action selector="NearLocationAction:" destination="-1" eventType="touchUpInside" id="UoG-xr-k5J"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jA3-qK-6LB">
-                    <rect key="frame" x="80" y="306" width="161" height="128"/>
-                    <state key="normal" title="Button" image="buttonBTT.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="ByThisTimeAction:" destination="-1" eventType="touchUpInside" id="gfk-SI-yap"/>
-                    </connections>
-                </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BTTtext.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q2N-9K-2Ru">
-                    <rect key="frame" x="97" y="442" width="127" height="21"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NLtext.png" translatesAutoresizingMaskIntoConstraints="NO" id="6kA-IE-eIk">
-                    <rect key="frame" x="97" y="250" width="127" height="21"/>
-                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQU-Mq-2cc">
                     <rect key="frame" x="221" y="24" width="71" height="28"/>
                     <state key="normal" image="cancel.png">
@@ -50,16 +38,26 @@
                         <action selector="cancelButtonAction" destination="-1" eventType="touchUpInside" id="D6c-OP-dIs"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jA3-qK-6LB">
+                    <rect key="frame" x="80" y="306" width="161" height="128"/>
+                    <state key="normal" title="Button" image="buttonBTT.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="106" y="344" width="109" height="135"/>
+                    </variation>
+                    <connections>
+                        <action selector="ByThisTimeAction:" destination="-1" eventType="touchUpInside" id="gfk-SI-yap"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
         </view>
     </objects>
     <resources>
-        <image name="BTTtext.png" width="240" height="30"/>
-        <image name="NLtext.png" width="240" height="30"/>
         <image name="bgmenu2.png" width="640" height="1136"/>
-        <image name="buttonBTT.png" width="252" height="221"/>
-        <image name="buttonNL.png" width="252" height="221"/>
+        <image name="buttonBTT.png" width="203" height="265"/>
+        <image name="buttonNL.png" width="252" height="287"/>
         <image name="cancel.png" width="100" height="35"/>
     </resources>
 </document>

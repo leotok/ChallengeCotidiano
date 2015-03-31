@@ -26,6 +26,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
     var rightButton: UIButton = UIButton(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2,UIScreen.mainScreen().bounds.height / 1.16 , 292/1.8  ,  151/1.8))
     var okButton: UIButton = UIButton(frame: CGRectMake(UIScreen.mainScreen().bounds.width/3,UIScreen.mainScreen().bounds.height / 1.2 , 198/1.8 , 176/1.8))
     var backButton: UIButton = UIButton(frame: CGRectMake(10,20 , 30 , 30))
+    var plusButton: UIButton = UIButton (frame: CGRectMake(265, 20, 30, 30))
     
     var vibrateSwitch: UISwitch = UISwitch(frame: CGRectMake(200, 100, 40, 30))
     var soundSwitch: UISwitch = UISwitch(frame: CGRectMake(200, 150, 40, 30))
@@ -51,21 +52,27 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         super.viewDidLoad()
         //Default
         
-        backgroundImage.image = UIImage(named: "configbg.png")
+        backgroundImage.image = UIImage(named: "background.png")
         
         // buttons
         
         leftButton.setImage(UIImage(named: "nearMeButton"), forState: UIControlState.Normal)
-        rightButton.setImage(UIImage(named: "configButton"), forState: UIControlState.Normal)
-        okButton.setImage(UIImage(named: "play"), forState: UIControlState.Normal)
-        okButton.addTarget(self, action: Selector("okButtonPressed:"), forControlEvents: UIControlEvents.TouchUpInside)
-        backButton.setImage(UIImage(named: "backbt"), forState: UIControlState.Normal)
-        backButton.addTarget(self, action: Selector("backMenu2:"), forControlEvents: UIControlEvents.TouchUpInside)
         leftButton.addTarget(self, action: Selector("leftRightButtons:"), forControlEvents: UIControlEvents.TouchUpInside)
         leftButton.tag = 0
+        
+        rightButton.setImage(UIImage(named: "configButton"), forState: UIControlState.Normal)
         rightButton.addTarget(self, action: Selector("leftRightButtons:"), forControlEvents: UIControlEvents.TouchUpInside)
         rightButton.tag = 1
+
+        okButton.setImage(UIImage(named: "play"), forState: UIControlState.Normal)
+        okButton.addTarget(self, action: Selector("okButtonPressed:"), forControlEvents: UIControlEvents.TouchUpInside)
         
+        backButton.setImage(UIImage(named: "backbt"), forState: UIControlState.Normal)
+        backButton.addTarget(self, action: Selector("backMenu2:"), forControlEvents: UIControlEvents.TouchUpInside)
+
+        plusButton.setImage(UIImage(named: "maisButton"), forState: UIControlState.Normal)
+        plusButton.addTarget(self, action: Selector("saveButton:"), forControlEvents: UIControlEvents.TouchUpInside)
+                
         soundSwitch.addTarget(self, action: Selector("soundSwitchChanged:"), forControlEvents: UIControlEvents.TouchUpInside)
         
         // labels
@@ -88,6 +95,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         view.addSubview(rightButton)
         view.addSubview(okButton)
         view.addSubview(backButton)
+        view.addSubview(plusButton)
         
         view.addSubview(vibrateSwitch)
         view.addSubview(soundSwitch)
@@ -174,7 +182,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
                 soundPicker.hidden = false
             }
         }
-        else                                           // 0 = leftButton (modos dependem do viewController)
+        else                                // 0 = leftButton (modos dependem do viewController)
         {  // esconde elementos genericos
             
             vibrateLabel.hidden = true
@@ -253,6 +261,13 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
     {
         self.dismissViewControllerAnimated(false, completion: nil)
         
+    }
+    
+    @IBAction func saveButton(sender: UIButton)
+    {
+        let save = AlarmListVController(nibName: "AlarmListVController", bundle:nil)
+        self.modalPresentationStyle = UIModalPresentationStyle.Popover
+        self.presentViewController(save, animated: true, completion:nil)
     }
     
     func okButtonPressed(sender: UIButton)
