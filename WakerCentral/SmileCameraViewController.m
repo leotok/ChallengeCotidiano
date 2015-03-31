@@ -191,7 +191,9 @@ bail:
                                    mTakenPhoto = image;
                                });
                 [[mPreviewLayer session] stopRunning];
+                [mStillImageOutput removeObserver:self forKeyPath:@"capturingStillImage" context:(__bridge void *)(AVCaptureStillImageIsCapturingStillImageContext)];
                 [self dismissViewControllerAnimated:NO completion:nil];
+                NSLog(@"Should Cancell Alarm");
             }
         }
         else
