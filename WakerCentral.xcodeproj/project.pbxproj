@@ -22,6 +22,7 @@
 		3FA7E75A1AC4361900D37944 /* configButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA7E7571AC4361900D37944 /* configButton.png */; };
 		3FA7E75B1AC4361900D37944 /* nearMeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA7E7581AC4361900D37944 /* nearMeButton.png */; };
 		3FA7E75C1AC4361900D37944 /* OnTimeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA7E7591AC4361900D37944 /* OnTimeButton.png */; };
+		3FA7E7E41ACADEA600D37944 /* SmileCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7E7E21ACADEA600D37944 /* SmileCameraViewController.m */; };
 		3FF13AE81AB8612F0098A4CD /* KeepMeAwakeVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF13AE61AB8612F0098A4CD /* KeepMeAwakeVController.swift */; };
 		3FF13AE91AB8612F0098A4CD /* KeepMeAwakeVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AE71AB8612F0098A4CD /* KeepMeAwakeVController.xib */; };
 		3FF13AF11AB9D5460098A4CD /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF13AEC1AB9D5460098A4CD /* info.png */; };
@@ -100,6 +101,9 @@
 		3FA7E7571AC4361900D37944 /* configButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = configButton.png; path = "documents-export-2015-03-26/configButton.png"; sourceTree = "<group>"; };
 		3FA7E7581AC4361900D37944 /* nearMeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nearMeButton.png; path = "documents-export-2015-03-26/nearMeButton.png"; sourceTree = "<group>"; };
 		3FA7E7591AC4361900D37944 /* OnTimeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OnTimeButton.png; path = "documents-export-2015-03-26/OnTimeButton.png"; sourceTree = "<group>"; };
+		3FA7E7E11ACADEA600D37944 /* SmileCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileCameraViewController.h; sourceTree = "<group>"; };
+		3FA7E7E21ACADEA600D37944 /* SmileCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileCameraViewController.m; sourceTree = "<group>"; };
+		3FA7E7E31ACADEA600D37944 /* WakerCentral-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WakerCentral-Bridging-Header.h"; sourceTree = "<group>"; };
 		3FF13AE61AB8612F0098A4CD /* KeepMeAwakeVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeepMeAwakeVController.swift; sourceTree = "<group>"; };
 		3FF13AE71AB8612F0098A4CD /* KeepMeAwakeVController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeepMeAwakeVController.xib; sourceTree = "<group>"; };
 		3FF13AEC1AB9D5460098A4CD /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
@@ -198,17 +202,11 @@
 		3FA0E0311AB1F1FB00802D0A /* WakerCentral */ = {
 			isa = PBXGroup;
 			children = (
+				3FA7E7E01ACADE7300D37944 /* Bridge */,
 				FF54CA121AC5E63C008560ED /* Controller */,
 				FF54CA111AC5E62E008560ED /* View */,
 				FF54CA101AC5E625008560ED /* Model */,
 				3FA0E0341AB1F1FB00802D0A /* AppDelegate.swift */,
-				E52C4D5C1ABA08E40003A154 /* Info */,
-				3FF13B091AB9E6030098A4CD /* MainMenu2 */,
-				FF6E10D11AB86E37008E5228 /* SetMode */,
-				3FA0E05E1AB3744A00802D0A /* MainMenu */,
-				3FF13AEA1AB861330098A4CD /* KeepMeAwake */,
-				FF54CA0B1AC19482008560ED /* NearLocation */,
-				3FA0E0631AB3747C00802D0A /* ByThisTime */,
 				3FA0E03B1AB1F1FB00802D0A /* Images.xcassets */,
 				3FA0E03D1AB1F1FB00802D0A /* LaunchScreen.xib */,
 				3FA0E0321AB1F1FB00802D0A /* Supporting Files */,
@@ -247,26 +245,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3FA0E05E1AB3744A00802D0A /* MainMenu */ = {
+		3FA7E7E01ACADE7300D37944 /* Bridge */ = {
 			isa = PBXGroup;
 			children = (
+				3FA7E7E11ACADEA600D37944 /* SmileCameraViewController.h */,
+				3FA7E7E21ACADEA600D37944 /* SmileCameraViewController.m */,
+				3FA7E7E31ACADEA600D37944 /* WakerCentral-Bridging-Header.h */,
 			);
-			name = MainMenu;
-			sourceTree = "<group>";
-		};
-		3FA0E0631AB3747C00802D0A /* ByThisTime */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ByThisTime;
-			path = WakerCentralTests;
-			sourceTree = SOURCE_ROOT;
-		};
-		3FF13AEA1AB861330098A4CD /* KeepMeAwake */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = KeepMeAwake;
+			name = Bridge;
 			sourceTree = "<group>";
 		};
 		3FF13AEB1AB9D5460098A4CD /* Main Menu */ = {
@@ -293,20 +279,6 @@
 				3FF13AFD1AB9D5500098A4CD /* NLtext.png */,
 			);
 			path = "Menu II";
-			sourceTree = "<group>";
-		};
-		3FF13B091AB9E6030098A4CD /* MainMenu2 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = MainMenu2;
-			sourceTree = "<group>";
-		};
-		E52C4D5C1ABA08E40003A154 /* Info */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Info;
 			sourceTree = "<group>";
 		};
 		E5CE828D1ABA283600C52DB6 /* Telas - Configurações */ = {
@@ -339,13 +311,6 @@
 				FF399A271AB351DC00F70316 /* alarm.mp3 */,
 			);
 			name = Sounds;
-			sourceTree = "<group>";
-		};
-		FF54CA0B1AC19482008560ED /* NearLocation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = NearLocation;
 			sourceTree = "<group>";
 		};
 		FF54CA101AC5E625008560ED /* Model */ = {
@@ -390,14 +355,6 @@
 			);
 			name = Controller;
 			sourceTree = "<group>";
-		};
-		FF6E10D11AB86E37008E5228 /* SetMode */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = SetMode;
-			path = WakerCentralTests;
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -549,6 +506,7 @@
 				3FA0E0611AB3746700802D0A /* MainMenuVController.swift in Sources */,
 				E52C4D5A1ABA08E00003A154 /* InfoVController.swift in Sources */,
 				3FF13AE81AB8612F0098A4CD /* KeepMeAwakeVController.swift in Sources */,
+				3FA7E7E41ACADEA600D37944 /* SmileCameraViewController.m in Sources */,
 				3FA0E0351AB1F1FB00802D0A /* AppDelegate.swift in Sources */,
 				FF54CA181AC5F707008560ED /* KeepMeAwakeAlarm.swift in Sources */,
 				FF54CA1C1AC5F721008560ED /* NearLocationAlarm.swift in Sources */,

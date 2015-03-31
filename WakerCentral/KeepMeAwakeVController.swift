@@ -6,10 +6,16 @@
 //  Copyright (c) 2015 Leonardo Edelman Wajnsztok. All rights reserved.
 //
 
+
 import UIKit
 import AVFoundation
 
-class KeepMeAwakeVController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+// metodos para o reconhecimento de smile
+
+
+
+
+class KeepMeAwakeVController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVCaptureVideoDataOutputSampleBufferDelegate{
 
     private var player: AVAudioPlayer = AVAudioPlayer()
     private var vibrate: Bool = true
@@ -21,22 +27,22 @@ class KeepMeAwakeVController: UIViewController , UIImagePickerControllerDelegate
     private var waitingFeedBackInterval: NSTimeInterval = NSTimeInterval(2);
     private var feedBackCounter: Int = 0
     
-    
+
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        player.numberOfLoops = -1
+        feedBackTimer = NSTimer.scheduledTimerWithTimeInterval(feedBackInterval, target:self, selector: Selector("startAlarm"),userInfo:nil, repeats: false)
+        
+    }
     
     @IBAction func backMenu(sender: UIButton)
     {
         feedBackTimer.invalidate() // Stops Timer Loop when leaves this Screen
         self.dismissViewControllerAnimated(false, completion: nil)
-    
-    }
-    
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-       
-        feedBackTimer = NSTimer.scheduledTimerWithTimeInterval(feedBackInterval, target:self, selector: Selector("startAlarm"),userInfo:nil, repeats: false)
         
     }
+    
     
     func startAlarm()
     {
@@ -114,6 +120,7 @@ class KeepMeAwakeVController: UIViewController , UIImagePickerControllerDelegate
     
     func didGetFeedBack (gesture: UIGestureRecognizer)
     {
+        
         feedBackTimer.invalidate()
         feedBackCounter = 0
         
@@ -182,4 +189,6 @@ class KeepMeAwakeVController: UIViewController , UIImagePickerControllerDelegate
         vibrate = true
     }
 
+    
+    
 }
