@@ -14,6 +14,8 @@
 
 #import "SmileCameraViewController.h"
 
+
+
 @interface SmileCameraViewController ()
 
 
@@ -21,6 +23,7 @@
 
 CGFloat degreesToRadians(CGFloat degrees)
 {
+    
     return degrees * M_PI / 180;
 };
 
@@ -192,8 +195,12 @@ bail:
                                });
                 [[mPreviewLayer session] stopRunning];
                 [mStillImageOutput removeObserver:self forKeyPath:@"capturingStillImage" context:(__bridge void *)(AVCaptureStillImageIsCapturingStillImageContext)];
+                [self removeFromParentViewController];
                 [self dismissViewControllerAnimated:NO completion:nil];
                 NSLog(@"Should Cancell Alarm");
+                
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"userSmiled" object:nil]; 
+                
             }
         }
         else
@@ -201,11 +208,14 @@ bail:
              NSLog(@"%d",smileCountdown);
              //self.countdownLabel.text = [NSString stringWithFormat:@"%d",smileCountdown];
             smileCountdown = 0;
+            
         }
             break;
         
     }
 }
+
+
 
 - (void)viewDidLoad
 {

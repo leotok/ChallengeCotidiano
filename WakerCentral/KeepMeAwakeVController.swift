@@ -28,6 +28,12 @@ class KeepMeAwakeVController: UIViewController , UIImagePickerControllerDelegate
     private var feedBackCounter: Int = 0
     
 
+    override func viewWillAppear(animated: Bool)
+    {
+        
+        
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -36,6 +42,19 @@ class KeepMeAwakeVController: UIViewController , UIImagePickerControllerDelegate
             player.numberOfLoops = -1
         }
         feedBackTimer = NSTimer.scheduledTimerWithTimeInterval(feedBackInterval, target:self, selector: Selector("startAlarm"),userInfo:nil, repeats: false)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "hasSmile", name: "userSmiled", object: nil) //Creates Message Detector
+    }
+    
+    func hasSmile()
+    {
+        println("Smiled")
+         //Implement here that the feedBack smiled was given
+//        if(sound == true)
+//        {
+//            player.stop()
+//        }
+        //feedBackTimer = NSTimer.scheduledTimerWithTimeInterval(feedBackInterval, target:self, selector: Selector("startAlarm"),userInfo:nil, repeats: false)
         
     }
     
