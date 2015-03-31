@@ -31,7 +31,10 @@ class KeepMeAwakeVController: UIViewController , UIImagePickerControllerDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        player.numberOfLoops = -1
+        if(sound)
+        {
+            player.numberOfLoops = -1
+        }
         feedBackTimer = NSTimer.scheduledTimerWithTimeInterval(feedBackInterval, target:self, selector: Selector("startAlarm"),userInfo:nil, repeats: false)
         
     }
@@ -98,15 +101,8 @@ class KeepMeAwakeVController: UIViewController , UIImagePickerControllerDelegate
             }
             else if (feedBackEscolhido == "smile")
             {
-                var cameraPicker:UIImagePickerController = UIImagePickerController()
-                cameraPicker.delegate = self
-                cameraPicker.allowsEditing = false
-                cameraPicker.sourceType = UIImagePickerControllerSourceType.Camera
-                cameraPicker.showsCameraControls = false
-                cameraPicker.cameraDevice = UIImagePickerControllerCameraDevice.Front
-                cameraPicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureMode.Photo
-                
-                self.presentViewController(cameraPicker, animated: true, completion: nil)
+                var smilevc: SmileCameraViewController = SmileCameraViewController(nibName: "SmileCameraViewController", bundle: nil)
+                self.presentViewController(smilevc, animated: false, completion: nil)
 
             }
         }

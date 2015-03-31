@@ -16,6 +16,7 @@
 
 @interface SmileCameraViewController ()
 
+
 @end
 
 CGFloat degreesToRadians(CGFloat degrees)
@@ -59,12 +60,16 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 
 @interface SmileCameraViewController (InternalMethods)
 
+
 - (void)setupAVCapture;
 - (UIImage *)resizeImage:(UIImage*)image newSize:(CGSize)newSize;
 
 @end
 
 @implementation SmileCameraViewController
+
+int smileCountdown = 0;
+
 
 - (void)setupAVCapture
 {
@@ -168,62 +173,49 @@ bail:
 	imageOptions = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:6], CIDetectorImageOrientation, [NSNumber numberWithBool:YES], CIDetectorSmile, nil];
     
 	NSArray *features = [mFaceDetector featuresInImage:ciImage options:imageOptions];
+
     
     for (CIFaceFeature* faceFeature in features)
     {
         if (faceFeature.hasSmile)
         {
-            dispatch_async(dispatch_get_main_queue(), ^(void)
+            NSLog(@"%d",smileCountdown++);
+           // self.countdownLabel.text = [NSString stringWithFormat:@"%d",smileCountdown];
+            
+            if (smileCountdown > 10)
             {
-                UIImage *image = [[UIImage alloc] initWithCIImage:ciImage];
-                mTakenPhoto = image;
-            });
-            
-            [[mPreviewLayer session] stopRunning];
-            
-            break;
+                
+                dispatch_async(dispatch_get_main_queue(), ^(void)
+                               {
+                                   UIImage *image = [[UIImage alloc] initWithCIImage:ciImage];
+                                   mTakenPhoto = image;
+                               });
+                [[mPreviewLayer session] stopRunning];
+                [self dismissViewControllerAnimated:NO completion:nil];
+            }
         }
+        else
+        {
+             NSLog(@"%d",smileCountdown);
+             //self.countdownLabel.text = [NSString stringWithFormat:@"%d",smileCountdown];
+            smileCountdown = 0;
+        }
+            break;
+        
     }
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	[self setupAVCapture];
-    
+//    self.countdownLabel.frame = CGRectMake(self.view.frame.size.width/2 - 25, 20, 50, 50);
+//    [self.view addSubview: self.countdownLabel];
+//    
 	NSDictionary *detectorOptions = [[NSDictionary alloc] initWithObjectsAndKeys:CIDetectorAccuracyHigh, CIDetectorAccuracy, nil];
 	mFaceDetector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:detectorOptions];
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
 
 - (IBAction)retakePhotoButtonPressed:(id)sender
 {
@@ -233,32 +225,6 @@ bail:
     }
 }
 
-- (IBAction)shareViaInstagram:(id)sender
-{
-    UIImage *image = [self resizeImage:mTakenPhoto scaledToSize:CGSizeMake(640, 480)];
-    image = [image imageRotatedByDegrees:90.0];
-    
-    NSString *savePath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/originalImage.ig"];
-    [UIImagePNGRepresentation(image) writeToFile:savePath atomically:YES];
-    NSURL *instagramURL = [NSURL URLWithString:@"instagram://app"];
-    
-    if ([[UIApplication sharedApplication] canOpenURL:instagramURL])
-    {
-        _documentController = [UIDocumentInteractionController interactionControllerWithURL:[NSURL fileURLWithPath:savePath]];
-        _documentController.UTI = @"com.instagram.exclusivegram";
-        _documentController.delegate = self;
-        _documentController.annotation = [NSDictionary dictionaryWithObject:@"Your Caption here" forKey:@"InstagramCaption"];
-        [_documentController presentOpenInMenuFromRect:CGRectZero inView:self.view animated:YES];
-    }
-}
-
-- (UIDocumentInteractionController *) setupControllerWithURL: (NSURL*) fileURL usingDelegate: (id <UIDocumentInteractionControllerDelegate>) interactionDelegate
-{
-    UIDocumentInteractionController *interactionController = [UIDocumentInteractionController interactionControllerWithURL: fileURL];
-    interactionController.delegate = interactionDelegate;
-    
-    return interactionController;
-}
 
 - (UIImage *)resizeImage:(UIImage *)image scaledToSize:(CGSize)newSize
 {
@@ -269,55 +235,5 @@ bail:
     return newImage;
 }
 
-- (IBAction)shareViaFacebook:(id)sender
-{
-    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
-    {
-        SLComposeViewController *mySLComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-        [mySLComposerSheet setInitialText:@"Your text here"];
-        
-        UIImage *image = [self resizeImage:mTakenPhoto scaledToSize:CGSizeMake(640, 480)];
-        image = [image imageRotatedByDegrees:90.0];
-        [mySLComposerSheet addImage:image];
-        
-        [self presentViewController:mySLComposerSheet animated:YES completion:nil];
-    }
-    else
-    {
-        UIAlertView *alertView = [[UIAlertView alloc]
-                                  initWithTitle:@"Facebook is not available"
-                                  message:@"Make sure your device has an internet connection and you have at least one Facebook account added"
-                                  delegate:self
-                                  cancelButtonTitle:@"OK"
-                                  otherButtonTitles:nil];
-        [alertView show];
-    }
-}
-
-- (IBAction)shareViaTwitter:(id)sender
-{
-    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
-    {
-        SLComposeViewController *mySLComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [mySLComposerSheet setInitialText:@"Your text here"];
-        
-        UIImage *image = [self resizeImage:mTakenPhoto scaledToSize:CGSizeMake(640, 480)];
-        image = [image imageRotatedByDegrees:90.0];
-        
-        [mySLComposerSheet addImage:image];
-        
-        [self presentViewController:mySLComposerSheet animated:YES completion:nil];
-    }
-    else
-    {
-        UIAlertView *alertView = [[UIAlertView alloc]
-                                  initWithTitle:@"Facebook is not available"
-                                  message:@"Make sure your device has an internet connection and you have at least one Twitter account added"
-                                  delegate:self
-                                  cancelButtonTitle:@"OK"
-                                  otherButtonTitles:nil];
-        [alertView show];
-    }
-}
 
 @end
