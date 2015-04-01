@@ -18,6 +18,10 @@
 
 @interface SmileCameraViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (nonatomic) IBOutlet UILabel *counterLabel;
+@property (weak, nonatomic) IBOutlet UILabel *viewLabel;
+
 
 @end
 
@@ -183,11 +187,11 @@ bail:
         if (faceFeature.hasSmile)
         {
             NSLog(@"%d",smileCountdown++);
-           // self.countdownLabel.text = [NSString stringWithFormat:@"%d",smileCountdown];
+            [self.counterLabel setText:[NSString stringWithFormat:@"%d",smileCountdown]];
             
-            if (smileCountdown > 10)
+            if (smileCountdown > 5)
             {
-                
+                smileCountdown = 0;
                 dispatch_async(dispatch_get_main_queue(), ^(void)
                                {
                                    UIImage *image = [[UIImage alloc] initWithCIImage:ciImage];
@@ -195,19 +199,25 @@ bail:
                                });
                 [[mPreviewLayer session] stopRunning];
                 [mStillImageOutput removeObserver:self forKeyPath:@"capturingStillImage" context:(__bridge void *)(AVCaptureStillImageIsCapturingStillImageContext)];
-                [self removeFromParentViewController];
-                [self dismissViewControllerAnimated:NO completion:nil];
+                
+
                 NSLog(@"Should Cancell Alarm");
                 
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"userSmiled" object:nil];  //Sends Message "UserSmiled" to receiver in the swift code.  
+               
+                //[self removeFromParentViewController];
+                [self dismissViewControllerAnimated:NO completion: ^{
+                    
+                 [[NSNotificationCenter defaultCenter] postNotificationName:@"userSmiled" object:nil];  //Sends Message "UserSmiled" to receiver in the swift code.
+                
+                }];
                 
             }
         }
         else
         {
-             NSLog(@"%d",smileCountdown);
-             //self.countdownLabel.text = [NSString stringWithFormat:@"%d",smileCountdown];
+            NSLog(@"%d",smileCountdown);
             smileCountdown = 0;
+            [self.counterLabel setText:[NSString stringWithFormat:@"%d",smileCountdown]];
             
         }
             break;
@@ -221,9 +231,8 @@ bail:
 {
     [super viewDidLoad];
 	[self setupAVCapture];
-//    self.countdownLabel.frame = CGRectMake(self.view.frame.size.width/2 - 25, 20, 50, 50);
-//    [self.view addSubview: self.countdownLabel];
-//    
+    
+    
 	NSDictionary *detectorOptions = [[NSDictionary alloc] initWithObjectsAndKeys:CIDetectorAccuracyHigh, CIDetectorAccuracy, nil];
 	mFaceDetector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:detectorOptions];
 }

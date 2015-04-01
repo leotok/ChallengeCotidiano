@@ -47,6 +47,17 @@ class KeepMeAwakeVController: UIViewController , UIImagePickerControllerDelegate
         println("Smiled")
          //Implement here that the feedBack smiled was given
 
+        feedBackTimer.invalidate()
+        feedBackCounter = 0
+        
+        if(sound == true)
+        {
+            player.stop()
+        }
+        
+        feedBackTimer = NSTimer.scheduledTimerWithTimeInterval(feedBackInterval, target:self, selector: Selector("startAlarm"),userInfo:nil, repeats: false)
+
+
     }
     
     @IBAction func backMenu(sender: UIButton)

@@ -22,10 +22,7 @@
     UIImage *mTakenPhoto;
 }
 
-@property (retain, nonatomic) IBOutlet UIButton *retakePhotoButton;
 @property (strong, nonatomic) UIDocumentInteractionController *documentController;
-
-- (IBAction)retakePhotoButtonPressed:(id)sender;
 
 @end
 
