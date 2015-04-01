@@ -26,7 +26,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
     var leftButton: UIButton = UIButton(frame: CGRectMake(0,UIScreen.mainScreen().bounds.height / 1.16 , 342/1.8, 151/1.8))
     var rightButton: UIButton = UIButton(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2,UIScreen.mainScreen().bounds.height / 1.16 , 292/1.8  ,  151/1.8))
     var okButton: UIButton = UIButton(frame: CGRectMake(UIScreen.mainScreen().bounds.width/3,UIScreen.mainScreen().bounds.height / 1.2 , 198/1.8 , 176/1.8))
-    var backButton: UIButton = UIButton(frame: CGRectMake(20 ,27 , 30 , 30))
+    var backButton: UIButton = UIButton(frame: CGRectMake(15 ,27 , 30 , 30))
     var plusButton: UIButton = UIButton (frame: CGRectMake(280, 27, 30, 30))
     
     var vibrateSwitch: UISwitch = UISwitch(frame: CGRectMake(200, 100, 40, 30))
@@ -71,7 +71,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         okButton.setImage(UIImage(named: "play"), forState: UIControlState.Normal)
         okButton.addTarget(self, action: Selector("okButtonPressed:"), forControlEvents: UIControlEvents.TouchUpInside)
         
-        backButton.setImage(UIImage(named: "backbt"), forState: UIControlState.Normal)
+        backButton.setImage(UIImage(named: "backButton"), forState: UIControlState.Normal)
         backButton.addTarget(self, action: Selector("backMenu2:"), forControlEvents: UIControlEvents.TouchUpInside)
 
         plusButton.setImage(UIImage(named: "maisButton"), forState: UIControlState.Normal)
