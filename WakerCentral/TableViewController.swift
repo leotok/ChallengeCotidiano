@@ -17,17 +17,17 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
     let SelectedCellHeight: CGFloat = 150.0
     let UnselectedCellHeight: CGFloat = 50.0
     
-    var vibrateSwitch: UISwitch = UISwitch(frame: CGRectMake(200, 5, 40, 20))
-    var soundSwitch: UISwitch = UISwitch(frame: CGRectMake(200, 45, 40, 20))
-    var tapSwitch: UISwitch = UISwitch(frame: CGRectMake(200, 85, 40, 20))
-    var slideSwitch: UISwitch  = UISwitch(frame: CGRectMake(200, 125, 40, 20))
-    var smileSwitch: UISwitch  = UISwitch(frame: CGRectMake(200, 165, 40, 20))
+    var vibrateSwitch: UISwitch = UISwitch(frame: CGRectMake(250, 0, 40, 20))
+    var soundSwitch: UISwitch = UISwitch(frame: CGRectMake(250, 30, 40, 20))
+    var tapSwitch: UISwitch = UISwitch(frame: CGRectMake(250, 60, 40, 20))
+    var slideSwitch: UISwitch  = UISwitch(frame: CGRectMake(250, 90, 40, 20))
+    var smileSwitch: UISwitch  = UISwitch(frame: CGRectMake(250, 120, 40, 20))
     
-    var vibrateLabel: UILabel = UILabel(frame: CGRectMake(100, 100, 70, 30))
-    var soundLabel: UILabel = UILabel(frame: CGRectMake(100, 150, 70, 30))
-    var tapLabel: UILabel = UILabel(frame: CGRectMake(100, 200, 70, 30))
-    var slideLabel: UILabel = UILabel(frame: CGRectMake(100, 250, 70, 30))
-    var smileLabel: UILabel = UILabel(frame: CGRectMake(100, 300, 70, 30))
+    var vibrateLabel: UILabel = UILabel(frame: CGRectMake(150, 0, 70, 30))
+    var soundLabel: UILabel = UILabel(frame: CGRectMake(150, 30, 70, 30))
+    var tapLabel: UILabel = UILabel(frame: CGRectMake(150, 60, 70, 30))
+    var slideLabel: UILabel = UILabel(frame: CGRectMake(150,90,  70, 30))
+    var smileLabel: UILabel = UILabel(frame: CGRectMake(150, 120, 70, 30))
     
     
     
@@ -37,8 +37,11 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        vibrateSwitch.onTintColor = UIColor.orangeColor()
+        soundSwitch.onTintColor = UIColor.orangeColor()
+        tapSwitch.onTintColor = UIColor.orangeColor()
+        slideSwitch.onTintColor = UIColor.orangeColor()
         smileSwitch.onTintColor = UIColor.orangeColor()
-        
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
         
         for index in 0 ... 100{
@@ -53,7 +56,21 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         vibrateSwitch.hidden=true
         soundSwitch.hidden=true
         tapSwitch.hidden=true
+        slideSwitch.hidden=true
         smileSwitch.hidden=true
+        
+        vibrateLabel.text="Vibrate"
+        soundLabel.text="Sound"
+        tapLabel.text="tap"
+        slideLabel.text="slide"
+        smileLabel.text="Smile"
+        vibrateLabel.hidden=true
+        soundLabel.hidden=true
+        tapLabel.hidden=true
+        slideLabel.hidden=true
+        smileLabel.hidden=true
+        
+        
         // tirar as celulas vazias
         tableView.tableFooterView = UIView (frame:CGRectZero)
         
@@ -65,7 +82,7 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 4
+        return 2
     }
     //Chamado apenas uma vez , quando a tabela carrega, por isso não há clones
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -74,6 +91,9 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier) as UITableViewCell
         
         println("Subs \(indexPath.row)")
+        
+        cell.backgroundColor = UIColor.orangeColor()
+        
         
         if(indexPath.row==1)
         {
@@ -91,6 +111,7 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         }
         
         cell.textLabel?.text = self.tableData[indexPath.row]
+        cell.textLabel?.textAlignment = .Natural
         
         return cell
         
@@ -149,7 +170,14 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
             vibrateSwitch.hidden=false
             soundSwitch.hidden=false
             tapSwitch.hidden=false
+            slideSwitch.hidden=false
             smileSwitch.hidden=false
+            
+            vibrateLabel.hidden=false
+            soundLabel.hidden=false
+            tapLabel.hidden=false
+            slideLabel.hidden=false
+            smileLabel.hidden=false
             
            
             break;
@@ -173,7 +201,14 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
             vibrateSwitch.hidden=true
             soundSwitch.hidden=true
             tapSwitch.hidden=true
+            slideSwitch.hidden=true
             smileSwitch.hidden=true
+            
+            vibrateLabel.hidden=true
+            soundLabel.hidden=true
+            tapLabel.hidden=true
+            slideLabel.hidden=true
+            smileLabel.hidden=true
             
             
             break;
