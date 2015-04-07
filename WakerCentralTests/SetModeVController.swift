@@ -9,6 +9,13 @@
 import UIKit
 
 class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    let cellIdentifier = "cell"
+    var tableData = [String]()
+    var expanded: Int = 0
+    var selectedCellIndexPath: NSIndexPath?
+    let SelectedCellHeight: CGFloat = 150.0
+    let UnselectedCellHeight: CGFloat = 50.0
 
     enum viewControllers
     {
@@ -28,6 +35,8 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
     var okButton: UIButton = UIButton(frame: CGRectMake(UIScreen.mainScreen().bounds.width/3,UIScreen.mainScreen().bounds.height / 1.2 , 198/1.8 , 176/1.8))
     var backButton: UIButton = UIButton(frame: CGRectMake(15 ,27 , 30 , 30))
     var plusButton: UIButton = UIButton (frame: CGRectMake(280, 27, 30, 30))
+    
+    var tableViewC: UITableViewController = TableViewController()
     
     var vibrateSwitch: UISwitch = UISwitch(frame: CGRectMake(200, 100, 40, 30))
     var soundSwitch: UISwitch = UISwitch(frame: CGRectMake(200, 150, 40, 30))
@@ -53,6 +62,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
         //Default
         
         backgroundImage.image = UIImage(named: "background.png")
@@ -116,8 +126,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         view.addSubview(smileLabel)
         
         view.addSubview(soundPicker)
-        
-       
+    
         
         // seta os elementos na config default
         
@@ -173,7 +182,6 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         {   //apresenta elementos genericos
             titleImage.image = UIImage(named: "titleWakemode.png")
             timePicker.hidden = true
-            
             smileLabel.hidden = false
             vibrateLabel.hidden = false
             soundLabel.hidden = false
@@ -193,6 +201,13 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
             {
                 soundPicker.hidden = false
             }
+            
+            var tableView: UITableView = tableViewC.tableView
+            tableView.frame = CGRectMake(0, 67, self.view.frame.size.width,430);
+            view.addSubview(tableViewC.tableView)
+
+            println("TableView")
+            
         }
         else                                // 0 = leftButton (modos dependem do viewController)
         {  // esconde elementos genericos
@@ -238,6 +253,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
                 
             case .NearLocationVController:
                 
+                
                 NSLog("NearLocation")
                 
                 // aqui vai a parte do mapa do lucas: pra onde vai, onde ta, quantos pontos
@@ -278,8 +294,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         
         return label
     }
-    
-    
+
     
     // Buttons Actions
     
@@ -415,10 +430,9 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
             case .NearLocationVController:
             
                 let vc = NearLocationVController(nibName: "NearLocationVController", bundle: nil)
-                
                 self.presentViewController(vc, animated: false, completion: nil)
-                
-                
+            
+            
         }
         
     }
