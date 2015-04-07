@@ -45,7 +45,7 @@ class NearLocationVController: UIViewController,CLLocationManagerDelegate,UIText
         
         partidaField.text="Calculating your position..."
         
-        backButton.setImage(UIImage(named: "backbt"), forState: UIControlState.Normal)
+        backButton.setImage(UIImage(named: "backButton.png"), forState: UIControlState.Normal)
         backButton.addTarget(self, action: Selector("backMenu2:"), forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(backButton)
         // 2
