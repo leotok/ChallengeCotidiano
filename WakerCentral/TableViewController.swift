@@ -17,17 +17,17 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
     let SelectedCellHeight: CGFloat = 150.0
     let UnselectedCellHeight: CGFloat = 50.0
     
-    var vibrateSwitch: UISwitch = UISwitch(frame: CGRectMake(250, 0, 40, 20))
-    var soundSwitch: UISwitch = UISwitch(frame: CGRectMake(250, 30, 40, 20))
-    var tapSwitch: UISwitch = UISwitch(frame: CGRectMake(250, 60, 40, 20))
-    var slideSwitch: UISwitch  = UISwitch(frame: CGRectMake(250, 90, 40, 20))
-    var smileSwitch: UISwitch  = UISwitch(frame: CGRectMake(250, 120, 40, 20))
+    var vibrateSwitch: UISwitch = UISwitch(frame: CGRectMake(250, 40, 40, 20))
+    var soundSwitch: UISwitch = UISwitch(frame: CGRectMake(250, 10, 40, 20))
+    var tapSwitch: UISwitch = UISwitch(frame: CGRectMake(250, 45, 40, 20))
+    var slideSwitch: UISwitch  = UISwitch(frame: CGRectMake(250, 80, 40, 20))
+    var smileSwitch: UISwitch  = UISwitch(frame: CGRectMake(250, 115, 40, 20))
     
-    var vibrateLabel: UILabel = UILabel(frame: CGRectMake(150, 0, 70, 30))
-    var soundLabel: UILabel = UILabel(frame: CGRectMake(150, 30, 70, 30))
-    var tapLabel: UILabel = UILabel(frame: CGRectMake(150, 60, 70, 30))
-    var slideLabel: UILabel = UILabel(frame: CGRectMake(150,90,  70, 30))
-    var smileLabel: UILabel = UILabel(frame: CGRectMake(150, 120, 70, 30))
+    var vibrateLabel: UILabel = UILabel(frame: CGRectMake(150, 40, 70, 30))
+    var soundLabel: UILabel = UILabel(frame: CGRectMake(150, 10, 70, 30))
+    var tapLabel: UILabel = UILabel(frame: CGRectMake(150, 42, 70, 30))
+    var slideLabel: UILabel = UILabel(frame: CGRectMake(150,74,  70, 30))
+    var smileLabel: UILabel = UILabel(frame: CGRectMake(150, 106, 70, 30))
     
     
     
@@ -56,7 +56,7 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
     
     }
         tableData[0] = "General Settings";
-        tableData[1] = "Responsive Settings"
+        tableData[1] = "Feedbacks"
         
         vibrateSwitch.hidden=true
         soundSwitch.hidden=true
@@ -101,17 +101,22 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         
         if(indexPath.row==1)
         {
-        cell.addSubview(vibrateSwitch)
+        
         cell.addSubview(soundSwitch)
         cell.addSubview(tapSwitch)
         cell.addSubview(slideSwitch)
         cell.addSubview(smileSwitch)
         
-        cell.addSubview(vibrateLabel)
+       
         cell.addSubview(soundLabel)
         cell.addSubview(tapLabel)
         cell.addSubview(slideLabel)
         cell.addSubview(smileLabel)
+        }
+        else
+        {
+            cell.addSubview(vibrateSwitch)
+            cell.addSubview(vibrateLabel)
         }
         
         cell.textLabel?.text = self.tableData[indexPath.row]
@@ -126,7 +131,7 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         var selectedCell : UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
         selectedCell.contentView.backgroundColor = UIColor(red: 222/255.0, green: 196/255.0, blue: 167/255.0, alpha: 1.0)
         
-        
+        println("1")
         
         if let selectedCellIndexPath = selectedCellIndexPath {
             if selectedCellIndexPath == indexPath {
@@ -144,6 +149,7 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{
         
+                println("2")
         if let selectedCellIndexPath = selectedCellIndexPath
         {
             if selectedCellIndexPath == indexPath
