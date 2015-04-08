@@ -341,7 +341,6 @@
 				3FF13AE71AB8612F0098A4CD /* KeepMeAwakeVController.xib */,
 				FF54CA0D1AC194C0008560ED /* NearLocationVController.xib */,
 				3FA0E0651AB374AB00802D0A /* ByThisTimeVController.xib */,
-				E5BC51391AD4200C00C371F5 /* TableViewController.swift */,
 				E5BC513A1AD4200C00C371F5 /* TableViewController.xib */,
 			);
 			name = View;
@@ -358,6 +357,7 @@
 				3FF13AE61AB8612F0098A4CD /* KeepMeAwakeVController.swift */,
 				FF54CA0C1AC194C0008560ED /* NearLocationVController.swift */,
 				3FA0E0641AB374AB00802D0A /* ByThisTimeVController.swift */,
+				E5BC51391AD4200C00C371F5 /* TableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
