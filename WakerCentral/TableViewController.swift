@@ -29,9 +29,38 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
     var slideLabel: UILabel = UILabel(frame: CGRectMake(150,74,  70, 30))
     var smileLabel: UILabel = UILabel(frame: CGRectMake(150, 106, 70, 30))
     
+    var ds:NSUserDefaults = NSUserDefaults.standardUserDefaults()
     
+    var parentVC: SetModeVController!
     
     var CellContentID : Int = Int() //Informs to the cell what it has to present
+    
+     func isSwitchOn(switchName:String) -> Bool
+    {
+        if (switchName == "vibrate")
+        {
+            return  vibrateSwitch.on
+        }
+        else if( switchName == "sound")
+        {
+            return soundSwitch.on;
+        }
+        else if (switchName == "tap")
+        {
+            return  tapSwitch.on
+        }
+        else if( switchName == "slide")
+        {
+            return slideSwitch.on;
+        }
+        else if( switchName == "smile")
+        {
+            return slideSwitch.on;
+        }
+
+        NSLog("ERROR SWITCH NOT FOUND!\n returning FALSE\n")
+        return false
+    }
     
     override func viewDidLoad()
     {
@@ -45,6 +74,7 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         
         self.tableView.backgroundColor = UIColor.clearColor()
         self.tableView.separatorColor = UIColor(red: 197/255.0, green: 124/255.0, blue: 46/255.0, alpha: 1.0)
+        //parentVC = self.parentViewController as SetModeVController
         
         
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
@@ -55,6 +85,10 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
 
     
     }
+        
+        
+        
+       
         tableData[0] = "General Settings";
         tableData[1] = "Feedbacks"
         
@@ -235,6 +269,13 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         default:
             break;
         }
+//        parentVC.vibrateSwitch.on = vibrateSwitch.on
+//        parentVC.soundSwitch.on = soundSwitch.on
+        ds.setBool( vibrateSwitch.on, forKey: "vibrate")
+        ds.setBool( soundSwitch.on, forKey: "sound")
+        ds.setBool( smileSwitch.on, forKey: "smile")
+        ds.setBool( vibrateSwitch.on, forKey: "vibrate")
+
     
     }
     override func didReceiveMemoryWarning() {
