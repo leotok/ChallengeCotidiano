@@ -20,7 +20,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (nonatomic) IBOutlet UILabel *counterLabel;
-@property (weak, nonatomic) IBOutlet UILabel *viewLabel;
 
 
 @end
@@ -163,7 +162,12 @@ bail:
 {
     return YES;
 }
-
+//Essa Função é chamada pelo performSelector
+-(void) updateTextLabel
+{
+    self.counterLabel.text=[NSString stringWithFormat:@"%d",smileCountdown];
+    
+}
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection
 {
@@ -186,12 +190,17 @@ bail:
     {
         if (faceFeature.hasSmile)
         {
-            NSLog(@"%d",smileCountdown++);
-            [self.counterLabel setText:[NSString stringWithFormat:@"%d",smileCountdown]];
+            NSLog(@"SmileCountDown %d SmileCountDownText %@",smileCountdown,self.counterLabel.text);
+            smileCountdown++;
+            //[self.counterLabel removeFromSuperview];
+            //[self.view addSubview:self.counterLabel];
+            [self performSelectorOnMainThread:@selector(updateTextLabel) withObject:self waitUntilDone:YES]; //Manda  chamar a função antes de continuar o código nesse escopo
+           // [[NSRunLoop mainRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.5]];
             
             if (smileCountdown > 5)
             {
                 smileCountdown = 0;
+                
                 dispatch_async(dispatch_get_main_queue(), ^(void)
                                {
                                    UIImage *image = [[UIImage alloc] initWithCIImage:ciImage];
@@ -217,7 +226,10 @@ bail:
         {
             NSLog(@"%d",smileCountdown);
             smileCountdown = 0;
-            [self.counterLabel setText:[NSString stringWithFormat:@"%d",smileCountdown]];
+            //[self.counterLabel setText:[NSString stringWithFormat:@"%d",smileCountdown]];
+            [self performSelectorOnMainThread:@selector(updateTextLabel) withObject:self waitUntilDone:YES]; //Manda  chamar a função antes de continuar o código nesse escopo
+
+            
             
         }
             break;
