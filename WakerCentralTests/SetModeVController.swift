@@ -203,7 +203,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
             }
             
             var tableView: UITableView = tableViewC.tableView
-            tableView.frame = CGRectMake(0, 67, self.view.frame.size.width,430);
+            tableView.frame = CGRectMake(0, 150, self.view.frame.size.width,430);
             view.addSubview(tableViewC.tableView)
 
             println("TableView")

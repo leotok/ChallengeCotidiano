@@ -37,11 +37,16 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        vibrateSwitch.onTintColor = UIColor.orangeColor()
-        soundSwitch.onTintColor = UIColor.orangeColor()
-        tapSwitch.onTintColor = UIColor.orangeColor()
-        slideSwitch.onTintColor = UIColor.orangeColor()
-        smileSwitch.onTintColor = UIColor.orangeColor()
+        vibrateSwitch.onTintColor = UIColor(red: 211/255.0, green: 129/255.0, blue: 54/255.0, alpha: 1.0)
+        soundSwitch.onTintColor = UIColor(red: 211/255.0, green: 129/255.0, blue: 54/255.0, alpha: 1.0)
+        tapSwitch.onTintColor = UIColor(red: 211/255.0, green: 129/255.0, blue: 54/255.0, alpha: 1.0)
+        slideSwitch.onTintColor = UIColor(red: 211/255.0, green: 129/255.0, blue: 54/255.0, alpha: 1.0)
+        smileSwitch.onTintColor = UIColor(red: 211/255.0, green: 129/255.0, blue: 54/255.0, alpha: 1.0)
+        
+        self.tableView.backgroundColor = UIColor.clearColor()
+        self.tableView.separatorColor = UIColor(red: 197/255.0, green: 124/255.0, blue: 46/255.0, alpha: 1.0)
+        
+        
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
         
         for index in 0 ... 100{
@@ -50,8 +55,8 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
 
     
     }
-        tableData[0] = "General Configurations";
-        tableData[1] = "Responsive"
+        tableData[0] = "General Settings";
+        tableData[1] = "Responsive Settings"
         
         vibrateSwitch.hidden=true
         soundSwitch.hidden=true
@@ -92,8 +97,7 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         
         println("Subs \(indexPath.row)")
         
-        cell.backgroundColor = UIColor.orangeColor()
-        
+        cell.backgroundColor = UIColor(red: 222/255.0, green: 196/255.0, blue: 167/255.0, alpha: 1.0)
         
         if(indexPath.row==1)
         {
@@ -118,6 +122,12 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        var selectedCell : UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        selectedCell.contentView.backgroundColor = UIColor(red: 222/255.0, green: 196/255.0, blue: 167/255.0, alpha: 1.0)
+        
+        
+        
         if let selectedCellIndexPath = selectedCellIndexPath {
             if selectedCellIndexPath == indexPath {
                 self.selectedCellIndexPath = nil
@@ -130,6 +140,7 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         tableView.beginUpdates()
         tableView.endUpdates()
     }
+    
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{
         
@@ -162,18 +173,19 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         switch(CellContentID)
         {
         case 0:
-            
+            vibrateSwitch.hidden=false
+
+            vibrateLabel.hidden=false
+
             
             break;
         case 1:
             //cell = self.tableView.cellForRowAtIndexPath(mode)!
-            vibrateSwitch.hidden=false
             soundSwitch.hidden=false
             tapSwitch.hidden=false
             slideSwitch.hidden=false
             smileSwitch.hidden=false
             
-            vibrateLabel.hidden=false
             soundLabel.hidden=false
             tapLabel.hidden=false
             slideLabel.hidden=false
@@ -193,18 +205,20 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         switch(CellContentID)
         {
         case 0:
+            vibrateSwitch.hidden=true
             
+            vibrateLabel.hidden=true
+
+
             
             break;
         case 1:
             //cell = self.tableView.cellForRowAtIndexPath(mode)!
-            vibrateSwitch.hidden=true
             soundSwitch.hidden=true
             tapSwitch.hidden=true
             slideSwitch.hidden=true
             smileSwitch.hidden=true
             
-            vibrateLabel.hidden=true
             soundLabel.hidden=true
             tapLabel.hidden=true
             slideLabel.hidden=true
