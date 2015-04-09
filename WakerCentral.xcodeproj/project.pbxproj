@@ -56,6 +56,25 @@
 		E5CE82A01ABA283700C52DB6 /* setaback.png in Resources */ = {isa = PBXBuildFile; fileRef = E5CE82951ABA283600C52DB6 /* setaback.png */; };
 		E5CE82A11ABA283700C52DB6 /* setalado.png in Resources */ = {isa = PBXBuildFile; fileRef = E5CE82961ABA283700C52DB6 /* setalado.png */; };
 		E5CE82A71ABA2A5700C52DB6 /* configbg.png in Resources */ = {isa = PBXBuildFile; fileRef = E5CE82A61ABA2A5700C52DB6 /* configbg.png */; };
+		E5FA93241AD6390200879032 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA93111AD6390200879032 /* Icon-40.png */; };
+		E5FA93251AD6390200879032 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA93121AD6390200879032 /* Icon-40@2x.png */; };
+		E5FA93261AD6390200879032 /* Icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA93131AD6390200879032 /* Icon-40@3x.png */; };
+		E5FA93271AD6390200879032 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA93141AD6390200879032 /* Icon-60@2x.png */; };
+		E5FA93281AD6390200879032 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA93151AD6390200879032 /* Icon-60@3x.png */; };
+		E5FA93291AD6390200879032 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA93161AD6390200879032 /* Icon-76.png */; };
+		E5FA932A1AD6390200879032 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA93171AD6390200879032 /* Icon-76@2x.png */; };
+		E5FA932B1AD6390200879032 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA93181AD6390200879032 /* Icon-Small.png */; };
+		E5FA932C1AD6390200879032 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA93191AD6390200879032 /* Icon-Small@2x.png */; };
+		E5FA932D1AD6390200879032 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA931A1AD6390200879032 /* Icon-Small@3x.png */; };
+		E5FA932E1AD6390200879032 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA931B1AD6390200879032 /* Icon-60.png */; };
+		E5FA932F1AD6390200879032 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA931C1AD6390200879032 /* Icon-72.png */; };
+		E5FA93301AD6390200879032 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA931D1AD6390200879032 /* Icon-72@2x.png */; };
+		E5FA93311AD6390200879032 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA931E1AD6390200879032 /* Icon-Small-50.png */; };
+		E5FA93321AD6390200879032 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA931F1AD6390200879032 /* Icon-Small-50@2x.png */; };
+		E5FA93331AD6390200879032 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA93201AD6390200879032 /* Icon.png */; };
+		E5FA93341AD6390200879032 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA93211AD6390200879032 /* Icon@2x.png */; };
+		E5FA93351AD6390200879032 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA93221AD6390200879032 /* iTunesArtwork.png */; };
+		E5FA93361AD6390200879032 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5FA93231AD6390200879032 /* iTunesArtwork@2x.png */; };
 		FF399A281AB351DC00F70316 /* alarm_classic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A251AB351DC00F70316 /* alarm_classic.mp3 */; };
 		FF399A291AB351DC00F70316 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A261AB351DC00F70316 /* alarm_sound.mp3 */; };
 		FF399A2A1AB351DC00F70316 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF399A271AB351DC00F70316 /* alarm.mp3 */; };
@@ -139,6 +158,25 @@
 		E5CE82951ABA283600C52DB6 /* setaback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setaback.png; sourceTree = "<group>"; };
 		E5CE82961ABA283700C52DB6 /* setalado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setalado.png; sourceTree = "<group>"; };
 		E5CE82A61ABA2A5700C52DB6 /* configbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = configbg.png; sourceTree = "<group>"; };
+		E5FA93111AD6390200879032 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		E5FA93121AD6390200879032 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		E5FA93131AD6390200879032 /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@3x.png"; sourceTree = "<group>"; };
+		E5FA93141AD6390200879032 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		E5FA93151AD6390200879032 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		E5FA93161AD6390200879032 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		E5FA93171AD6390200879032 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		E5FA93181AD6390200879032 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		E5FA93191AD6390200879032 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		E5FA931A1AD6390200879032 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		E5FA931B1AD6390200879032 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		E5FA931C1AD6390200879032 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		E5FA931D1AD6390200879032 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		E5FA931E1AD6390200879032 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		E5FA931F1AD6390200879032 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		E5FA93201AD6390200879032 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		E5FA93211AD6390200879032 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		E5FA93221AD6390200879032 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		E5FA93231AD6390200879032 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		FF399A251AB351DC00F70316 /* alarm_classic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_classic.mp3; sourceTree = "<group>"; };
 		FF399A261AB351DC00F70316 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 		FF399A271AB351DC00F70316 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
@@ -221,6 +259,7 @@
 		3FA0E0321AB1F1FB00802D0A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E5FA930F1AD6390200879032 /* ios */,
 				E5CE828D1ABA283600C52DB6 /* Telas - Configurações */,
 				64E9E70B1ACAEDA7000F33CC /* telainicio@2x.png */,
 				3FF13AF61AB9D5500098A4CD /* Menu II */,
@@ -304,6 +343,40 @@
 				E5CE82961ABA283700C52DB6 /* setalado.png */,
 			);
 			path = "Telas - Configurações";
+			sourceTree = "<group>";
+		};
+		E5FA930F1AD6390200879032 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				E5FA93101AD6390200879032 /* AppIcon.appiconset */,
+				E5FA931B1AD6390200879032 /* Icon-60.png */,
+				E5FA931C1AD6390200879032 /* Icon-72.png */,
+				E5FA931D1AD6390200879032 /* Icon-72@2x.png */,
+				E5FA931E1AD6390200879032 /* Icon-Small-50.png */,
+				E5FA931F1AD6390200879032 /* Icon-Small-50@2x.png */,
+				E5FA93201AD6390200879032 /* Icon.png */,
+				E5FA93211AD6390200879032 /* Icon@2x.png */,
+				E5FA93221AD6390200879032 /* iTunesArtwork.png */,
+				E5FA93231AD6390200879032 /* iTunesArtwork@2x.png */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		E5FA93101AD6390200879032 /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				E5FA93111AD6390200879032 /* Icon-40.png */,
+				E5FA93121AD6390200879032 /* Icon-40@2x.png */,
+				E5FA93131AD6390200879032 /* Icon-40@3x.png */,
+				E5FA93141AD6390200879032 /* Icon-60@2x.png */,
+				E5FA93151AD6390200879032 /* Icon-60@3x.png */,
+				E5FA93161AD6390200879032 /* Icon-76.png */,
+				E5FA93171AD6390200879032 /* Icon-76@2x.png */,
+				E5FA93181AD6390200879032 /* Icon-Small.png */,
+				E5FA93191AD6390200879032 /* Icon-Small@2x.png */,
+				E5FA931A1AD6390200879032 /* Icon-Small@3x.png */,
+			);
+			path = AppIcon.appiconset;
 			sourceTree = "<group>";
 		};
 		FF399A2B1AB3526400F70316 /* Sounds */ = {
@@ -443,6 +516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64E9E70C1ACAEDA7000F33CC /* telainicio@2x.png in Resources */,
+				E5FA93291AD6390200879032 /* Icon-76.png in Resources */,
 				E5B726371ACB0DAD0014CE71 /* titleLocation.png in Resources */,
 				3FA7E75B1AC4361900D37944 /* nearMeButton.png in Resources */,
 				FF399A291AB351DC00F70316 /* alarm_sound.mp3 in Resources */,
@@ -455,14 +529,20 @@
 				3FA7E7E61ACAE9FB00D37944 /* SmileCameraViewController.xib in Resources */,
 				FF6E10D51AB87873008E5228 /* SetModeVController.xib in Resources */,
 				E5B726351ACB03570014CE71 /* titleWakemode.png in Resources */,
+				E5FA93331AD6390200879032 /* Icon.png in Resources */,
 				E5CE82A01ABA283700C52DB6 /* setaback.png in Resources */,
 				3FF13AF41AB9D5460098A4CD /* titlemain.png in Resources */,
+				E5FA93281AD6390200879032 /* Icon-60@3x.png in Resources */,
 				3F5E14F31AB74E3A0067F649 /* sideButton.jpg in Resources */,
+				E5FA932A1AD6390200879032 /* Icon-76@2x.png in Resources */,
 				FF54CA0F1AC194C0008560ED /* NearLocationVController.xib in Resources */,
 				64E9E7111ACAF07A000F33CC /* buttonBTT.png in Resources */,
 				FF399A2A1AB351DC00F70316 /* alarm.mp3 in Resources */,
 				64E9E7141ACAF1B4000F33CC /* MainMenu2VController.xib in Resources */,
 				3F5E14F41AB74E3A0067F649 /* seta back.png in Resources */,
+				E5FA93251AD6390200879032 /* Icon-40@2x.png in Resources */,
+				E5FA93321AD6390200879032 /* Icon-Small-50@2x.png in Resources */,
+				E5FA93241AD6390200879032 /* Icon-40.png in Resources */,
 				64E9E7081ACADF60000F33CC /* maisButton.png in Resources */,
 				E5C26E9B1ACC420F008C8769 /* backButton.png in Resources */,
 				3FF13AFE1AB9D5500098A4CD /* bgmenu2.png in Resources */,
@@ -471,15 +551,24 @@
 				3FF13AE91AB8612F0098A4CD /* KeepMeAwakeVController.xib in Resources */,
 				64E9E7121ACAF07A000F33CC /* buttonNL.png in Resources */,
 				3FF13B021AB9D5500098A4CD /* cancel.png in Resources */,
+				E5FA93361AD6390200879032 /* iTunesArtwork@2x.png in Resources */,
+				E5FA93271AD6390200879032 /* Icon-60@2x.png in Resources */,
+				E5FA93341AD6390200879032 /* Icon@2x.png in Resources */,
+				E5FA93351AD6390200879032 /* iTunesArtwork.png in Resources */,
+				E5FA93301AD6390200879032 /* Icon-72@2x.png in Resources */,
 				E5B7263B1ACB10A40014CE71 /* titleAlarm.png in Resources */,
 				3FA7E75C1AC4361900D37944 /* OnTimeButton.png in Resources */,
 				E5CE829F1ABA283700C52DB6 /* play.png in Resources */,
+				E5FA932E1AD6390200879032 /* Icon-60.png in Resources */,
 				3FA0E0621AB3746700802D0A /* MainMenuVController.xib in Resources */,
 				E5CE829A1ABA283700C52DB6 /* bg.png in Resources */,
 				3FF13AF51AB9D5460098A4CD /* wakemeup.png in Resources */,
 				64E9E70E1ACAEECC000F33CC /* telainiciobg.png in Resources */,
 				FF54CA221AC5FE39008560ED /* AlarmListVController.xib in Resources */,
+				E5FA932C1AD6390200879032 /* Icon-Small@2x.png in Resources */,
+				E5FA932F1AD6390200879032 /* Icon-72.png in Resources */,
 				E5B7263A1ACB10A40014CE71 /* titleCoffee.png in Resources */,
+				E5FA932B1AD6390200879032 /* Icon-Small.png in Resources */,
 				FF399A281AB351DC00F70316 /* alarm_classic.mp3 in Resources */,
 				E5CE82991ABA283700C52DB6 /* backbt.png in Resources */,
 				3FA7E75A1AC4361900D37944 /* configButton.png in Resources */,
@@ -487,6 +576,9 @@
 				3FA0E03F1AB1F1FB00802D0A /* LaunchScreen.xib in Resources */,
 				3FA0E03C1AB1F1FB00802D0A /* Images.xcassets in Resources */,
 				3F5E14F51AB74E3A0067F649 /* seta pra baixo.png in Resources */,
+				E5FA93261AD6390200879032 /* Icon-40@3x.png in Resources */,
+				E5FA93311AD6390200879032 /* Icon-Small-50.png in Resources */,
+				E5FA932D1AD6390200879032 /* Icon-Small@3x.png in Resources */,
 				E50BBD601ACB14E8007D6B97 /* coffButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
