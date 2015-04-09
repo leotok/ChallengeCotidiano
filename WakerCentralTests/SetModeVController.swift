@@ -16,7 +16,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
     var selectedCellIndexPath: NSIndexPath?
     let SelectedCellHeight: CGFloat = 150.0
     let UnselectedCellHeight: CGFloat = 50.0
-
+    var ds:NSUserDefaults = NSUserDefaults.standardUserDefaults()
     enum viewControllers
     {
         case KeepMeAwakeVController
@@ -39,11 +39,11 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
     var tableViewC: UITableViewController = TableViewController()
     
     
-//    var vibrateSwitch: UISwitch = UISwitch(frame: CGRectMake(200, 100, 40, 30))
-//    var soundSwitch: UISwitch = UISwitch(frame: CGRectMake(200, 150, 40, 30))
-//    var tapSwitch: UISwitch = UISwitch(frame: CGRectMake(200, 200, 40, 30))
-//    var slideSwitch: UISwitch  = UISwitch(frame: CGRectMake(200, 250, 40, 30))
-//    var smileSwitch: UISwitch  = UISwitch(frame: CGRectMake(200, 300, 40, 30))
+    var vibrateSwitch: UISwitch = UISwitch(frame: CGRectMake(200, 100, 40, 30))
+    var soundSwitch: UISwitch = UISwitch(frame: CGRectMake(200, 150, 40, 30))
+    var tapSwitch: UISwitch = UISwitch(frame: CGRectMake(200, 200, 40, 30))
+    var slideSwitch: UISwitch  = UISwitch(frame: CGRectMake(200, 250, 40, 30))
+    var smileSwitch: UISwitch  = UISwitch(frame: CGRectMake(200, 300, 40, 30))
 //
 //    var vibrateLabel: UILabel = UILabel(frame: CGRectMake(100, 100, 70, 30))
 //    var soundLabel: UILabel = UILabel(frame: CGRectMake(100, 150, 70, 30))
@@ -104,7 +104,7 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         timePicker.datePickerMode = UIDatePickerMode.CountDownTimer
         
         tableViewC.tableView.frame = CGRectMake(0, 150, self.view.frame.size.width,300);
-
+        
         
         // adiciona os elementos genericos na tela
 
@@ -319,135 +319,144 @@ class SetModeVController: UIViewController, UIPickerViewDataSource, UIPickerView
         self.modalPresentationStyle = UIModalPresentationStyle.Popover
         self.presentViewController(save, animated: true, completion:nil)
     }
-    
-//    func okButtonPressed(sender: UIButton)
-//    {
-//        
-//        //configuracoes de wakemode's a serem mandadas para o viewcontroller chamado, falta implementar para alguns
-//        if( !tapSwitch.on && !slideSwitch.on && !smileSwitch.on)
-//        {
-//            NSLog("Escolha pelo menos um tipo de feedback")
-//            return
-//        }
-//        var feedBackDic: NSMutableDictionary = NSMutableDictionary()
-//        if(tapSwitch.on)
-//        {
-//            feedBackDic.setValue("1", forKey: "tap")
-//        }
-//        else
-//        {
-//            feedBackDic.setValue("0", forKey: "tap")
-//        }
-//        if(slideSwitch.on)
-//        {
-//            feedBackDic.setValue("1", forKey: "slide")
-//        }
-//        else
-//        {
-//            feedBackDic.setValue("0", forKey: "slide")
-//        }
-//        // if(winkSwitch.on)
-//        if(false)                                               // temporario! ainda nao existe essa opcao entao sempre será 0
-//        {
-//            feedBackDic.setValue("1", forKey: "wink")
-//        }
-//        else
-//        {
-//            feedBackDic.setValue("0", forKey: "wink")
-//        }
-//        //if(smileSwitch.on)
-//        if(smileSwitch.on)                                               // temporario!
-//        {
-//            feedBackDic.setValue("1", forKey: "smile")
-//        }
-//        else
-//        {
-//            feedBackDic.setValue("0", forKey: "smile")
-//        }
-//        
-//        
-//        soundName = soundArray[soundPicker.selectedRowInComponent(0)]
-//        println("soundName \(soundName)")
-//        var timeToWait: NSTimeInterval = timePicker.countDownDuration
-//        println("on \(vibrateSwitch.on) \(soundSwitch.on)")
-//        
-//        switch vcToPresent
-//        {
-//            case .ByThisTimeVController:
-//            
-//                let vc = ByThisTimeVController(nibName: "ByThisTimeVController", bundle: nil)
-//                
-//                if(vibrateSwitch.on==true)
-//                {
-//                    if(soundSwitch.on==true)
-//                    {
-//                        vc.setToVibrateAndToPlaySound(soundName, ofType: ".mp3", timeToWait: timeToWait)
-//                    }
-//                    else
-//                    {
-//                        vc.setToVibrate(timeToWait)
-//                    }
-//                }
-//                else
-//                {
-//                    if(soundSwitch.on==true)
-//                    {
-//                        vc.setSoundToPlay(soundName, ofType: ".mp3", timeToWait: timeToWait)
-//                    }
-//                    else
-//                    {
-//                        println("Escolha pelo menos um modo de acordar");
-//                        return
-//                    }
-//                }
-//                
-//                self.presentViewController(vc, animated: false, completion: nil)
-//                
-//            case .KeepMeAwakeVController:
-//                
-//                let kmavc = KeepMeAwakeVController(nibName: "KeepMeAwakeVController", bundle: nil)
-//                
-//                if(vibrateSwitch.on==true)
-//                {
-//                    if(soundSwitch.on==true)
-//                    {
-//                        kmavc.setToVibrateAndToPlaySound(soundName, ofType: ".mp3")
-//                    }
-//                    else
-//                    {
-//                       kmavc.setToVibrate()
-//                    }
-//                }
-//                else
-//                {
-//                    if(soundSwitch.on==true)
-//                    {
-//                        kmavc.setSoundToPlay(soundName, ofType: ".mp3")
-//                    }
-//                    else
-//                    {
-//                        println("Escolha pelo menos um modo de acordar");
-//                        return
-//                    }
-//                }
-//            
-//                kmavc.setFeedBackTypesAndTimeInterval(feedBackDic, timeInterval: 6)
-//                
-//                self.presentViewController(kmavc, animated: false, completion: nil)
-//                
-//                
-//            case .NearLocationVController:
-//            
-//                let vc = NearLocationVController(nibName: "NearLocationVController", bundle: nil)
-//                self.presentViewController(vc, animated: false, completion: nil)
-//            
-//            
-//        }
-//        
-//    }
-//
-//    func soundSwitchChanged(sender: UISwitch) {
-//        soundPicker.hidden = !sender.on
-//    }
+    func recoverSwitches()
+    {
+        vibrateSwitch.on=ds.boolForKey("vibrate")
+        soundSwitch.on=ds.boolForKey("sound")
+        tapSwitch.on=ds.boolForKey("tap")
+        slideSwitch.on=ds.boolForKey("slide")
+        smileSwitch.on=ds.boolForKey("smile")
+    }
+    func okButtonPressed(sender: UIButton)
+    {
+        NSNotificationCenter.defaultCenter().postNotificationName("getSwitches", object: nil)
+        recoverSwitches()
+        
+        println("vibrate on \(vibrateSwitch.on)")
+        //configuracoes de wakemode's a serem mandadas para o viewcontroller chamado, falta implementar para alguns
+        if( !tapSwitch.on && !slideSwitch.on && !smileSwitch.on)
+        {
+            NSLog("Escolha pelo menos um tipo de feedback")
+            return
+        }
+        var feedBackDic: NSMutableDictionary = NSMutableDictionary()
+        if(tapSwitch.on)
+        {
+            feedBackDic.setValue("1", forKey: "tap")
+        }
+        else
+        {
+            feedBackDic.setValue("0", forKey: "tap")
+        }
+        if(slideSwitch.on)
+        {
+            feedBackDic.setValue("1", forKey: "slide")
+        }
+        else
+        {
+            feedBackDic.setValue("0", forKey: "slide")
+        }
+        // if(winkSwitch.on)
+        if(false)                                               // temporario! ainda nao existe essa opcao entao sempre será 0
+        {
+            feedBackDic.setValue("1", forKey: "wink")
+        }
+        else
+        {
+            feedBackDic.setValue("0", forKey: "wink")
+        }
+        //if(smileSwitch.on)
+        if(smileSwitch.on)                                               // temporario!
+        {
+            feedBackDic.setValue("1", forKey: "smile")
+        }
+        else
+        {
+            feedBackDic.setValue("0", forKey: "smile")
+        }
+        
+        
+        soundName = soundArray[soundPicker.selectedRowInComponent(0)]
+        println("soundName \(soundName)")
+        var timeToWait: NSTimeInterval = timePicker.countDownDuration
+        println("on \(vibrateSwitch.on) \(soundSwitch.on)")
+                 switch vcToPresent
+        {
+            case .ByThisTimeVController:
+            
+                let vc = ByThisTimeVController(nibName: "ByThisTimeVController", bundle: nil)
+                
+                if(vibrateSwitch.on==true)
+                {
+                    if(soundSwitch.on==true)
+                    {
+                        vc.setToVibrateAndToPlaySound(soundName, ofType: ".mp3", timeToWait: timeToWait)
+                    }
+                    else
+                    {
+                        vc.setToVibrate(timeToWait)
+                    }
+                }
+                else
+                {
+                    if(soundSwitch.on==true)
+                    {
+                        vc.setSoundToPlay(soundName, ofType: ".mp3", timeToWait: timeToWait)
+                    }
+                    else
+                    {
+                        println("Escolha pelo menos um modo de acordar");
+                        return
+                    }
+                }
+                
+                self.presentViewController(vc, animated: false, completion: nil)
+                
+            case .KeepMeAwakeVController:
+                
+                let kmavc = KeepMeAwakeVController(nibName: "KeepMeAwakeVController", bundle: nil)
+                
+                if( vibrateSwitch.on==true)
+                {
+                    if(soundSwitch.on==true)
+                    {
+                        kmavc.setToVibrateAndToPlaySound(soundName, ofType: ".mp3")
+                    }
+                    else
+                    {
+                       kmavc.setToVibrate()
+                    }
+                }
+                else
+                {
+                    if(soundSwitch.on==true)
+                    {
+                        kmavc.setSoundToPlay(soundName, ofType: ".mp3")
+                    }
+                    else
+                    {
+                        println("Escolha pelo menos um modo de acordar");
+                        return
+                    }
+                }
+            
+                kmavc.setFeedBackTypesAndTimeInterval(feedBackDic, timeInterval: 6)
+                
+                self.presentViewController(kmavc, animated: false, completion: nil)
+                
+                
+            case .NearLocationVController:
+            
+                let vc = NearLocationVController(nibName: "NearLocationVController", bundle: nil)
+                self.presentViewController(vc, animated: false, completion: nil)
+            
+            
+        }
+        
+    }
+
+    func soundSwitchChanged(sender: UISwitch) {
+        soundPicker.hidden = !sender.on
+    }
 
 }

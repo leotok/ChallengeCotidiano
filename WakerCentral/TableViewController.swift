@@ -109,20 +109,38 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         slideLabel.hidden=true
         smileLabel.hidden=true
         
+        //default values
+        smileSwitch.on = true
+        vibrateSwitch.on=true
+        soundSwitch.on=false
+        tapSwitch.on=true
+        slideSwitch.on=false
+        saveSwitches()
+        
         
         // tirar as celulas vazias
         tableView.tableFooterView = UIView (frame:CGRectZero)
-        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "saveSwitches", name: "getSwitches", object: nil)
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int{
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
+        saveSwitches()
         return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
+        saveSwitches()
         return 2
     }
+   
+    override  func tableView(tableView: UITableView, performAction action: Selector, forRowAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject!)
+    {
+        println("Performed")
+        saveSwitches()
+    }
+    
     //Chamado apenas uma vez , quando a tabela carrega, por isso não há clones
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
@@ -178,6 +196,7 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         }
         tableView.beginUpdates()
         tableView.endUpdates()
+        saveSwitches()
     }
     
     
@@ -204,6 +223,7 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         //        }
         
         //        return rowHeight
+        saveSwitches()
         
     }
     func DrawCellObjects(mode: NSIndexPath)
@@ -236,7 +256,7 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         default:
             break;
         }
-        
+        saveSwitches()
         
     }
     func EraseCellObjects(mode: NSIndexPath)
@@ -271,12 +291,19 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         }
 //        parentVC.vibrateSwitch.on = vibrateSwitch.on
 //        parentVC.soundSwitch.on = soundSwitch.on
-        ds.setBool( vibrateSwitch.on, forKey: "vibrate")
-        ds.setBool( soundSwitch.on, forKey: "sound")
-        ds.setBool( smileSwitch.on, forKey: "smile")
-        ds.setBool( vibrateSwitch.on, forKey: "vibrate")
+          saveSwitches()
 
     
+    }
+    func saveSwitches()
+    {
+        NSLog("Saved Switches")
+        ds.setBool( vibrateSwitch.on, forKey: "vibrate")
+        ds.setBool( soundSwitch.on, forKey: "sound")
+        ds.setBool(tapSwitch.on, forKey: "tap")
+        ds.setBool( smileSwitch.on, forKey: "smile")
+        ds.setBool(slideSwitch.on, forKey: "slide")
+       
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
