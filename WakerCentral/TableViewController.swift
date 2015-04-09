@@ -29,11 +29,13 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
     var slideLabel: UILabel = UILabel(frame: CGRectMake(150,74,  70, 30))
     var smileLabel: UILabel = UILabel(frame: CGRectMake(150, 106, 70, 30))
     
+    var expandTimer: NSTimer = NSTimer()
     var ds:NSUserDefaults = NSUserDefaults.standardUserDefaults()
     
     var parentVC: SetModeVController!
     
     var CellContentID : Int = Int() //Informs to the cell what it has to present
+    var DrawCellContentID: Int = 0
     
      func isSwitchOn(switchName:String) -> Bool
     {
@@ -178,6 +180,7 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         
     }
     
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         var selectedCell : UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
@@ -208,13 +211,16 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
             if selectedCellIndexPath == indexPath
             {
                 CellContentID = indexPath.row
-                DrawCellObjects(indexPath)
+                //drawCellObjects()
+                DrawCellContentID = indexPath.row
+                expandTimer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "drawCellObjects", userInfo: nil, repeats: false)
                 return SelectedCellHeight
                 
             }
         }
         CellContentID = indexPath.row
         EraseCellObjects(indexPath)
+        
         return UnselectedCellHeight
         
         //        if(indexPath.row == expanded){
@@ -223,14 +229,14 @@ class TableViewController: UITableViewController, UITableViewDataSource, UITable
         //        }
         
         //        return rowHeight
-        saveSwitches()
+        
         
     }
-    func DrawCellObjects(mode: NSIndexPath)
+    func drawCellObjects()
     {
         var cell : UITableViewCell
         println("draw")
-        switch(CellContentID)
+        switch(DrawCellContentID)
         {
         case 0:
             vibrateSwitch.hidden=false
