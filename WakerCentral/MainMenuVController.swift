@@ -101,7 +101,7 @@ class MainMenuVController: UIViewController, CLLocationManagerDelegate {
                 
                 
                 
-                let pm = placemarks[0] as CLPlacemark
+                let pm = placemarks[0] as! CLPlacemark
                 
                 self.displayLocationInfo(pm)
                 

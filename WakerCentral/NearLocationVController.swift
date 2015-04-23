@@ -17,7 +17,7 @@ class NearLocationVController: UIViewController,CLLocationManagerDelegate,UIText
     var destination: String = String();
     var currentPosition: CLPlacemark = CLPlacemark()
     var timeToWait: NSTimeInterval = NSTimeInterval();
-    var positionUpdates : UnsignedFixed = 0
+    var positionUpdates : Int = 0
     var destinationRegion: CLRegion = CLRegion()
     var destinationRegionLimit : CLLocationDistance = 10.0
     
@@ -60,7 +60,7 @@ class NearLocationVController: UIViewController,CLLocationManagerDelegate,UIText
     func searchCoordinatesForString(textfield : UITextField)
     {
         var geocoder:CLGeocoder = CLGeocoder()
-        geocoder.geocodeAddressString(textfield.text, {(placemarks: [AnyObject]!, error: NSError!)->Void in
+        geocoder.geocodeAddressString(textfield.text, completionHandler: {(placemarks: [AnyObject]!, error: NSError!)->Void in
             if let placemark = placemarks?[0] as? CLPlacemark {
                 self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
                 if(textfield == self.partidaField)
@@ -101,7 +101,7 @@ class NearLocationVController: UIViewController,CLLocationManagerDelegate,UIText
         mapView.setRegion(region, animated: true)
         
         let annotation = MKPointAnnotation()
-        annotation.setCoordinate(location)
+        //annotation.setCoordinate(location)
         annotation.title=title
         annotation.subtitle=subtitle
         if(title==nil)
@@ -147,7 +147,7 @@ class NearLocationVController: UIViewController,CLLocationManagerDelegate,UIText
                 
             if placemarks.count > 0
             {
-                let pm = placemarks[0] as CLPlacemark
+                let pm = placemarks[0] as! CLPlacemark
                 self.displayLocationInfo(pm)
                 
                 

@@ -76,7 +76,7 @@ class AlarmListVController: UITableViewController
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         var cell:UITableViewCell = UITableViewCell();
-        cell = tableView.dequeueReusableCellWithIdentifier("alarmsList", forIndexPath: indexPath) as UITableViewCell
+        cell = tableView.dequeueReusableCellWithIdentifier("alarmsList", forIndexPath: indexPath) as! UITableViewCell
         
 //        if (cell == nil)
 //        {

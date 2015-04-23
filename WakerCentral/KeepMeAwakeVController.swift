@@ -94,7 +94,7 @@ class KeepMeAwakeVController: UIViewController , UIImagePickerControllerDelegate
                 player.play()
             }
             var numeroFeedBackEscolhido: Int = Int(arc4random_uniform(UInt32(feedBackTypeArray.count)))  // escolhe um feedback aleatorio entre os escolhidos anteriormente
-            var feedBackEscolhido: String = feedBackTypeArray[numeroFeedBackEscolhido] as String
+            var feedBackEscolhido: String = feedBackTypeArray[numeroFeedBackEscolhido] as! String
         
             NSLog("\(feedBackEscolhido)")
         
@@ -146,6 +146,7 @@ class KeepMeAwakeVController: UIViewController , UIImagePickerControllerDelegate
             player.stop()
         }
         NSLog("Tapped")
+        
         view.removeGestureRecognizer(gesture)
         
         feedBackTimer = NSTimer.scheduledTimerWithTimeInterval(feedBackInterval, target:self, selector: Selector("startAlarm"),userInfo:nil, repeats: false)
@@ -158,19 +159,19 @@ class KeepMeAwakeVController: UIViewController , UIImagePickerControllerDelegate
         self.feedBackTypeDic = fbTypes
         feedBackInterval = timeInterval
         
-        if(feedBackTypeDic.objectForKey("tap") as String ==  "1")
+        if(feedBackTypeDic.objectForKey("tap") as! String ==  "1")
         {
             feedBackTypeArray.addObject("tap")
         }
-        if(feedBackTypeDic.objectForKey("slide") as String == "1")
+        if(feedBackTypeDic.objectForKey("slide") as! String == "1")
         {
             feedBackTypeArray.addObject("slide")
         }
-        if(feedBackTypeDic.objectForKey("wink")as String == "1")
+        if(feedBackTypeDic.objectForKey("wink")as! String == "1")
         {
             feedBackTypeArray.addObject("wink")
         }
-        if(feedBackTypeDic.objectForKey("smile")as String == "1")
+        if(feedBackTypeDic.objectForKey("smile")as! String == "1")
         {
             feedBackTypeArray.addObject("smile")
         }
